@@ -31,13 +31,16 @@ public class func {
 		String phnum2 = "01093636623";
 		String emailadr1 = "dbro0423@gmail.com";
 		String emailadr2 = "bloodred15@naver.com";
-		String cut1 = "--------------------------------------------------------------------";
-		String cut2 = "----------------------------------";
 		System.out.printf("이름\t나이\t성별\t지역\t전화번호\t\t이메일\n");
-		System.out.println(cut1);
-		System.out.printf("%s\t%s\t%s\t%s\t%s\t%s\t\n",name1,age1,gender1,address1,phnum1,emailadr1);
-		System.out.println(cut2+cut2);
-		System.out.println(name2+"\t"+age2+"\t"+gender2+"\t"+address2+"\t"+phnum2+"\t"+emailadr2);
+		for (int i=1; i<24; i++) {
+			System.out.print("---");
+		}
+		System.out.printf("\n%s\t%s\t%s\t%s\t%s\t%s\t\n",name1,age1,gender1,address1,phnum1,emailadr1);
+		for (int i=1; i<24; i++) {
+			System.out.print("---");
+		}
+		
+		System.out.println("\n"+name2+"\t"+age2+"\t"+gender2+"\t"+address2+"\t"+phnum2+"\t"+emailadr2);
 		
 	}
 	

@@ -19,8 +19,8 @@ public class Sample {
 		double scr3 = sc.nextDouble();
 		System.out.println("======== °á°ú ========");
 		int sumscr = (int)scr1+(int)scr2+(int)scr3;
-		System.out.println("ÃÑÁ¡ : " + sumscr);
 		int avgscr = sumscr/3;
+		System.out.println("ÃÑÁ¡ : " + sumscr);
 		System.out.println("Æò±Õ : " + avgscr);
 	}
 }

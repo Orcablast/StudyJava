@@ -5,7 +5,7 @@ public class RunExample {
 
 	public static void main(String[] args) {
 		Func ex1 = new Func();
-		ex1.exam1();
+		ex1.exam2();
 
 	}
 

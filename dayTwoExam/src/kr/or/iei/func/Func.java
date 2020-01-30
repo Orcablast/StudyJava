@@ -30,8 +30,11 @@ public class Func {
 		System.out.print("영어점수 입력 : ");
 		int score3 = sc.nextInt();
 		int sumscore = score1+score2+score3;
-		double avgscore = (double)sumscore/3;
-		System.out.printf("당신 점수의 총 합은 %d점이고 평균은 %.2f점입니다!",sumscore,avgscore);
+		double avgscore = sumscore/3.0;
+		for(int i =1; i<=19; i++) {
+			System.out.print("--");
+		}
+		System.out.printf("\n당신 점수의 총 합은 %d점이고 평균은 %.2f점입니다!",sumscore,avgscore);
 	}
 	
 	public void exam3() {
