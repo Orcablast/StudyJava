@@ -105,6 +105,7 @@ public class Example {
 		Scanner sc = new Scanner(System.in);		
 		System.out.print("나이를 입력하세요 : ");
 		int age = sc.nextInt();
+		// age 값이 19 보다 큰지 비교하여 true 이면 성인입니다, false 이면 미성년자입니다
 		System.out.println(age>19 ? "성인입니다. 어서오세요!" : "미성년자는 입장불가입니다");
 	}
 	
@@ -116,10 +117,10 @@ public class Example {
 		int eng = sc.nextInt();
 		System.out.print("수학 점수 입력 : ");
 		int math = sc.nextInt(); 
-		int sum = kor+eng+math; // 
-		double avg = sum/3.0;
+		int sum = kor+eng+math;  
+		double avg = sum/3.0; // 정수 타입 sum을 실수 3.0으로 나누어 double 타입 avg로 저장
 		System.out.println("합계 : "+sum);
-		System.out.printf("평균 : %.2f\n",avg);
+		System.out.printf("평균 : %.2f\n",avg); 
 		System.out.println(avg>=60 ? "합격!" : "불합격!");		
 		
 	}
@@ -127,8 +128,9 @@ public class Example {
 	public void exam12() { // 연습문제 5-2번
 		Scanner sc = new Scanner(System.in);
 		System.out.print("정수 입력 : ");
-		int num = sc.nextInt();
-		int check = num%2;
+		int num = sc.nextInt(); 
+		int check = num%2; // num 값을 2로 나눈 나머지 값을 check 변수로 초기화
+		// check 값이 0 인지 비교하여 true이면 짝수!, false이면 홀수! 를 출력
 		System.out.println(check == 0 ? "짝수!" : "홀수!");
 	}
 }

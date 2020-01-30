@@ -5,7 +5,7 @@ public class Run {
 
 	public static void main(String[] args) {
 		Example e = new Example();
-		e.exam9();
+		e.exam12();
 
 	}
 
