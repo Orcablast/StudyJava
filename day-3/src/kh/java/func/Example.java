@@ -135,13 +135,5 @@ public class Example {
 		System.out.println(check == 0 ? "Â¦¼ö!" : "È¦¼ö!");
 	}
 	
-	public void exam13() {
-		int a = 2;
-		int b = 3;
-		int c = 10;
-		int values[] = {a,b,c};
-		System.out.println("Min value : " + values[2]);
-				
-	}
 
 }
