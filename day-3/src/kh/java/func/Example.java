@@ -119,9 +119,10 @@ public class Example {
 		int math = sc.nextInt(); 
 		int sum = kor+eng+math;  
 		double avg = sum/3.0; // 정수 타입 sum을 실수 3.0으로 나누어 double 타입 avg로 저장
+		boolean each = (kor>=40) && (eng>=40) && (math>=40);
 		System.out.println("합계 : "+sum);
 		System.out.printf("평균 : %.2f\n",avg); 
-		System.out.println(avg>=60 ? "합격!" : "불합격!");		
+		System.out.println(each && avg>=60 ? "합격!" : "불합격!");	
 		
 	}
 	
@@ -133,4 +134,14 @@ public class Example {
 		// check 값이 0 인지 비교하여 true이면 짝수!, false이면 홀수! 를 출력
 		System.out.println(check == 0 ? "짝수!" : "홀수!");
 	}
+	
+	public void exam13() {
+		int a = 2;
+		int b = 3;
+		int c = 10;
+		int values[] = {a,b,c};
+		System.out.println("Min value : " + values[2]);
+				
+	}
+
 }
