@@ -106,12 +106,12 @@ public class Example2 { // Chapter 조건문
 		} else {
 			System.out.println("홀수입니다");
 		}
-		if(num%2==0) {
-			System.out.println("짝수입니다");
-		} 
-		if(num%2!=0){
-			System.out.println("홀수입니다");
-		}
+//		if(num%2==0) {
+//			System.out.println("짝수입니다");
+//		} 
+//		if(num%2!=0){
+//			System.out.println("홀수입니다");
+//		}
 	}
 	
 	public void exam7() {

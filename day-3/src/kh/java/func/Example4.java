@@ -27,25 +27,25 @@ public class Example4 {
 		System.out.print("일수를 알고싶은 달을 입력하세요 : ");
 		int inputNum = sc.nextInt();
 		switch (inputNum) {
-		case 1 :
-		case 3 :
-		case 5 :
-		case 7 :
-		case 8 :
-		case 10 :
-		case 12 : 
-			System.out.printf("%d월달은 31일까지 있습니다.",inputNum);
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:
+			System.out.printf("%d월달은 31일까지 있습니다.", inputNum);
 			break;
-		case 4 :
-		case 6 :
-		case 9 :
-		case 11 : 
-			System.out.printf("%d월달은 30일까지 있습니다.",inputNum);
+		case 4:
+		case 6:
+		case 9:
+		case 11:
+			System.out.printf("%d월달은 30일까지 있습니다.", inputNum);
 			break;
-		case 2 : 
-			System.out.printf("%d월달은 28일까지 있습니다.",inputNum);
+		case 2:
+			System.out.printf("%d월달은 28일까지 있습니다.", inputNum);
 			break;
-		default :
+		default:
 			System.out.println("1~12 사이의 값을 입력해주세요.");
 		}
 
@@ -76,7 +76,7 @@ public class Example4 {
 		}
 
 	}
-	
+
 	public void exam4() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("=========== 계산기 프로그램 ===========");
@@ -86,62 +86,80 @@ public class Example4 {
 		int num1 = sc.nextInt();
 		System.out.print("두번째 정수를 입력하세요 : ");
 		int num2 = sc.nextInt();
-		int sum = num1+num2;
-		int min = num1-num2;
-		int multi = num1*num2;
-		double div = (double)num1/num2;
-		
-		switch(oper){
-		case '+' :
-			System.out.printf("%d%c%d=%d",num1,oper,num2,sum);
+		int sum = num1 + num2;
+		int min = num1 - num2;
+		int multi = num1 * num2;
+		double div = (double) num1 / num2;
+
+		switch (oper) {
+		case '+':
+			System.out.printf("%d%c%d=%d", num1, oper, num2, sum);
 			break;
-		case '-' :
-			System.out.printf("%d%c%d=%d",num1,oper,num2,min);
+		case '-':
+			System.out.printf("%d%c%d=%d", num1, oper, num2, min);
 			break;
-		case '*' :
-			System.out.printf("%d%c%d=%d",num1,oper,num2,multi);
+		case '*':
+			System.out.printf("%d%c%d=%d", num1, oper, num2, multi);
 			break;
-		case '/' :
-			System.out.printf("%d%c%d=%.6f",num1,oper,num2,div);
-			break;			
+		case '/':
+			System.out.printf("%d%c%d=%.6f", num1, oper, num2, div);
+			break;
 		}
-		
-		
-		
+
 	}
-	
-	
-	public void exam5() {
+
+	public void exam5() { // 연습문제 4번 구조에 대해 고민해볼것!!
 		Scanner sc = new Scanner(System.in);
 		System.out.print("점수를 입력하세요 : ");
-		int score = sc.nextInt();		
-		if(score<=100 && score>=0) {
-			int grade = score/10;
-			switch(grade) {			
-			case 10 : 
-				System.out.printf("%d점 ==> A 등급",score);
+		int score = sc.nextInt();
+		if (score <= 100 && score >= 0) {
+			int grade = score / 10;
+			switch (grade) {
+			case 10:
+			case 9:
+				System.out.printf("%d점 ==> A 등급", score);
 				break;
-			case 9 : 
-				System.out.printf("%d점 ==> A 등급",score);
+			case 8:
+				System.out.printf("%d점 ==> B 등급", score);
 				break;
-			case 8 :
-				System.out.printf("%d점 ==> B 등급",score);
+			case 7:
+				System.out.printf("%d점 ==> C 등급", score);
 				break;
-			case 7 :
-				System.out.printf("%d점 ==> C 등급",score);
+			case 6:
+				System.out.printf("%d점 ==> D 등급", score);
 				break;
-			case 6 :
-				System.out.printf("%d점 ==> D 등급",score);
-				break;
-			default : 
-				System.out.printf("%d점 ==> F 0등급",score);
+			default:
+				System.out.printf("%d점 ==> F 0등급", score);
 			}
 		} else {
 			System.out.println("0~100 사이의 값을 입력하세요.");
 		}
-		
+
+//		if (score == 100) { // 강사님 풀이
+//			System.out.printf("%d점 ==> A 등급", score);
+//		} else if (score > 100 || score < 0) {
+//			System.out.println("0~100 사이의 값을 입력하세요.");
+//		} else {
+//			int grade = score / 10;
+//			switch (grade) {
+//			case 10:
+//			case 9:
+//				System.out.printf("%d점 ==> A 등급", score);
+//				break;
+//			case 8:
+//				System.out.printf("%d점 ==> B 등급", score);
+//				break;
+//			case 7:
+//				System.out.printf("%d점 ==> C 등급", score);
+//				break;
+//			case 6:
+//				System.out.printf("%d점 ==> D 등급", score);
+//				break;
+//			default:
+//				System.out.printf("%d점 ==> F 0등급", score);
+//			}
+//		}
+
 	}
-	
-	
-	
+
 }
