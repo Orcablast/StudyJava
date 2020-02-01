@@ -89,15 +89,15 @@ public class ExampleSelfReview {
 		}
 	}
 	
-	public void exam11() {
-		for(int i=1; i<=5; i++) {
-			for(int j=i; j<=4; j++) {
-				System.out.print(" ");
-			}
-			for(int h=i; h) {
-				
-			}
-			System.out.println();
-		}
-	}
+//	public void exam11() {
+//		for(int i=1; i<=5; i++) {
+//			for(int j=i; j<=4; j++) {
+//				System.out.print(" ");
+//			}
+//			for(int h=i; h) {
+//				
+//			}
+//			System.out.println();
+//		}
+//	}
 }
