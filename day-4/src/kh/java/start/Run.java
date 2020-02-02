@@ -15,7 +15,7 @@ public class Run {
 		Example04 e04 = new Example04();
 		Example05 e05 = new Example05();
 		ExampleSelfReview e06 = new ExampleSelfReview(); 
-		e05.exam03();
+		e05.exam06();
 	}
 
 }
