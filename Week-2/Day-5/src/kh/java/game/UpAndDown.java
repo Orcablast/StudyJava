@@ -115,10 +115,12 @@ public class UpAndDown {
 				System.out.println("WIN : " + scrWin);
 				System.out.println("LOSE : " + scrLose);
 				break;
+				
 			case 3:
 				System.out.println("프로그램을 종료합니다.");
 				keepPlay++;
 				break;
+				
 			default:
 				System.out.println("잘못된 입력입니다");
 			}
@@ -133,6 +135,7 @@ public class UpAndDown {
 		int scrLose = 0; // 유저의 패배 횟수
 		int scrDraw = 0; // 유저의 비긴 횟수
 		int programOn = 0; // 프로그램을 종료하는 변수, 0 != 게임 종료
+
 		while (programOn == 0) {
 			System.out.println("===== Dice Game =====");
 			System.out.println("1. Game Start");
@@ -143,13 +146,13 @@ public class UpAndDown {
 			int keepPlay = 0; // 게임을 계속 진행할지 결정하는 변수, 0 != 메뉴로 돌아감
 			switch (selectMenu) { // 유저가 입력한 selectMenu 변수의 리터럴값으로 분기
 			case 1:
-				while (keepPlay == 0) { // 게임을 계속 진행할지 결정하는 변수 (0 == 무한루프 , 0 != 메뉴로 돌아감) 
+				while (keepPlay == 0) { // 게임을 계속 진행할지 결정하는 변수 (0 == 무한루프 , 0 != 메뉴로 돌아감)
 					if (userMoney == 0) { // 유저의 잔액이 없으면 무한루프를 종료하도록 keepPlay값을 1 증가
 						System.out.println("잔액이 없습니다.");
-						keepPlay++; 
+						keepPlay++;
 						break;
 					}
-					System.out.println("<< Game Start >>"); 
+					System.out.println("<< Game Start >>");
 					int userSum = 0; // 유저의 주사위 총 합, 초기화 0
 					int userD; // 유저의 주사위 결과, for문에서 반복될 것
 					char userBetAns; // 유저가 베팅을 진행할지 결정하는 변수
@@ -168,6 +171,10 @@ public class UpAndDown {
 							System.out.println("현재 내 소지금 : " + userMoney);
 							System.out.print("얼마를 배팅하시겠습니까? : ");
 							userBet = sc.nextInt();
+							if (userBet > userMoney) {
+								System.out.println("소지금이 부족합니다.");
+								break;
+							}
 							int comSum = 0;
 							int comD;
 							for (int j = 1; j <= 3; j++) {
@@ -240,6 +247,89 @@ public class UpAndDown {
 				break;
 			default:
 				System.out.println("잘못입력하셨습니다.");
+			}
+		}
+	}
+
+	public void exam04() {
+		Scanner sc = new Scanner(System.in);
+		Random rn = new Random();
+
+		boolean programOn = true; // 메뉴에서 프로그램을 재실행하는 변수
+		
+		int userWin = 0;
+		int userLose = 0;
+		int userDraw = 0;
+		int userMoney = 10000;		
+		
+		int userDice, comDice;
+		int userSum = 0;
+		int comSum = 0;
+		
+		while (programOn == true) { // false 일시 프로그램 종료
+			System.out.println("====== Dice Game ======");
+			System.out.println("1. Game Start");
+			System.out.println("2. Game Score");
+			System.out.println("3. End Game");
+			System.out.print("선택 > ");
+						
+			int selectMenu = sc.nextInt();
+			
+			switch (selectMenu) {
+			case 2:
+				System.out.println("<< 당신의 전적 >>");
+				System.out.println("WIN : " + userWin);
+				System.out.println("LOSE : " + userLose);
+				System.out.println("DRAW : " + userDraw);
+				System.out.println("내 소지금 : " + userMoney);				
+				break;
+				
+			case 3:
+				programOn = false;
+				System.out.println("프로그램을 종료합니다.");
+				break;
+				
+			case 1:
+				while(true) {
+					if(userMoney==0) { // 유저의 소지금이 부족하면 case 1 진행자체를 차단.
+						System.out.println("소지금이 부족합니다");
+						break;
+					}
+					
+					System.out.println("<< Game Start >>");
+					
+					for(int i=1; i<=3; i++) {
+						userDice=rn.nextInt(6)+1;
+						userSum += userDice;
+						System.out.println(i+"번째 주사위 값 : "+userDice); 						
+					}					
+					
+					System.out.println("내 주사위 총 합 : " + userSum);
+					
+					System.out.print("배팅 하시겠습니까? [y/n] : ");
+					char betAns = sc.next().charAt(0);
+					int userBet;
+					
+					while (betAns=='y') {
+						System.out.println("얼마를 배팅하시겠습니까?");
+						System.out.println("현재 내 소지금 : "+userMoney);
+						userBet = sc.nextInt();
+						if(userBet>userMoney) {
+							System.out.println("소지금이 부족합니다");
+							continue;
+						}
+					} 
+					if (betAns=='n') {
+						
+					}
+					
+				
+					
+					
+				}
+				break;
+			default:				
+				System.out.println("잘못된 입력입니다.");				
 			}
 		}
 	}
