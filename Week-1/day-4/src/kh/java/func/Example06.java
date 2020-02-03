@@ -50,10 +50,33 @@ public class Example06 {
 				for(int h=i; h>0; h--) {
 					System.out.print("*");
 				}
-			}
-			
-		}
-		
+			}			
+		}		
 	}
+	
+	public void exam04() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("몇 행(row)를 출력하시겠습니까? :");
+		int row = sc.nextInt();
+		for(int i=1; i<=row; i++) {
+			if(i!=5) {
+				for(int j=i; j<5; j++) {
+					System.out.print(" ");
+				}
+				System.out.print("*");
+				for(int h=i; h>0; h--) {
+					System.out.print(" ");
+				}
+				System.out.println("*");								
+			} else if(i==5) {
+				for() {
+					
+				}
+				
+			}
+			System.out.println();
+		}
+	}
+	
 
 }

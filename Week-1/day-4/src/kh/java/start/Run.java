@@ -17,7 +17,7 @@ public class Run {
 		Example05 e05 = new Example05();
 		Example06 e06 = new Example06();
 		ExampleSelfReview es01 = new ExampleSelfReview(); 
-		e06.exam03();
+		e06.exam04();
 	}
 
 }
