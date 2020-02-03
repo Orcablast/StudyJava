@@ -38,7 +38,7 @@ public class Example01 {
 
 	public void exam03() { // 난수를 설정하고 사용자가 입력한 정수와 비교하는 문제
 		Scanner sc = new Scanner(System.in); // Scanner를 약어 sc로 정의
-		Random r = new Random(); // Random을 약어 r 로 정의
+		Random r = new Random(); // Random을 약어 r로 정의
 		System.out.println("== 동전 앞뒤 맞추기 ==");
 		System.out.print("숫자를 입력해주세요 (1.앞면 / 2.뒷면) : ");
 		int sltNum = sc.nextInt(); // 사용자가 입력한 값을 sltNum으로 선언
@@ -106,39 +106,39 @@ public class Example01 {
 		Random r = new Random();
 		System.out.println("=== 가위 바위 보 게임 ===");
 		System.out.print("숫자를 선택하세요 (1.가위/ 2.바위 / 3.보) : ");
-		int sltNum = sc.nextInt();
-		int rndNum = r.nextInt(3) + 1;
+		int sltNum = sc.nextInt(); // 입력받은 값을 변수 sltNum으로 선언
+		int rndNum = r.nextInt(3) + 1; // 1~3까지의 랜덤 숫자를 추출
 		System.out.println("============결과=============");
-		String userHand = "힝";
-		String comHand = "왕";		
-		switch (sltNum) {
-		case 1:
-			userHand = "가위";
+		String userHand = ""; // 문자열 변수 userHand를 초기화, 사용자가 선택한 가위바위보가 된다
+		String comHand = ""; // 문자열 변수 comHand를 초기화, 컴퓨터가 선택한 가위바위보가 된다
+		switch (sltNum) { // 입력받은 변수 sltNum의 리터럴값을 통해 3개의 분기를 진행		
+		case 1: // 사용자가 1을 입력했을 경우
+			userHand = "가위"; // 문자열 변수 userHand에 "가위"를 저장
 			break;
-		case 2:
-			userHand = "바위";
+		case 2: // 사용자가 2를 입력했을 경우
+			userHand = "바위"; // 문자열 변수 userHand에 "바위"를 저장
 			break;
-		case 3:
-			userHand = "보";
-			break;
-		}
-		switch (rndNum) {
-		case 1:
-			comHand = "가위";
-			break;
-		case 2:
-			comHand = "바위";
-			break;
-		case 3:
-			comHand = "보";
+		case 3: // 사용자가 3을 입력했을 겨우
+			userHand = "보"; // 문자열 변수 userHand에 "보"를 저장
 			break;
 		}
-		System.out.println("당신은 " + userHand + "를 냈습니다");
+		switch (rndNum) { // 1~3까지 랜덤 숫자를 입력받아 3개의 분기를 진행
+		case 1: // random값이 1일 경우
+			comHand = "가위"; // 문자열 변수 comHand에 문자열 "가위"를 저장
+			break;
+		case 2: // random값이 2일 경우
+			comHand = "바위"; // 문자열 변수 comHand에 문자열 "바위"를 저장
+			break;
+		case 3: // random값이 3일 경우
+			comHand = "보"; // 문자열 변수 comHand에 문자열 "보"를 저장
+			break;
+		}
+		System.out.println("당신은 " + userHand + "를 냈습니다"); 
 		System.out.println("컴퓨터는 " + comHand + "를 냈습니다");
 		System.out.println("============================");
-		if (sltNum == rndNum) {
+		if (sltNum == rndNum) { // 사용자가 입력한 값과 랜덤값이 같을 경우
 			System.out.println("비겼습니다!");
-		} else if (sltNum == (rndNum-1) || (sltNum-rndNum)==2) {
+		} else if (sltNum == (rndNum-1) || (sltNum-rndNum)==2) { // 
 			System.out.println("졌습니다!");
 		} else {
 			System.out.println("이겼습니다!");
