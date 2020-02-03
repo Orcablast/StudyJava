@@ -115,12 +115,12 @@ public class UpAndDown {
 				System.out.println("WIN : " + scrWin);
 				System.out.println("LOSE : " + scrLose);
 				break;
-				
+
 			case 3:
 				System.out.println("프로그램을 종료합니다.");
 				keepPlay++;
 				break;
-				
+
 			default:
 				System.out.println("잘못된 입력입니다");
 			}
@@ -256,80 +256,105 @@ public class UpAndDown {
 		Random rn = new Random();
 
 		boolean programOn = true; // 메뉴에서 프로그램을 재실행하는 변수
-		
+
 		int userWin = 0;
 		int userLose = 0;
 		int userDraw = 0;
-		int userMoney = 10000;		
-		
-		int userDice, comDice;
-		int userSum = 0;
-		int comSum = 0;
-		
+		int userMoney = 10000;
+
 		while (programOn == true) { // false 일시 프로그램 종료
 			System.out.println("====== Dice Game ======");
 			System.out.println("1. Game Start");
 			System.out.println("2. Game Score");
 			System.out.println("3. End Game");
 			System.out.print("선택 > ");
-						
+
 			int selectMenu = sc.nextInt();
-			
+
 			switch (selectMenu) {
 			case 2:
 				System.out.println("<< 당신의 전적 >>");
 				System.out.println("WIN : " + userWin);
 				System.out.println("LOSE : " + userLose);
 				System.out.println("DRAW : " + userDraw);
-				System.out.println("내 소지금 : " + userMoney);				
+				System.out.println("내 소지금 : " + userMoney);
 				break;
-				
+
 			case 3:
 				programOn = false;
 				System.out.println("프로그램을 종료합니다.");
 				break;
-				
+
 			case 1:
-				while(true) {
-					if(userMoney==0) { // 유저의 소지금이 부족하면 case 1 진행자체를 차단.
+				while (true) {
+					if (userMoney == 0) { // 유저의 소지금이 부족하면 case 1 진행자체를 차단.
 						System.out.println("소지금이 부족합니다");
 						break;
 					}
 					
+					int userDice, comDice;
+					int userSum = 0;
+					int comSum = 0;
+					
 					System.out.println("<< Game Start >>");
-					
-					for(int i=1; i<=3; i++) {
-						userDice=rn.nextInt(6)+1;
+
+					for (int i = 1; i <= 3; i++) {
+						userDice = rn.nextInt(6) + 1;
 						userSum += userDice;
-						System.out.println(i+"번째 주사위 값 : "+userDice); 						
-					}					
-					
+						System.out.println(i + "번째 주사위 값 : " + userDice);
+					}
+
 					System.out.println("내 주사위 총 합 : " + userSum);
-					
+
 					System.out.print("배팅 하시겠습니까? [y/n] : ");
 					char betAns = sc.next().charAt(0);
 					int userBet;
-					
-					while (betAns=='y') {
-						System.out.println("얼마를 배팅하시겠습니까?");
-						System.out.println("현재 내 소지금 : "+userMoney);
+
+					if (betAns == 'y') {
+						System.out.println("현재 내 소지금 : " + userMoney);
+						System.out.print("얼마를 배팅하시겠습니까? : ");
 						userBet = sc.nextInt();
-						if(userBet>userMoney) {
-							System.out.println("소지금이 부족합니다");
-							continue;
-						}
-					} 
-					if (betAns=='n') {
 						
+						if (userBet > userMoney) {
+							System.out.println("소지금이 부족합니다");
+							break;
+						}
+						
+						for(int j=1; j<=3; j++) {
+							comDice = rn.nextInt(6) + 1;
+							comSum += comDice;
+							System.out.println("컴퓨터 "+ j + "번째 주사위 값 : " + comDice);
+						}
+						
+						System.out.println("컴퓨터 주사위 총 합 : " + comSum);						
+						System.out.println("<< 결과 >>");
+						
+						if(userSum>comSum) {
+							userWin++;
+							userMoney+=userBet;
+							System.out.println("승리!!!!!");
+							System.out.println("소지금이 "+userBet+"원 증가하였습니다.");							
+						} else {
+							userLose++;
+							userMoney-=userBet;
+							System.out.println("패배... ㅠㅠ");
+							System.out.println("소지금이 "+userBet+"원 감소하였습니다.");
+						}
+						
+						System.out.print("한번 더 하시겠습니까? [y/n] : ");
+						char keepAns= sc.next().charAt(0);
+						
+						if (keepAns=='n') {
+							break;
+						}						
+						
+					} else { // 배팅하시겠습니까? 에서 y를 제외한 모든 경우
+						break;
 					}
-					
-				
-					
-					
 				}
 				break;
-			default:				
-				System.out.println("잘못된 입력입니다.");				
+			default:
+				System.out.println("잘못된 입력입니다.");
 			}
 		}
 	}
