@@ -4,6 +4,7 @@ import kh.java.func.Example02;
 import kh.java.func.Example03;
 import kh.java.func.Example04;
 import kh.java.func.Example05;
+import kh.java.func.Example06;
 import kh.java.func.ExampleSelfReview;
 
 public class Run {
@@ -14,8 +15,9 @@ public class Run {
 		Example03 e03 = new Example03();
 		Example04 e04 = new Example04();
 		Example05 e05 = new Example05();
-		ExampleSelfReview e06 = new ExampleSelfReview(); 
-		e05.exam07();
+		Example06 e06 = new Example06();
+		ExampleSelfReview es01 = new ExampleSelfReview(); 
+		e06.exam01();
 	}
 
 }
