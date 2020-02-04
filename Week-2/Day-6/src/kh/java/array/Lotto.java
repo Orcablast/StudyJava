@@ -37,15 +37,8 @@ public class Lotto {
 						System.out.println("이미 중복된 번호입니다. 다시 입력해주세요.");
 						dup = true;
 						break;
-					} 
-//					else if(comNum[]) {
-//						
-//					}
-					
+					}
 				}
-				
-				
-			
 
 				if (dup == true) {
 					i--;
@@ -54,8 +47,14 @@ public class Lotto {
 				} else {
 					userNum[i] = inputNum;
 					comNum[i] = rn.nextInt(45) + 1;
+					for(int j=i; j>0; j--) {
+						if(comNum[j-1]==comNum[i]) {
+							System.out.println("컴퓨터 같은값");
+							comNum[i] = rn.nextInt(45) + 1;
+							j=1;
+						}
+					}
 				}
-
 			}
 
 			for (int i = 0; i < userNum.length; i++) {

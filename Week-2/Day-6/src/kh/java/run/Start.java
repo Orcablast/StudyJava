@@ -17,7 +17,7 @@ public class Start {
 		Example05 e05 = new Example05();
 		Lotto e06 = new Lotto();
 		BubbleSort sort = new BubbleSort();
-		e05.exam01();
+		e06.exam01();
 
 	}
 
