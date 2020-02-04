@@ -1,0 +1,45 @@
+Scanner sc = new Scanner(System.in);
+		int record = -1;
+		while(true) {
+			System.out.println("===== Up & Down Game =====");
+			System.out.println("1. Game Start");
+			System.out.println("2. Game Score");
+			System.out.println("3. End Game");
+			System.out.print("선택 > ");
+			switch(sc.nextInt()) {
+			case 1:
+				Random r = new Random();
+				int num = r.nextInt(99)+1;
+				System.out.println("<< Game Start >>");
+				int count = 1;
+				while(true) {
+					System.out.print(count +" 회차 번호 입력 : ");
+					int userNum = sc.nextInt();
+					if(userNum<1 || 99<userNum ) {
+						System.out.println("입력범위 오류");
+						continue;
+					}else if(userNum == num) {
+						System.out.println("<< 정답 >>");
+						if(record==-1 || record>count) {
+							record = count;
+						}
+						break;
+					}else if(userNum>num) {
+						System.out.println("<< DOWN >>");
+					}else if(userNum<num) {
+						System.out.println("<< UP >>");
+					}					
+					count++;
+				}
+				break;
+			case 2:
+				if(record != -1) {
+					System.out.println("현재 최고 기록은 "+record+"회 입니다.");
+				}else {
+					System.out.println("아직 기록이 없습니다.");
+				}				
+				break;
+			case 3: return;
+			default : System.out.println("잘못입력하셨습니다.");
+			}
+		}

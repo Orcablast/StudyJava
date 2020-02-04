@@ -1,0 +1,87 @@
+Scanner sc = new Scanner(System.in);
+		int win=0,lose=0,draw=0;
+		int money = 10000;
+		while(true) {
+			System.out.println("===== Dice Game =====");
+			System.out.println("1. Game Start");
+			System.out.println("2. Game Score");
+			System.out.println("3. End Game");
+			System.out.print("선택 > ");
+			switch(sc.nextInt()) {
+			case 1:
+				if(money == 0) {
+					System.out.println("잔액이 없습니다. bye~");
+					break;
+				}
+				Random r = new Random();
+				
+				
+				while(true) {
+					System.out.println("\n<< Game Start >>");
+					int userNum = 0;
+					for(int i=0;i<3;i++) {
+						int num = r.nextInt(6)+1;
+						System.out.println((i+1)+"번째 주사위 값 : "+num);
+						userNum += num;
+					}
+					System.out.println("내 주사위 총 합 : "+userNum);
+					System.out.print("배팅 하시겠습니까[y/n] : ");
+					char sel = sc.next().charAt(0);
+					if(sel == 'y') {
+						int bat =0;
+						while(true) {
+							System.out.print("얼마를 배팅하시겠습니까(현재 내 소지금 "+money+"원) : ");
+							bat = sc.nextInt();
+							if(bat>money) {
+								System.out.println("금액이 부족합니다.다시 입력해주세요");
+							}else {
+								break;
+							}
+						}						
+						int comNum = 0;
+						for(int i=0;i<3;i++) {
+							int num = r.nextInt(6)+1;
+							System.out.println("컴퓨터 "+(i+1)+"번째 주사위 값 : "+num);
+							comNum += num;
+						}
+						System.out.println("컴퓨터 주사위 총 합 : "+comNum);
+						System.out.println("<< 결과 >>");
+						if(userNum==comNum) {
+							System.out.println("비겼습니다.......");
+							draw++;
+						}else if(userNum>comNum) {
+							System.out.println("승리!!!!!");
+							System.out.println("+"+bat+"원!!");
+							win++;
+							money += bat;
+						}else {
+							System.out.println("패배");
+							System.out.println("-"+bat+"원!!");
+							lose++;
+							money -= bat;	
+							if(money == 0) {
+								System.out.println("거지 Bye~");
+								break;
+							}
+						}
+						System.out.print("한번 더 하시겠습니까[y/n] : ");
+						if(sc.next().charAt(0)=='n') {
+							break;
+						}
+					}else {
+						System.out.println("메뉴로 돌아갑니다.");
+						break;
+					}
+				}
+				break;
+			case 2:
+				System.out.println("<<당신의 전적>>");
+				System.out.println("WIN : "+win);
+				System.out.println("LOSE : "+lose);
+				System.out.println("DRAW : "+draw);
+				System.out.println("내 소지금 : "+money+"원" );
+				break;
+			case 3: return;
+			default : System.out.println("잘못입력하셨습니다.");
+			}
+		}
