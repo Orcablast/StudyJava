@@ -176,7 +176,7 @@ public class Lotto {
 					}
 				}
 
-				for (int j = 0; j < comNum.length; j++) {
+				for (int j = 0; j < i; j++) {
 					
 					if (userNum[i] == comNum[j]) {
 						countNum++;
