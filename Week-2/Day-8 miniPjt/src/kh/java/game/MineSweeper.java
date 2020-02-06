@@ -15,46 +15,82 @@ public class MineSweeper {
 
 	public void main() { // 메인 메뉴
 		while (true) {
+			
+			boom = false;
+					
 			System.out.println("====== 지뢰 찾기 ======");
 			System.out.println("1. 난이도 : 쉬움 (5x5)");
-			System.out.println("2. 난이도 : 중간 (10x10)");
-			System.out.println("3. 난이도 : 어려움 (15x15)");
+			System.out.println("2. 난이도 : 중간 (7x7)");
+			System.out.println("3. 난이도 : 어려움 (10x10)");
 			System.out.println("4. 커스텀 난이도");
 			System.out.println("5. 게임 끝내기");
 			System.out.println("===================");
 			System.out.print("선택 : ");
 			int inputSlt = sc.nextInt();
-
+			
 			switch (inputSlt) {
 			case 1:
-				// gameDif = 5;
-				// newGame(gameDif);
-
+				
 				gameNum = 5;
 				mineNum = 5;
 
-				int back[][] = new int[gameNum][gameNum]; // 지뢰가 있는 배열 선언
+				int easy[][] = new int[gameNum][gameNum]; // 지뢰가 있는 배열 선언
 
-				putMine(back);
+				putMine(easy);
 
 				while (!boom) {
 
-					showCurrent(back); // 화면 출력 메소드, 테스트용
+					showCurrent(easy); // 화면 출력 메소드, 테스트용
 
-					showScreen(back);
+					showScreen(easy);
 
-					userSelect(back);
+					userSelect(easy);
 				}
 
 				continue;
 
 			case 2:
-				break;
+
+				gameNum = 7;
+				mineNum = 12;
+
+				int mid[][] = new int[gameNum][gameNum]; // 지뢰가 있는 배열 선언
+
+				putMine(mid);
+
+				while (!boom) {
+
+					showCurrent(mid); // 화면 출력 메소드, 테스트용
+
+					showScreen(mid);
+
+					userSelect(mid);
+				}
+
+				continue;
 
 			case 3:
-				break;
+
+				gameNum = 10;
+				mineNum = 25;
+
+				int dif[][] = new int[gameNum][gameNum]; // 지뢰가 있는 배열 선언
+
+				putMine(dif);
+
+				while (!boom) {
+
+					showCurrent(dif); // 화면 출력 메소드, 테스트용
+
+					showScreen(dif);
+
+					userSelect(dif);
+				}
+
+				continue;
 
 			case 4:
+				System.out.println("미구현 ㅎㅎ... ㅈㅅ!!");
 				break;
 
 			case 5:
@@ -65,13 +101,12 @@ public class MineSweeper {
 
 			}
 		}
-
 	}
 
 	public void putMine(int arr[][]) { // 배열에 지뢰를 배치하는 난수로직 , 지뢰는 -1
 
 		while (mineNum != 0) {
-			arr[rn.nextInt(5)][rn.nextInt(5)] = -1; // 지뢰값 -1
+			arr[rn.nextInt(gameNum-1)][rn.nextInt(gameNum-1)] = -1; // 지뢰값 -1
 			mineNum--;
 		}
 
