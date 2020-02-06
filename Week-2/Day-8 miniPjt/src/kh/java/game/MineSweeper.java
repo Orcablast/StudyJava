@@ -10,41 +10,64 @@ public class MineSweeper {
 
 	int gameNum;
 	int mineNum;
+	int winNum;
 
 	boolean boom = false; // 유저가 지뢰를 밟았는지 논리 여부
 
+	boolean win = false; // 유저가 승리했는지 논리 여부
+
+	int blankCount; // 유저의 공백 갯수
+
 	public void main() { // 메인 메뉴
 		while (true) {
-			
+
+			blankCount = 0;
+
 			boom = false;
-					
+
 			System.out.println("====== 지뢰 찾기 ======");
 			System.out.println("1. 난이도 : 쉬움 (5x5)");
 			System.out.println("2. 난이도 : 중간 (7x7)");
 			System.out.println("3. 난이도 : 어려움 (10x10)");
 			System.out.println("4. 커스텀 난이도");
-			System.out.println("5. 게임 끝내기");
+			System.out.println("5. 게임 설명");
+			System.out.println("6. 게임 끝내기");
 			System.out.println("===================");
 			System.out.print("선택 : ");
 			int inputSlt = sc.nextInt();
-			
+
 			switch (inputSlt) {
 			case 1:
-				
+
 				gameNum = 5;
 				mineNum = 5;
+				winNum = 5;
 
 				int easy[][] = new int[gameNum][gameNum]; // 지뢰가 있는 배열 선언
 
 				putMine(easy);
 
-				while (!boom) {
+				while (!boom ) {
+
+					blankCount = 0;
+
+					System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
 					showCurrent(easy); // 화면 출력 메소드, 테스트용
 
 					showScreen(easy);
 
 					userSelect(easy);
+
+					winCount(easy);
+
+					if (blankCount >= (gameNum * gameNum) - winNum) {
+						System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+						showScreen(easy);
+						System.out.println("승리하셨습니다!!");
+						return;
+					}
+
 				}
 
 				continue;
@@ -52,7 +75,8 @@ public class MineSweeper {
 			case 2:
 
 				gameNum = 7;
-				mineNum = 12;
+				mineNum = 10;
+				winNum = 10;
 
 				int mid[][] = new int[gameNum][gameNum]; // 지뢰가 있는 배열 선언
 
@@ -60,11 +84,24 @@ public class MineSweeper {
 
 				while (!boom) {
 
+					blankCount = 0;
+
+					System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+
 					showCurrent(mid); // 화면 출력 메소드, 테스트용
 
 					showScreen(mid);
 
 					userSelect(mid);
+
+					winCount(mid);
+
+					if (blankCount >= (gameNum * gameNum) - winNum) {
+						System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+						showScreen(mid);
+						System.out.println("승리하셨습니다!!");
+						return;
+					}
 				}
 
 				continue;
@@ -80,20 +117,72 @@ public class MineSweeper {
 
 				while (!boom) {
 
-					showCurrent(dif); // 화면 출력 메소드, 테스트용
+					blankCount = 0;
+
+					System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+
+//					showCurrent(dif); // 화면 출력 메소드, 테스트용
 
 					showScreen(dif);
 
 					userSelect(dif);
+
+					winCount(dif);
+
+					if (blankCount >= (gameNum * gameNum) - winNum) {
+						System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+						showScreen(dif);
+						System.out.println("승리하셨습니다!!");
+						return;
+					}
+				}
+				continue;
+
+			case 4:
+				System.out.print("가로 x 세로 길이를 정하세요 : ");
+				gameNum = userSelectNum(sc.nextInt());
+				System.out.print("지뢰 갯수를 입력하세요 : ");
+				mineNum = userSelectNum(sc.nextInt());
+				winNum = mineNum;
+
+				int custom[][] = new int[gameNum][gameNum]; // 지뢰가 있는 배열 선언
+
+				putMine(custom);
+
+				while (!boom) {
+
+					blankCount = 0;
+
+					System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+
+//					showCurrent(custom); // 화면 출력 메소드, 테스트용
+
+					showScreen(custom);
+
+					userSelect(custom);
+
+					winCount(custom);
+
+					if (blankCount >= (gameNum * gameNum) - winNum) {
+						System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+						showScreen(custom);
+						System.out.println("승리하셨습니다!!");
+						return;
+					}
 				}
 
 				continue;
 
-			case 4:
-				System.out.println("미구현 ㅎㅎ... ㅈㅅ!!");
-				break;
-
 			case 5:
+				System.out.println("숫자로 표시된 지역에 지뢰가 숨겨져 있으면 패배합니다");
+				System.out.println("만일 해당 지역에 지뢰가 없다면 주변 8칸 중  지뢰의 갯수를 표시하고");
+				System.out.println("해당 지역 주변 8칸의 안전 지역을 해방합니다");
+				System.out.println("게임을 계속 플레이하시려면 아무키나 입력해주세요");
+				if(sc.hasNext()) {
+					sc.next();
+					continue;
+				}
+			case 6:
 				return;
 
 			default: // 메뉴 이외의 정수를 입력했을 경우
@@ -106,8 +195,14 @@ public class MineSweeper {
 	public void putMine(int arr[][]) { // 배열에 지뢰를 배치하는 난수로직 , 지뢰는 -1
 
 		while (mineNum != 0) {
-			arr[rn.nextInt(gameNum-1)][rn.nextInt(gameNum-1)] = -1; // 지뢰값 -1
-			mineNum--;
+			int randomRow = rn.nextInt(gameNum - 1);
+			int randomColumn = rn.nextInt(gameNum - 1);
+
+			if (arr[randomRow][randomColumn] != -1) {
+				arr[randomRow][randomColumn] = -1; // 지뢰값 -1
+				mineNum--;
+			}
+
 		}
 
 	}
@@ -176,17 +271,23 @@ public class MineSweeper {
 				int row = 0;
 				int column = 0;
 
-				for (int i=0; (i<gameNum) && userNum!=0; i++) {
+				for (int i = 0; (i < gameNum) && userNum != 0; i++) {
 					row = i;
-					for (int j=0; (j<gameNum) && userNum!=0; j++) {
+					for (int j = 0; (j < gameNum) && userNum != 0; j++) {
 						column = j;
 						userNum--;
 					}
 				}
-				
+
 				if (arr[row][column] == -1) {
 
+					System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 					System.out.println("게임 오버!!");
+					System.out.println("게임 오버!!");
+					System.out.println("게임 오버!!");
+					delay(1500);
+
+					System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
 					boom = true;
 					return;
@@ -203,42 +304,7 @@ public class MineSweeper {
 		}
 	}
 
-	public void userNumChk(int num, int arr[][]) { // 폐기 로직
-		int row = 0;
-		int column = 0;
-
-		for (int i = 0; i < gameNum - 1; i++) {
-
-			if (num == 0) {
-				break;
-			} else {
-				row++;
-				num--;
-			}
-
-			for (int j = 0; j < gameNum - 1; j++) {
-
-				if (num == 0) {
-					break;
-				} else {
-					column++;
-					num--;
-				}
-			}
-		}
-
-		if (arr[row][column] == -1) {
-			boom = true;
-			return;
-		} else if (arr[row][column] == 0) {
-			arr[row][column] = 2;
-			return;
-		} else {
-			System.out.println("잘못 입력하셨습니다");
-		}
-	}
-
-	public int check(int arr[][], int row, int column) {
+	public int check(int arr[][], int row, int column) { // 주변 8칸의 지뢰 갯수를 카운트 하여 int값으로 return
 		int mineCount = 0;
 
 		for (int r = row - 1; r <= row + 1; r++) {
@@ -265,7 +331,7 @@ public class MineSweeper {
 
 		return mineCount;
 	}
-	
+
 	public void check2(int arr[][], int row, int column) { // 주변 공백을 자동으로 오픈하는 로직 check 로직 활용
 		for (int r = row - 1; r <= row + 1; r++) {
 
@@ -290,12 +356,31 @@ public class MineSweeper {
 		}
 	}
 
-	public void delay(int time) {
+	public int userSelectNum(int num) { // 0 이하의 숫자를 입력했을때 재입력을 요구
+		while (num < 1) {
+			System.out.println("다시 입력하세요.");
+			num = sc.nextInt();
+		}
+		return num;
+	}
+
+	public void winCount(int arr[][]) { // 승리 조건을 만듦ㅇㄴㄹㄷㅈ멎 아 졸려 몰라
+
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr.length; j++) {
+				if (arr[i][j] == 2) {
+					blankCount++;
+				}
+			}
+		}
+
+	}
+	
+	public void delay(int time) { // 딜레이 타임
 		try {
 			Thread.sleep(time);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
-
 }
