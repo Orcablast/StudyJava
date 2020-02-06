@@ -7,7 +7,7 @@ public class Run {
 		
 		MineSweeper m = new MineSweeper();
 		m.main();
-
+		
 	}
 
 }
