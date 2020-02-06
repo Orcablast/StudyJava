@@ -65,7 +65,9 @@ public class MineSweeper {
 						System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 						showScreen(easy);
 						System.out.println("½Â¸®ÇÏ¼Ì½À´Ï´Ù!!");
-						return;
+						delay(2000);
+						System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+						break;
 					}
 
 				}
@@ -100,7 +102,9 @@ public class MineSweeper {
 						System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 						showScreen(mid);
 						System.out.println("½Â¸®ÇÏ¼Ì½À´Ï´Ù!!");
-						return;
+						delay(2000);
+						System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+						break;
 					}
 				}
 
@@ -133,7 +137,9 @@ public class MineSweeper {
 						System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 						showScreen(dif);
 						System.out.println("½Â¸®ÇÏ¼Ì½À´Ï´Ù!!");
-						return;
+						delay(2000);
+						System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+						break;
 					}
 				}
 				continue;
@@ -167,7 +173,9 @@ public class MineSweeper {
 						System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 						showScreen(custom);
 						System.out.println("½Â¸®ÇÏ¼Ì½À´Ï´Ù!!");
-						return;
+						delay(2000);
+						System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+						break;
 					}
 				}
 
