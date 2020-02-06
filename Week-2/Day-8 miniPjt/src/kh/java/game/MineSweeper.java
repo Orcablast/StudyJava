@@ -34,7 +34,6 @@ public class MineSweeper {
 				mineNum = 5;
 
 				int back[][] = new int[gameNum][gameNum]; // 지뢰가 있는 배열 선언
-				int front[][] = new int[gameNum][gameNum]; // 유저에게 보여줄 배열
 
 				putMine(back);
 
@@ -122,30 +121,12 @@ public class MineSweeper {
 					k++;
 					break;
 				}
-
-				// if (arr[i][j] < 1 && k < 10) { // 초기상태 중 k가 10 미만 일 때
-				// System.out.print("[");
-				// System.out.print("0" + k++);
-				// System.out.print("]");
-				//
-				// } else if (arr[i][j] < 1) { // 초기상태
-				// System.out.print("[");
-				// System.out.print(k++);
-				// System.out.print("]");
-				// } else if (arr[i][j] == 2) { // 공백상태 (배열값 2)
-				// k++;
-				// System.out.print(" " + check(arr, i, j) + " " );
-				// } else if (arr[i][j] == 0) {
-				// k++;
-				// System.out.print("[ ]");
-				//
-				// }
 			}
 			System.out.println();
 		} // 2중 for문 종료시점
 	}
 
-	public void userSelect(int arr[][]) {
+	public void userSelect(int arr[][]) { // 사용자가 입력한 값에 해당하는 배열에 지뢰가 있는지 확인
 		int userNum;
 
 		while (true) {
@@ -177,6 +158,7 @@ public class MineSweeper {
 
 				} else if (arr[row][column] == 0) {
 					arr[row][column] = 2;
+					check2(arr, row, column);
 					return;
 
 				} else {
@@ -186,7 +168,7 @@ public class MineSweeper {
 		}
 	}
 
-	public void userNumChk(int num, int arr[][]) {
+	public void userNumChk(int num, int arr[][]) { // 폐기 로직
 		int row = 0;
 		int column = 0;
 
@@ -247,29 +229,30 @@ public class MineSweeper {
 		}
 
 		return mineCount;
+	}
+	
+	public void check2(int arr[][], int row, int column) { // 주변 공백을 자동으로 오픈하는 로직 check 로직 활용
+		for (int r = row - 1; r <= row + 1; r++) {
 
-		// // 최초에 구상한 Boundary 로직
-		// if (row == 0 && column == 0) { // row 0, column 0 -> 좌상
-		//
-		// } else if (row == 0 && column == gameNum - 1) { // row 0, column 4 -> 우상
-		//
-		// } else if (row == gameNum - 1 && column == 0) { // row 4, column 0 -> 좌하
-		//
-		// } else if (row == gameNum - 1 && column == gameNum - 1) { // row 4, column 4
-		// -> 우하
-		//
-		// } else if (row == 0 && (column != 0 || column != gameNum - 1)) { // row 0,
-		// 첫번째행
-		//
-		// } else if (row == gameNum - 1 && (column != gameNum - 1 || column != 0)) { //
-		// row 4, 마지막행
-		//
-		// } else if (column == 0 && (row != 0 || row != gameNum - 1)) { // column 0, 좌측
-		// 첫째열
-		//
-		// } else if (column == gameNum - 1 && (row != 0 || row != gameNum - 1)) {
-		//
-		// }
+			if (r < 0 || r > gameNum - 1) {
+
+				continue;
+
+			} else {
+
+				for (int c = column - 1; c <= column + 1; c++) {
+
+					if (c < 0 || c > gameNum - 1) {
+
+						continue;
+					}
+
+					if (arr[r][c] == 0) {
+						arr[r][c] = 2;
+					}
+				}
+			}
+		}
 	}
 
 	public void delay(int time) {
