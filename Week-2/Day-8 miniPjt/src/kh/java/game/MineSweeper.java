@@ -192,6 +192,7 @@ public class MineSweeper {
 					continue;
 				}
 			case 6:
+				System.out.println("게임을 종료합니다. Bye~");
 				return;
 
 			default: // 메뉴 이외의 정수를 입력했을 경우
