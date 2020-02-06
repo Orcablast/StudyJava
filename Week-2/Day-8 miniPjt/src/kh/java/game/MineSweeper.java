@@ -53,7 +53,7 @@ public class MineSweeper {
 
 					System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
-					showCurrent(easy); // 화면 출력 메소드, 테스트용
+//					showCurrent(easy); // 화면 출력 메소드, 테스트용
 
 					showScreen(easy);
 
@@ -88,7 +88,7 @@ public class MineSweeper {
 
 					System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
-					showCurrent(mid); // 화면 출력 메소드, 테스트용
+//					showCurrent(mid); // 화면 출력 메소드, 테스트용
 
 					showScreen(mid);
 
@@ -139,7 +139,7 @@ public class MineSweeper {
 				continue;
 
 			case 4:
-				System.out.print("가로 x 세로 길이를 정하세요 : ");
+				System.out.print("가로x세로 길이를 정하세요 : ");
 				gameNum = userSelectNum(sc.nextInt());
 				System.out.print("지뢰 갯수를 입력하세요 : ");
 				mineNum = userSelectNum(sc.nextInt());
@@ -177,6 +177,7 @@ public class MineSweeper {
 				System.out.println("숫자로 표시된 지역에 지뢰가 숨겨져 있으면 패배합니다");
 				System.out.println("만일 해당 지역에 지뢰가 없다면 주변 8칸 중  지뢰의 갯수를 표시하고");
 				System.out.println("해당 지역 주변 8칸의 안전 지역을 해방합니다");
+				System.out.println("모든 안전지역이 해방되면 승리합니다");
 				System.out.println("게임을 계속 플레이하시려면 아무키나 입력해주세요");
 				if(sc.hasNext()) {
 					sc.next();
