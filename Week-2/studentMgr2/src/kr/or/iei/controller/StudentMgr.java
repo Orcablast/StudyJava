@@ -111,7 +111,8 @@ public class StudentMgr {
 			
 			System.out.println("이름 : "+students[stdNum].getName());
 			System.out.println("나이 : "+students[stdNum].getAge());
-			System.out.println("주소 : "+students[stdNum].getAddr());			
+			System.out.println("주소 : "+students[stdNum].getAddr());		
+			
 		}
 	}
 	
@@ -122,7 +123,9 @@ public class StudentMgr {
 		
 		if(stdNum==-1) {
 			System.out.println("학생이 존재하지 않습니다.");
+			
 		} else {
+			
 			System.out.print("수정 이름 입력 : ");
 			String mName=sc.next();
 			
@@ -156,6 +159,7 @@ public class StudentMgr {
 			}
 			
 			students[index-1]=null;
+			
 			index--;
 			
 		}		
