@@ -1,7 +1,6 @@
 package kh.java.game;
 
 import java.util.Scanner;
-
 import java.util.Random;
 
 public class MineSweeper {
@@ -47,13 +46,13 @@ public class MineSweeper {
 
 				putMine(easy);
 
-				while (!boom ) {
+				while (!boom) {
 
 					blankCount = 0;
 
 					System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
-//					showCurrent(easy); // 화면 출력 메소드, 테스트용
+					// showCurrent(easy); // 화면 출력 메소드, 테스트용
 
 					showScreen(easy);
 
@@ -90,7 +89,7 @@ public class MineSweeper {
 
 					System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
-//					showCurrent(mid); // 화면 출력 메소드, 테스트용
+					// showCurrent(mid); // 화면 출력 메소드, 테스트용
 
 					showScreen(mid);
 
@@ -125,7 +124,7 @@ public class MineSweeper {
 
 					System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
-//					showCurrent(dif); // 화면 출력 메소드, 테스트용
+					// showCurrent(dif); // 화면 출력 메소드, 테스트용
 
 					showScreen(dif);
 
@@ -161,7 +160,7 @@ public class MineSweeper {
 
 					System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
-//					showCurrent(custom); // 화면 출력 메소드, 테스트용
+					// showCurrent(custom); // 화면 출력 메소드, 테스트용
 
 					showScreen(custom);
 
@@ -187,7 +186,7 @@ public class MineSweeper {
 				System.out.println("해당 지역 주변 8칸의 안전 지역을 해방합니다");
 				System.out.println("모든 안전지역이 해방되면 승리합니다");
 				System.out.println("게임을 계속 플레이하시려면 아무키나 입력해주세요");
-				if(sc.hasNext()) {
+				if (sc.hasNext()) {
 					sc.next();
 					continue;
 				}
@@ -385,7 +384,7 @@ public class MineSweeper {
 		}
 
 	}
-	
+
 	public void delay(int time) { // 딜레이 타임
 		try {
 			Thread.sleep(time);
