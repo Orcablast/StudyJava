@@ -6,9 +6,9 @@ import kr.or.iei.point.Silver;
 public class PointMgr {
 	
 	Scanner sc = new Scanner(System.in);
-	Silver[] svs = new Silver[3];
+	Silver[] svs = new Silver[30];
 	
-	int index = 0;
+	int index;
 
 	public void main() {
 
