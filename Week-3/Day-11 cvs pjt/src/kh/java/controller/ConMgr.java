@@ -457,7 +457,6 @@ public class ConMgr {
 		}
 	}
 
-
 	public void shopping() {
 
 		while (true) {
