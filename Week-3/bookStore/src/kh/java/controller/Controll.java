@@ -375,8 +375,8 @@ public class Controll {
 	public void showCart() {
 
 		int totalPrice = 0;
-		
-		while(true) {				
+
+		while (true) {
 			System.out.println("===== 현재 장바구니 =====");
 			System.out.println("no.\t도서명\t저자\t장르\t가격\t수량\t");
 			for (int i = 0; i < ctIndex; i++) {
@@ -384,42 +384,69 @@ public class Controll {
 						+ cart[i].getGenre() + "\t" + cart[i].getPrice() + "\t" + cart[i].getStock());
 				totalPrice += cart[i].getPrice();
 			}
-			
-			System.out.println("합계 금액 : " + totalPrice+"원");
-			
+
+			System.out.println("합계 금액 : " + totalPrice + "원");
+
 			System.out.print("이대로 구매 하시겠습니까? [y/n] : ");
 			char ans = sc.next().charAt(0);
-			
+
 			switch (ans) {
 			case 'y':
-				System.out.println(totalPrice+"원을 지불하셨습니다.");
-				System.out.println("적립 포인트 : "+(totalPrice*0.05));
-				point += totalPrice*0.05;
+				System.out.println(totalPrice + "원을 지불하셨습니다.");
+				System.out.println("적립 포인트 : " + (totalPrice * 0.05));
+				point += totalPrice * 0.05;
 				break;
-				
+
 			case 'n':
 				System.out.println("장바구니를 비우시겠습니까? [y/n]");
 				char ans2 = sc.next().charAt(0);
-				
-				if(ans2=='y') {
-					
+
+				if (ans2 == 'y') {
+					clearCart();
+					System.out.println("장바구니를 비웠습니다.");
 				} else {
 					System.out.println("이전 메뉴로 돌아갑니다.");
 					return;
 				}
-				
+
 				break;
-				
+
 			default:
 				System.out.println("잘못 입력하셨습니다.");
-				continue;				
+				continue;
 			}
 		}
 
 	}
-	
+
 	public void clearCart() {
 		
-	}
+		while(ctIndex>=0) {	
+			
+			for (int j = 0; j < nIndex; j++) {
+				if (ne[j].getName().equals(cart[ctIndex-1].getName())) {
+					ne[j].setStock(ne[j].getStock() + 1);
+					ctIndex--;
+					continue;
+				}
+			}
+			
+			for (int j = 0; j < cIndex; j++) {
+				if (eco[j].getName().equals(cart[ctIndex-1].getName())) {
+					eco[j].setStock(eco[j].getStock() + 1);
+					ctIndex--;
+					continue;
+				}
+			}
+			
+			for (int j = 0; j < dIndex; j++) {
+				if (edu[j].getName().equals(cart[ctIndex-1].getName())) {
+					edu[j].setStock(edu[j].getStock() + 1);
+					ctIndex--;
+					continue;
+				}
+			}
+		}
 
+	}
 }
