@@ -1,5 +1,6 @@
 package kh.java.test;
 
+import java.util.Calendar;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
@@ -133,6 +134,60 @@ public class Test {
 		
 		System.out.println((int)(Math.random()*10)+1); // 1~10 범위의 임의의값 출력
 		
+		
+		
+	}
+
+	public void calenderTest() {
+		
+		// GregorianCalendar 객체 생성
+		Calendar today = Calendar.getInstance();
+		
+		System.out.println(today.get(Calendar.YEAR)); // 현재 연도 출력
+		
+		System.out.println(today.get(Calendar.MONTH)+1); // 현재 월 출력
+		
+		System.out.println(today.get(Calendar.DATE)); // 현재 일 출력
+		
+		System.out.println(today.get(Calendar.AM_PM)); // 오전=0, 오후=1 출력
+		
+		System.out.println(today.get(Calendar.HOUR)); // 현재 시간 출력
+		
+		System.out.println(today.get(Calendar.MINUTE)); // 현재 분 출력
+		
+		System.out.println(today.get(Calendar.SECOND)); // 현재 초 출력
+		
+		System.out.println(today.get(Calendar.DAY_OF_WEEK)); // 현재 요일 출력 1== 일요일, 7== 토요일
+		
+		
+		today.set(Calendar.YEAR, 2050); // 연도 수정
+		
+		System.out.println(today.get(Calendar.YEAR)); // 현재 연도 출력
+		
+		System.out.println(today.get(Calendar.DAY_OF_WEEK)); // 현재 요일 출력 1== 일요일, 7== 토요일
+		
+		
+		
+		// 현재 시간을 표현하는 메소드
+		// 1970년 1월 1일 09시 00분 00초 ~ 현재 시간을 ms 단위로 계산		
+		System.out.println(today.getTimeInMillis());
+		
+	}
+	
+public void calenderTest2() {  // d-day 계산법		
+	
+		// GregorianCalendar 객체 생성
+		Calendar day1 = Calendar.getInstance();
+		Calendar day2 = Calendar.getInstance();
+				
+		day2.set(Calendar.YEAR, 2021);		
+		
+		long day11 = day1.getTimeInMillis();
+		long day22 = day2.getTimeInMillis();
+		
+		long day = day22 - day11;
+		
+		System.out.println(day/1000/60/60/24);
 		
 		
 	}
