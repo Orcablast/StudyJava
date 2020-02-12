@@ -18,5 +18,10 @@ public class Drink extends Eatable {
 		this.amount=amount;
 	}
 	
+	@Override
+	public String toString() {
+		String str = getName()+"\t"+getStock()+"\t"+getPrice()+"\t"+(getAdult()? "O":"X")+"\t"+getAmount()+"\t"+getKcal();
+		return str;				
+	}
 	
 }

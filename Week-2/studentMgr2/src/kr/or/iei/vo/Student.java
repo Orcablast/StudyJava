@@ -42,6 +42,11 @@ public class Student {
 		this.addr = addr;
 	}
 	
+	@Override
+	public String toString() {
+		String str = name+"\t"+age+"\t"+addr;
+		return str;
+	}
 	
 
 }

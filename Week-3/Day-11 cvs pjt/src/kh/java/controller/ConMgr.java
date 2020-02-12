@@ -114,7 +114,7 @@ public class ConMgr {
 				break;
 
 			case 2:
-				printDrink();
+				printArr(d,dIndex);
 				printSnack();
 				printIFood();
 				printMedi();
@@ -234,14 +234,19 @@ public class ConMgr {
 		} // insertItem while문 종료지점
 
 	}
+	
+	public void printArr(Items[] item, int index) {
+		for(int i=0; i<index; i++) {
+			System.out.println((i+1)+"\t"+item[i]);
+		}
+	}
 
 	public void printDrink() { // 음료 현황 출력
 		System.out.println("===== 음료 =====");
 		System.out.println("no.\t제품명\t\t재고\t가격\t성인여부\t칼로리\t용량");
 
 		for (int i = 0; i < dIndex; i++) {
-			System.out.println((i + 1) + "\t" + d[i].getName() + "\t\t" + d[i].getStock() + "\t" + d[i].getPrice()
-					+ "\t" + (d[i].getAdult() ? "O" : "X") + "\t" + d[i].getKcal() + "\t" + d[i].getAmount());
+			System.out.println((i + 1) + "\t" + d[i]);
 		}
 	}
 
