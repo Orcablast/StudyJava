@@ -26,26 +26,26 @@ public class Controll {
 	int ctIndex;
 
 	int point; // 회원의 point를 기록할 변수
-	
+
 	public Controll() {
-		ne[nIndex++] = new NAndE("나미야 잡화점의 기적", "히가시노 게이고", "현대문학", 13320, 8);
-		ne[nIndex++] = new NAndE("82년생 김지영", "조남주", "현대소설", 11000, 5);
-		ne[nIndex++] = new NAndE("나는 나로 살기로 했다", "김수현", "에세이", 14850, 6);
-		ne[nIndex++] = new NAndE("꽃을 보듯 너를 본다", "나태주", "시", 9000, 9);
-		
-		eco[cIndex++] = new Economics("부의감각", "댄 앨리얼리", "경제", 16200, 7);
-		eco[cIndex++] = new Economics("1달러의 세계경제 여행", "다르니시 데이비드", "경제", 14850, 2);
-		eco[cIndex++] = new Economics("미니멀 경제학", "한진수", "경제", 13500, 4);
-		
-		edu[dIndex++] = new EduBook("2020 시나공 정보처리기사 필기", "길벗", "수험서", 27900, 1);
-		edu[dIndex++] = new EduBook("EBS 수능특강 독서+사용설명서 세트", "한국교육방송공사", "자습서", 19530, 3);
-		edu[dIndex++] = new EduBook("The Python", "허진경", "BOOKK", 22000, 1);
-				
+		ne[nIndex++] = new NAndE("나미야 잡화점의 기적\t\t", "히가시노 게이고", "현대문학", 13320, 8);
+		ne[nIndex++] = new NAndE("82년생 김지영\t\t", "조남주\t", "현대소설", 11000, 5);
+		ne[nIndex++] = new NAndE("나는 나로 살기로 했다\t\t", "김수현\t", "에세이", 14850, 6);
+		ne[nIndex++] = new NAndE("꽃을 보듯 너를 본다\t\t", "나태주\t", "시", 9000, 9);
+
+		eco[cIndex++] = new Economics("부의감각\t\t\t", "댄 앨리얼리\t", "경제", 16200, 7);
+		eco[cIndex++] = new Economics("1달러의 세계경제 여행\t\t", "다르니시 데이비드", "경제", 14850, 2);
+		eco[cIndex++] = new Economics("미니멀 경제학\t\t", "한진수\t", "경제", 13500, 4);
+
+		edu[dIndex++] = new EduBook("2020 시나공 정보처리기사 필기\t", "길벗\t", "수험서", 27900, 1);
+		edu[dIndex++] = new EduBook("EBS 수능특강 독서+사용설명서 세트\t", "한국교육방송공사", "자습서", 19530, 3);
+		edu[dIndex++] = new EduBook("The Python\t\t", "허진경\t", "BOOKK", 22000, 1);
+
 	}
 
 	public void main() {
 		while (true) {
-			System.out.println("서점 관리 프로그램");
+			System.out.println("======== 교보 24 ========");
 			System.out.println("1. 직원");
 			System.out.println("2. 손님");
 			System.out.print("선택 > ");
@@ -84,6 +84,7 @@ public class Controll {
 				break;
 
 			case 2: // 도서 현황
+				printBook();
 				break;
 
 			case 3: // 도서 관리
@@ -151,42 +152,48 @@ public class Controll {
 			System.out.println("2. 경제");
 			System.out.println("3. 학습서");
 			System.out.println("0. 뒤로가기");
+			System.out.print("선택 > ");
 			int slt = sc.nextInt();
 
-			System.out.println("등록할 도서의 정보를 입력해주세요.");
-
-			sc.nextLine();
-			System.out.print("도서 이름 : ");
-			String name = sc.nextLine();
-
-			System.out.print("저자명 : ");
-			String writer = sc.next();
-
-			System.out.print("장르 : ");
-			String genre = sc.next();
-
-			System.out.print("가격 : ");
-			int price = sc.nextInt();
-
-			System.out.print("수량 : ");
-			int stock = sc.nextInt();
-
-			switch (slt) {
-			case 1: // 소설 or 에세이 ne 배열
-				ne[nIndex++] = new NAndE(name, writer, genre, price, stock);
+			if (slt == 0) {
 				return;
 
-			case 2: // 경제 eco 배열
-				eco[cIndex++] = new Economics(name, writer, genre, price, stock);
-				return;
+			} else {
+				System.out.println("등록할 도서의 정보를 입력해주세요.");
 
-			case 3: // 학습서 edu 배열
-				edu[dIndex++] = new EduBook(name, writer, genre, price, stock);
-				return;
+				sc.nextLine();
+				System.out.print("도서 이름 : ");
+				String name = sc.nextLine();
 
-			case 0:
-				System.out.println("이전 메뉴로 이동합니다");
-				return;
+				System.out.print("저자명 : ");
+				String writer = sc.nextLine();
+
+				System.out.print("장르 : ");
+				String genre = sc.next();
+
+				System.out.print("가격 : ");
+				int price = sc.nextInt();
+
+				System.out.print("수량 : ");
+				int stock = sc.nextInt();
+
+				switch (slt) {
+				case 1: // 소설 or 에세이 ne 배열
+					ne[nIndex++] = new NAndE(name, writer, genre, price, stock);
+					return;
+
+				case 2: // 경제 eco 배열
+					eco[cIndex++] = new Economics(name, writer, genre, price, stock);
+					return;
+
+				case 3: // 학습서 edu 배열
+					edu[dIndex++] = new EduBook(name, writer, genre, price, stock);
+					return;
+
+				default:
+					System.out.println("이전 메뉴로 이동합니다");
+					return;
+				}
 			}
 		}
 	}
@@ -200,6 +207,7 @@ public class Controll {
 			System.out.println("2. 경제");
 			System.out.println("3. 학습서");
 			System.out.println("0. 뒤로가기");
+			System.out.print("선택 >");
 			int num1 = sc.nextInt();
 
 			int num2;
@@ -356,7 +364,7 @@ public class Controll {
 
 	public void printNE() {
 		System.out.println("===== 소설/에세이 =====");
-		System.out.println("NO\t도서명\t저자\t가격\t수량\t장르");
+		System.out.println("no.\t도서명\t\t\t\t저자\t\t가격\t수량\t장르");
 		for (int i = 0; i < nIndex; i++) {
 			System.out.println((i + 1) + "\t" + ne[i].getName() + "\t" + ne[i].getWriter() + "\t" + ne[i].getPrice()
 					+ "\t" + ne[i].getStock() + "\t" + ne[i].getGenre());
@@ -366,7 +374,7 @@ public class Controll {
 
 	public void printEco() {
 		System.out.println("===== 경제 =====");
-		System.out.println("NO\t도서명\t저자\t가격\t수량");
+		System.out.println("no.\t도서명\t\t\t\t저자\t\t가격\t수량");
 		for (int i = 0; i < cIndex; i++) {
 			System.out.println((i + 1) + "\t" + eco[i].getName() + "\t" + eco[i].getWriter() + "\t" + eco[i].getPrice()
 					+ "\t" + eco[i].getStock() + "\t");
@@ -375,7 +383,7 @@ public class Controll {
 
 	public void printEdu() {
 		System.out.println("===== 학습서 =====");
-		System.out.println("NO\t도서명\t저자\t가격\t수량");
+		System.out.println("no.\t도서명\t\t\t\t저자\t\t가격\t수량");
 		for (int i = 0; i < dIndex; i++) {
 			System.out.println((i + 1) + "\t" + edu[i].getName() + "\t" + edu[i].getWriter() + "\t" + edu[i].getPrice()
 					+ "\t" + edu[i].getStock() + "\t");
@@ -385,11 +393,12 @@ public class Controll {
 
 	public void showCart() {
 
-		int totalPrice = 0;
-
 		while (true) {
+
+			int totalPrice = 0;
 			System.out.println("===== 현재 장바구니 =====");
-			System.out.println("no.\t도서명\t저자\t장르\t가격\t수량\t");
+			System.out.println("no.\t도서명\t\t\t\t저자\t\t\t가격\t수량\t장르");
+
 			for (int i = 0; i < ctIndex; i++) {
 				System.out.println((i + 1) + "\t" + cart[i].getName() + "\t" + cart[i].getWriter() + "\t"
 						+ cart[i].getGenre() + "\t" + cart[i].getPrice() + "\t" + cart[i].getStock());
@@ -406,62 +415,68 @@ public class Controll {
 				System.out.println(totalPrice + "원을 지불하셨습니다.");
 				System.out.println("적립 포인트 : " + (totalPrice * 0.05));
 				point += totalPrice * 0.05;
-				break;
+
+				for (int i = 0; i < ctIndex; i++) {
+					cart[i] = null;
+				}
+
+				ctIndex = 0;
+
+				return;
 
 			case 'n':
 				System.out.println("장바구니를 비우시겠습니까? [y/n]");
 				char ans2 = sc.next().charAt(0);
 
 				if (ans2 == 'y') {
+
 					clearCart();
 					System.out.println("장바구니를 비웠습니다.");
+
+					for (int i = 0; i < ctIndex; i++) {
+						cart[i] = null;
+					}
+
+					ctIndex = 0;
+					return;
 				} else {
 					System.out.println("이전 메뉴로 돌아갑니다.");
 					return;
 				}
-
-				break;
 
 			default:
 				System.out.println("잘못 입력하셨습니다.");
 				continue;
 			}
 		}
-
 	}
 
 	public void clearCart() {
 
-		while (ctIndex >= 0) {
+		for (int i = ctIndex - 1; i >= 0; i--) {
+			String name = cart[i].getName();
 
 			for (int j = 0; j < nIndex; j++) {
-				if (ne[j].getName().equals(cart[ctIndex - 1].getName())) {
-					ne[j].setStock(ne[j].getStock() + 1);
-					cart[ctIndex - 1] = null;
-					ctIndex--;
-					continue;
+				int crnt = ne[j].getStock();
+				if (ne[j].getName().equals(name)) {
+					ne[j].setStock(crnt + 1);
 				}
 			}
 
 			for (int j = 0; j < cIndex; j++) {
-				if (eco[j].getName().equals(cart[ctIndex - 1].getName())) {
-					eco[j].setStock(eco[j].getStock() + 1);
-					cart[ctIndex - 1] = null;
-					ctIndex--;
-					continue;
+				int crnt = eco[j].getStock();
+				if (eco[j].getName().equals(name)) {
+					eco[j].setStock(crnt + 1);
 				}
 			}
 
 			for (int j = 0; j < dIndex; j++) {
-				if (edu[j].getName().equals(cart[ctIndex - 1].getName())) {
-					edu[j].setStock(edu[j].getStock() + 1);
-					cart[ctIndex - 1] = null;
-					ctIndex--;
-					continue;
+				int crnt = edu[j].getStock();
+				if (edu[j].getName().equals(name)) {
+					edu[j].setStock(crnt + 1);
 				}
 			}
 		}
-
 	}
 
 	private void shoppingBook() {
@@ -471,48 +486,76 @@ public class Controll {
 		while (true) {
 			System.out.println("=======쇼핑하기 =======");
 			System.out.println("어떤 종류의 책을 찾으십니까?");
-			System.out.println("1.소설/에세이류\t2.경제\3.학습서\0.뒤로가기");
+			System.out.println("1. 소설/에세이");
+			System.out.println("2. 경제");
+			System.out.println("3. 학습서");
+			System.out.println("0. 뒤로가기");
 			System.out.print("선택 > ");
 			int sel = sc.nextInt();
+
 			switch (sel) {
 			case 1:
 				printNE();
 				System.out.println("구입 하실 책의 no.를 입력하세요 : ");
 				index = sc.nextInt();
+				if (index <= 0 || index > nIndex) {
+					System.out.println("해당하는 책이 없습니다.");
+					continue;
+				}
 				if (ne[index - 1].getStock() == 0) {
 					System.out.println("현재 재고가 없습니다.");
 				} else {
-					cart[ctIndex] = ne[index - 1];
-					ne[index - 1].setStock(ne[index - 1].getStock() - 1);
+					int temp = ne[index - 1].getStock();
+					cart[ctIndex++] = new Books(ne[index - 1].getName(), ne[index - 1].getWriter(),
+							ne[index - 1].getGenre(), ne[index - 1].getPrice(), 1);
+
+					ne[index - 1].setStock(temp - 1);
+					cart[ctIndex - 1].setStock(1);
+
 					System.out.println("장바구니에 책 1권을 담았습니다.");
 				}
-				break;
-				
+				return;
+
 			case 2:
 				printEco();
 				System.out.println("구입 하실 책의 no.를 입력하세요 : ");
 				index = sc.nextInt();
+				if (index <= 0 || index > cIndex) {
+					System.out.println("해당하는 책이 없습니다.");
+					continue;
+				}
 				if (eco[index - 1].getStock() == 0) {
 					System.out.println("현재 재고가 없습니다.");
 				} else {
-					cart[ctIndex] = eco[index - 1];
-					eco[index - 1].setStock(eco[index - 1].getStock() - 1);
+					int temp = eco[index - 1].getStock();
+
+					cart[ctIndex++] = new Books(eco[index - 1].getName(), eco[index - 1].getWriter(),
+							eco[index - 1].getGenre(), eco[index - 1].getPrice(), 1);
+
+					eco[index - 1].setStock(temp - 1);
 					System.out.println("장바구니에 책 1권을 담았습니다.");
 				}
-				break;
-				
+				return;
+
 			case 3:
 				printEdu();
 				System.out.println("구입하실 책의 no.를 입력하세요 : ");
 				index = sc.nextInt();
+				if (index <= 0 || index > dIndex) {
+					System.out.println("해당하는 책이 없습니다.");
+					continue;
+				}
 				if (edu[index - 1].getStock() == 0) {
 					System.out.println("현재 재고가 없습니다.");
 				} else {
-					cart[ctIndex] = edu[index - 1];
-					edu[index - 1].setStock(edu[index - 1].getStock() - 1);
+					int temp = edu[index - 1].getStock();
+					cart[ctIndex++] = new Books(edu[index - 1].getName(), edu[index - 1].getWriter(),
+							edu[index - 1].getGenre(), edu[index - 1].getPrice(), 1);
+					cart[ctIndex - 1].setStock(1);
+					edu[index - 1].setStock(temp - 1);
 				}
 
-				break;
+				return;
 			case 0:
 				return;
 
@@ -522,20 +565,39 @@ public class Controll {
 	}
 
 	public void showPoint() {
-		
+
 		while (true) {
 			System.out.println("====== 포인트 보기======");
-			System.out.println("포인트를 보시겠습니까?[y/n]");
-			char sel = sc.next().charAt(0);
-			if (sel == 'y') {
-				System.out.println("포인트 보기 : " + point);
-				return;
-			} else {
-				System.out.println("포인트 보기 취소");
-				continue;
-			}
-
+			System.out.println("포인트 보기 : " + point);
+			return;
 		}
+	}
 
+	public void printBook() {
+		while (true) {
+			System.out.println("===== 도서 현황 =====");
+			System.out.println("1. 소설/에세이");
+			System.out.println("2. 경제");
+			System.out.println("3. 학습서");
+			System.out.println("0. 뒤로가기");
+			System.out.print("입력 > ");
+			int select = sc.nextInt();
+			switch (select) {
+			case 1:
+				printNE();
+				break;
+			case 2:
+				printEco();
+				break;
+			case 3:
+				printEdu();
+				break;
+			case 0:
+				return;
+			default:
+				System.out.println("잘못 입력하셨습니다.");
+
+			}
+		}
 	}
 }
