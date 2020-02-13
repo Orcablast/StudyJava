@@ -227,46 +227,55 @@ public class Test {
 		System.out.print("숫자 입력 : ");
 		String str = sc.next();
 		
-		// 문자열 길이 측정
-		char[] arr = new char[str.length()];
+		int num = Integer.parseInt(str);
 		
-		int index= 1;
 		
-
-		int num = 0;
 		
-		for(int i=0; i<str.length(); i++) {
-			
-			char ch = str.charAt(i);
-			
-			if(ch>47 && ch<58) {
-				arr[i]=str.charAt(i);
-			} else {
-				System.out.println("숫자가 아닙니다.");
-				return;
-			}			
-		}
-		
-//		for(int i=str.length()-1; i>=0; i--) {
+//		
+//		// 문자열 길이 측정
+//		char[] arr = new char[str.length()];
+//		
+//		int num = 0;
+//		
+//		
+//		int index = 1;
+//		
+//		for(int i=0; i<str.length(); i++) {
 //			
-//			if(str.charAt(i)>47 && str.charAt(i)<58) {
-//				num += (str.charAt(i)-48)*Math.pow(10, i);
+//			char ch = str.charAt(i);
+//			
+//			if(ch>47 && ch<58) {
+//				arr[i]=str.charAt(i);
 //			} else {
 //				System.out.println("숫자가 아닙니다.");
 //				return;
 //			}			
 //		}
-		
-		
-		
-		
-		for(int i=arr.length-1; i>=0; i--) {
-			num += (arr[i]-48)*index;
-//			num += (arr[i]-48)*Math.pow(10, i);
-			index= index*10;
-		}
-		
+//				
+//		for(int i=arr.length-1; i>=0; i--) {
+//			num += (arr[i]-48)*index;
+////			num += (arr[i]-48)*Math.pow(10, i);
+//			index= index*10;
+//		}
+//		
+//		System.out.println(num);
+//		
+//		int index= str.length()-1;
+//		for(int i=0; i<str.length(); i++) {
+//			
+//			if(str.charAt(i)>47 && str.charAt(i)<58) {
+//				num += (str.charAt(i)-48)*Math.pow(10, index--);
+//			} else {
+//				System.out.println("숫자가 아닙니다.");
+//				return;
+//			}			
+//		}
+//		
+//
 		System.out.println(num);
+		
+		
+		
 	}
 	
 }
