@@ -34,7 +34,7 @@ public class Exam implements Calc {
 				return;
 
 			case '/':
-				System.out.printf("%.5f",div(num1, num2));
+				System.out.println(div(num1, num2));
 				return;
 
 			default:
@@ -46,17 +46,17 @@ public class Exam implements Calc {
 
 	@Override
 	public int add(String num1, String num2) {
-		return (Integer.valueOf(num1)+Integer.valueOf(num2));
+		return (Integer.parseInt(num1)+Integer.parseInt(num2));
 	}
 
 	@Override
 	public int sub(String num1, String num2) {
-		return (Integer.valueOf(num1)-Integer.valueOf(num2));
+		return (Integer.parseInt(num1)-Integer.parseInt(num2));
 	}
 
 	@Override
 	public int multi(String num1, String num2) {
-		return (Integer.valueOf(num1)*Integer.valueOf(num2));
+		return (Integer.parseInt(num1)*Integer.parseInt(num2));
 	}
 
 	@Override
