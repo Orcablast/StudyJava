@@ -38,7 +38,6 @@ public class Exam {
 
 			break;
 		}
-
 	}
 
 	public void inputCity() { // 사용자에게 도시 이름을 입력받는 함수
@@ -84,13 +83,8 @@ public class Exam {
 				time += 5;
 				dataGetOld();
 				cache.put(city, 0);
-			}
-			
-			
-			
-			
+			}		
 		}
-
 	}
 
 	public void dataGetOld() {
@@ -103,8 +97,7 @@ public class Exam {
 		
 		for(String key : keys) {
 			cache.put(key, (cache.get(key)-1));
-		}
-		
+		}		
 	}
 	
 	public String cacheReplace() {
@@ -121,8 +114,6 @@ public class Exam {
 			}
 		}
 		
-		return oldKey;
-		
-	}
-	
+		return oldKey;		
+	}	
 }
