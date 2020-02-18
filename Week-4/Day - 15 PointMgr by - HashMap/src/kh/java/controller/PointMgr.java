@@ -95,8 +95,7 @@ public class PointMgr {
 			
 		} else {
 			System.out.println("회원 정보가 없습니다.");			
-		}
-		
+		}		
 	}
 	
 	public void deleteMbr() {
