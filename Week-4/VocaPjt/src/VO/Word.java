@@ -1,11 +1,5 @@
 package VO;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.StringTokenizer;
 
 public class Word {
 	
@@ -46,49 +40,5 @@ public class Word {
 	public void setMean2(String mean2) {
 		this.mean2 = mean2;
 	}
-
-	ArrayList<Word> allDB; // 전역 변수
-	
-	BufferedReader br = null; // 전역 변수
-	
-	public void makeDB() {
-
-		ArrayList<Word> allDB = new ArrayList<Word>();
-		
-		
-		try {
-			br = new BufferedReader(new FileReader("all.txt")); 			
-			
-			String str;
-			
-			while(true) {
-				str = br.readLine();
-								
-				if(str==null) {
-					break;
-					
-				} else {
-					StringTokenizer sT = new StringTokenizer(str,"/");
-					
-					String name = sT.nextToken();
-					String mean1 = sT.nextToken();
-					String mean2 = sT.nextToken();
-					
-					allDB.add(new Word(name,mean1,mean2));
-					
-				}
-			}
-			
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
-		
-	}
-	
-	
-	
 
 }
