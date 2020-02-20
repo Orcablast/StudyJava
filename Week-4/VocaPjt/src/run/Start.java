@@ -5,7 +5,7 @@ import controller.updateWord;
 
 public class Start {
 	public static void main(String[] args) {
-		new updateWord().updateMain();
+		new updateWord().showRandomWord();
 		
 	}
 

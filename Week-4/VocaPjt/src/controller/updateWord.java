@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.StringTokenizer;
 
 import VO.Word;
@@ -23,6 +24,8 @@ public class updateWord {
 	BufferedReader br = null; // 테스트용 객체 생성, 삭제되어야함
 
 	BufferedWriter bw = null; // 테스트용 객체 생성, 삭제되어야함
+	
+	Random rn = new Random();
 
 	public updateWord() { // 테스트용 기본생성자, 삭제되어야함
 
@@ -166,6 +169,20 @@ public class updateWord {
 			return;
 		}
 
+	}
+	
+	public void showRandomWord() {
+		
+		while(true) { // 사용자가 그만두기를 입력하지 않으면 루프
+			Word randomWord = allDB.get(rn.nextInt(allDB.size()));
+			
+			view.showRandomWord(randomWord); // randomWord를 사용자화면에 출력
+			
+			if(view.askNextRandom()) { // 그만둘지를 사용자에게 질문하여 false를 return 받았을때
+				System.out.println("이전 메뉴로 돌아갑니다.");
+				return;
+			}
+		}
 	}
 
 }

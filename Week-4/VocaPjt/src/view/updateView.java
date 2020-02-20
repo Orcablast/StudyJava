@@ -3,6 +3,8 @@ package view;
 
 import java.util.Scanner;
 
+import VO.Word;
+
 public class updateView {
 
 	Scanner sc = new Scanner(System.in);
@@ -54,5 +56,34 @@ public class updateView {
 				System.out.println("잘못된 입력입니다.");
 			}
 		}
+	}
+	
+	public void showRandomWord(Word randomWord) {
+		
+		System.out.println("\n단어명 : "+randomWord.getName());
+		System.out.println("의미 : ");
+		System.out.print("1. "+randomWord.getMean1()+"\n");
+		
+		if(randomWord.getMean2()==null) {
+			return;
+		} else {
+			System.out.print("2. "+randomWord.getMean2()+"\n");
+		}
+	}
+	
+	public boolean askNextRandom() {
+		
+		System.out.println("\n다음 단어를 보시겠습니까?");
+		System.out.println("그만보시려면 x, 계속 보시려면 아무키나 입력하세요.");
+		
+		char userAnswer = sc.next().charAt(0);
+		
+		if(userAnswer=='x') {
+			return true;
+			
+		} else {
+			return false;
+		}
+		
 	}
 }
