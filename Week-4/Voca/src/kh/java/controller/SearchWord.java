@@ -212,6 +212,7 @@ public class SearchWord {
 
 		} else if (view.delWord(userInput)) { // 유저가 y를 입력해 단어삭제를 진행하는 경우 = true가 리턴될 때
 			allDB.remove(index);
+			
 			saveDB();
 
 		} else { // 유저가 n을 입력하여 단어삭제를 취소한 경우
