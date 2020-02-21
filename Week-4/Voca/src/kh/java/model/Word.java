@@ -1,6 +1,9 @@
 package kh.java.model;
 
+
+
 public class Word {
+	
 	
 	private String name;
 	private String mean1;
@@ -13,6 +16,7 @@ public class Word {
 		this.name = name;
 		this.mean1= mean1;
 		this.mean2 = mean2;
+		
 	}
 	
 	

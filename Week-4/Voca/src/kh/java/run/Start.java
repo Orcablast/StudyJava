@@ -1,13 +1,13 @@
 package kh.java.run;
 
-import kh.java.controller.SearchWord;
+import kh.java.controller.Controll;
 
 public class Start {
 
 	public static void main(String[] args) {
-		SearchWord main = new SearchWord();
-		
-		main.controlMain();
+		Controll main = new Controll();
+
+		main.controlMain();;
 	}
 
 }
