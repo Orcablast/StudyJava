@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 import java.util.StringTokenizer;
 import kh.java.view.View;
@@ -26,10 +27,11 @@ public class Controll {
 	BufferedReader br;
 	BufferedReader failBr;
 	BufferedWriter bw;
+	BufferedWriter failBw;
 	Random r = new Random();
 	Scanner sc = new Scanner(System.in);
 
-	public Controll() { // 단어장 전체 읽어와 리스트에 추가
+	public Controll(){ // 단어장 전체 읽어와 리스트에 추가
 
 		try {
 			br = new BufferedReader(new FileReader("allDB.txt"));
@@ -54,7 +56,6 @@ public class Controll {
 				e.printStackTrace();
 			}
 		}
-
 	}
 
 	public void controlMain() { // 첫 메뉴
@@ -79,21 +80,29 @@ public class Controll {
 					updateMain();
 					break;
 				case 0:
-					saveDB(allDB, "allDB");
-					saveDB(failDB, "failDB");
+					bw = new BufferedWriter(new FileWriter("allDB.txt"));
+					saveDB(bw,allDB);
+					failBw = new BufferedWriter(new FileWriter("failDB.txt"));
+					saveDB(failBw,failDB);
+					bw.close();
+					failBw.close();
 					return;
 				}
 			}
 		} catch (Exception e) {
-
+			System.out.println("오류 발생");
 			try {
-				saveDB(allDB, "allDB");
-				saveDB(failDB, "failDB");
+				bw = new BufferedWriter(new FileWriter("allDB.txt"));
+				saveDB(bw,allDB);
+				failBw = new BufferedWriter(new FileWriter("failDB.txt"));
+				saveDB(failBw,failDB);
+				bw.close();
+				failBw.close();
+				
 			} catch (IOException e1) {
 				e1.printStackTrace();
 			}
 		}
-
 	}
 
 	public int searchIndex(String userInput) { // 유저가 입력한 단어 단어장에 있는지 검사 및 결과 리턴 !!!!!!!재사용 가능!!!!!!!!!
@@ -106,18 +115,17 @@ public class Controll {
 		return -1; // 해당되는 단어를 찾지 못할경우 -1 리턴
 	}
 
-	public void saveDB(ArrayList<Word> arr, String fileName) throws IOException { // 수정, 삭제가 끝날시 진행할 DB 저장 메소드
-
-		bw = new BufferedWriter(new FileWriter(fileName + ".txt")); // allDB.txt에 저장하는 BufferWriter 생성
+	public void saveDB(BufferedWriter bfw, ArrayList<Word> arr) throws IOException { // 수정, 삭제가 끝날시 진행할 DB 저장 메소드
+		
 		int i = 0;
-		for (Word w : allDB) { // allDB 내의 모든 Word 객체 검색
+		for (Word w : arr) { // allDB 내의 모든 Word 객체 검색
 
 			if (i != 0) { // 최초에는 개행처리하지않음.
-				bw.newLine();
+				bfw.newLine();
 			}
 			// 검색된 Word 객체의 이름, mean1, mean2를 구분자 / 를 기준으로 FileWrite
 
-			bw.write(w.getName() + "/" + w.getMean1() + "/" + w.getMean2());
+			bfw.write(w.getName() + "/" + w.getMean1() + "/" + w.getMean2());
 			i++;
 		}
 	}
@@ -143,10 +151,7 @@ public class Controll {
 			}
 		}
 	}
-
-	// ---------수정 및
-	// 삭제_도형이형-------------------------------------------------------------------------------------
-
+	
 	public void updateMain() { // 유저에게 메뉴화면을 출력하고 입력값을 리턴받아 진행
 
 		while (true) {
@@ -276,7 +281,7 @@ public class Controll {
 		}
 	}
 
-	// ---------테스트_예진누나-------------------------------------------------------------------------------------
+	// ---------테스트_예진누나------------------------------------------------------------------------------------
 
 	public void setTest(ArrayList<Word> DB, int qNum) { // 사용자가 입력한 값만큼 사용할 문제의 index를 정하는 메소드
 		int index;
@@ -293,22 +298,21 @@ public class Controll {
 		}
 	}
 
-	public int doTest(ArrayList<Word> DB,int slt) {
+	public int doTest(ArrayList<Word> DB, int slt) {
 		int score = 0;
-		
-		
+
 		for (int i : qIndex) {
-			
-			switch(slt) {
+
+			switch (slt) {
 			case 1:
 				System.out.print("\n" + DB.get(i).getName() + " : ");
 				break;
-				
+
 			case 2:
-				System.out.print("\n" + DB.get(i).getMean1() +", "+DB.get(i).getMean2() + " : ");
+				System.out.print("\n" + DB.get(i).getMean1() + ", " + DB.get(i).getMean2() + " : ");
 				break;
-			}			
-			
+			}
+
 			String ans = sc.nextLine();
 
 			int result = DB.get(i).toString().indexOf(ans);
@@ -324,8 +328,8 @@ public class Controll {
 				cIndex.add(i);
 				score++;
 			}
-		}		
-		
+		}
+
 		qIndex.clear();
 		return score;
 	}
@@ -410,21 +414,31 @@ public class Controll {
 			return;
 		}
 		System.out.println("테스트를 시작합니다. 다음 영단어를 보고 뜻을 입력하세요.");
-		
+
 		setTest(failDB, failDB.size());
-		
+
 		double score = doTest(failDB, 1);
-		
+
 		view.testResult((score / (double) failDB.size()) * 100);
-		
-		for(int i : cIndex) {
-			failDB.remove(i);
+
+		if (cIndex.size() == failDB.size()) {
+			failDB.clear();
+			
+		} else {
+			
+			Collections.sort(cIndex);
+			Collections.reverse(cIndex);
+			
+			for (int i : cIndex) {
+				failDB.remove(i);
+			}
+
 		}
-		
+
 		cIndex.clear();
-		
+
 	}
-	
+
 	public void readNote() { // 오답노트 넘버링 보고 선택해서 뜻까지 조회
 
 		if (failDB.size() == 0) { // 보여줄 오답이 없을 시
