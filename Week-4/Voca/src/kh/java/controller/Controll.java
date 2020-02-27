@@ -12,7 +12,6 @@ import java.util.Random;
 import java.util.StringTokenizer;
 import kh.java.view.View;
 import kh.java.model.*;
-import kh.java.view.*;;
 
 public class Controll {
 
@@ -23,6 +22,7 @@ public class Controll {
 	ArrayList<Word> allDB = new ArrayList<Word>(); // 영단어 List
 	ArrayList<Word> failDB = new ArrayList<Word>(); // 오답 DB List
 	ArrayList<Integer> qIndex = new ArrayList<Integer>();
+	ArrayList<Integer> cIndex = new ArrayList<Integer>();
 	BufferedReader br;
 	BufferedReader failBr;
 	BufferedWriter bw;
@@ -90,7 +90,6 @@ public class Controll {
 				saveDB(allDB, "allDB");
 				saveDB(failDB, "failDB");
 			} catch (IOException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 		}
@@ -279,10 +278,10 @@ public class Controll {
 
 	// ---------테스트_예진누나-------------------------------------------------------------------------------------
 
-	public void setTest(int qNum) { // 사용자가 입력한 값만큼 사용할 문제의 index를 정하는 메소드
+	public void setTest(ArrayList<Word> DB, int qNum) { // 사용자가 입력한 값만큼 사용할 문제의 index를 정하는 메소드
 		int index;
 		for (int i = 0; i < qNum; i++) {
-			index = r.nextInt(allDB.size());
+			index = r.nextInt(DB.size());
 
 			if (qIndex.contains(index)) {
 				i--;
@@ -294,24 +293,40 @@ public class Controll {
 		}
 	}
 
-	public int doTest() {
+	public int doTest(ArrayList<Word> DB,int slt) {
 		int score = 0;
-
+		
+		
 		for (int i : qIndex) {
-			System.out.print("\n" + allDB.get(i).getName() + " : ");
+			
+			switch(slt) {
+			case 1:
+				System.out.print("\n" + DB.get(i).getName() + " : ");
+				break;
+				
+			case 2:
+				System.out.print("\n" + DB.get(i).getMean1() +", "+DB.get(i).getMean2() + " : ");
+				break;
+			}			
+			
 			String ans = sc.nextLine();
 
-			int result = allDB.get(i).toString().indexOf(ans);
+			int result = DB.get(i).toString().indexOf(ans);
 
 			if (result == -1) {
 				System.out.println("땡!!");
-				failDB.add(allDB.get(i));
+				if (!checkDup(failDB, DB.get(i))) {
+					failDB.add(DB.get(i));
+				}
+
 			} else {
 				System.out.println("정답!!");
+				cIndex.add(i);
 				score++;
 			}
-		}
-
+		}		
+		
+		qIndex.clear();
 		return score;
 	}
 
@@ -325,12 +340,12 @@ public class Controll {
 			case 1: // 영한테스트라면
 
 				qNum = view.askQNum("영한");
-				setTest(qNum);
+				setTest(allDB, qNum);
 
 				System.out.println("테스트를 시작합니다.");
 				System.out.println("다음 단어를 보고 답을 입력하세요.");
 
-				score = doTest();
+				score = doTest(allDB, 1);
 
 				view.testResult((score / (double) qNum) * 100);
 
@@ -338,15 +353,14 @@ public class Controll {
 			case 2: // 한영테스트라면
 
 				qNum = view.askQNum("한영");
-				setTest(qNum);
+				setTest(allDB, qNum);
 
 				System.out.println("테스트를 시작합니다.");
 				System.out.println("다음 의미를 보고 단어를 입력하세요.");
 
-				score = doTest();
+				score = doTest(allDB, 2);
 
 				view.testResult((score / (double) qNum) * 100);
-
 			case 0:
 				System.out.println("이전 메뉴로 돌아갑니다.");
 				return;
@@ -354,17 +368,15 @@ public class Controll {
 		}
 	} // main
 
-	public void clearDupInDB(ArrayList<Word> DB) {	
-		
-		for(int i=0; i<DB.size(); i++) {
-			for(int j=i+1; j<failDB.size(); j++) {
-				if(DB.get(i).toString().equals(DB.get(j).toString())) {
-					failDB.remove(j);					
-					j--;
-				}
+	public Boolean checkDup(ArrayList<Word> DB, Word w) {
+
+		for (int i = 0; i < DB.size(); i++) {
+			if (DB.get(i).toString().equals(w.toString())) {
+				return true;
 			}
 		}
 
+		return false;
 	}
 
 	// ---------오답_수민누나-------------------------------------------------------------------------------------
@@ -380,9 +392,11 @@ public class Controll {
 				reTest();
 				break;
 			case 3:
-				clearNote();
+				failDB.clear();
+				System.out.println("오답노트가 삭제되었습니다.");
 				break;
-			case 4:
+			case 0:
+				System.out.println("이전 메뉴로 돌아갑니다.");
 				return;
 			}
 		}
@@ -390,72 +404,39 @@ public class Controll {
 
 	public void reTest() { // 재작성 필요
 
-		view.reTest();
-
-		char agree = sc.next().toLowerCase().charAt(0); // 재시험 여부 입력
-		sc.nextLine();
-
-		switch (agree) {
-		case 'n': // 재시험 원치 않을 시 종료
-			System.out.println("이전 메뉴로 돌아갑니다.\n");
+		if (failDB.size() == 0) {
+			System.out.println("오답노트가 비어있습니다");
+			System.out.println("이전 메뉴로 돌아갑니다");
 			return;
-		case 'y': // 재시험 원할 시
-			if (failDB.size() == 0) {
-				System.out.println("오답노트에 단어가 없습니다!");
-				return;
-			}
-			System.out.println("테스트를 시작합니다. 다음 영단어를 보고 뜻을 입력하세요.");
-			// System.out.println(failName.size());
-			System.out.println(failDB.size());
-			System.out.println();
-			// int size = failName.size();
-			// for (int i = 0; i < size; i++) {
-
-			// System.out.println(failName.get(i)); // 오답(뜻 제외한) 영단어에 인덱스 붙여서 출력
-			System.out.print("뜻 : ");
-			String ans = sc.nextLine(); // 뜻 입력받음.
-
-			// StringTokenizer sT = new StringTokenizer(failDB.get(question), "/"); //뜻 포함한
-			// 영단어 3개의 토큰으로 나눠주기
-			// sT.nextToken();
-			// String mean1 = sT.nextToken(); //뜻1 출력
-			// String mean2 = sT.nextToken(); //뜻2 출력
-
-			// if (failDB.get(i).getMean1().equals(ans) ||
-			// failDB.get(i).getMean2().equals(ans)) {
-			System.out.println("정답!"); // '입력받은 답 '이 '문제의 뜻'과 하나라도 같으면 "정답"
-			// failName.remove(i); // 단어 들어있는 배열에서 제거해주기
-			// failDB.remove(i); // 위와 상동
-			// } else {
-			// System.out.println("틀렸습니다!");
-			// }
-			//
-			// }
 		}
+		System.out.println("테스트를 시작합니다. 다음 영단어를 보고 뜻을 입력하세요.");
+		
+		setTest(failDB, failDB.size());
+		
+		double score = doTest(failDB, 1);
+		
+		view.testResult((score / (double) failDB.size()) * 100);
+		
+		for(int i : cIndex) {
+			failDB.remove(i);
+		}
+		
+		cIndex.clear();
+		
 	}
-
-	public void clearNote() { // 오답노트 비워주는 메소드
-	}
-
+	
 	public void readNote() { // 오답노트 넘버링 보고 선택해서 뜻까지 조회
-		//
-		// if (failName.size() == 0) { // 보여줄 오답이 없을 시
-		// System.out.println("오답노트에 담긴 단어가 없습니다.\n");
-		// } else { // failName(뜻 제외한 단어만 들어있는) 배열에 넣은 오답name 일련화해서 출력
-		// for (int i = 0; i < failName.size(); i++) {
-		// System.out.println((i + 1) + ". " + (failName.get(i)));
-		// }
-		//
-		// view.readNote(); // view클래스의 readNote 메소드 실행
-		// int select = sc.nextInt(); // 조회하고 싶은 오답 번호 선택
-		// System.out.println("단어 : " + failDB.get(select - 1).getName() + " 첫번째 뜻 : "
-		// + failDB.get(select - 1).getMean1() + " 두번째 뜻 : " + failDB.get(select -
-		// 1).getMean2()); // 뜻 포함한 영단어
-		// // 들어있는 배열에서
-		// // 선택한 오답 출력
-		// System.out.println();
-		// }
 
+		if (failDB.size() == 0) { // 보여줄 오답이 없을 시
+			System.out.println("오답노트에 담긴 단어가 없습니다.\n");
+			return;
+		} else {// failName(뜻 제외한 단어만 들어있는) 배열에 넣은 오답name 일련화해서 출력
+			int i = 1;
+			for (Word w : failDB) {
+				System.out.println(i + ". " + w.toString());
+				i++;
+			}
+		}
 	}
 
 	public void Insertdictionary() {

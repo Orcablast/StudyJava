@@ -119,8 +119,7 @@ public class View {
 			System.out.println("빵점!! 공부하세요!!!");
 		} else {
 			System.out.printf("테스트 결과 : %.2f",score);
-		}
-		
+		}		
 	}
 
 	//---------오답_수민누나-------------------------------------------------------------------------------------
@@ -130,20 +129,13 @@ public class View {
 		System.out.println("1. 오답 보기");
 		System.out.println("2. 재시험");
 		System.out.println("3. 오답노트 비우기");
-		System.out.println("4. 뒤로");
+		System.out.println("0. 뒤로");
 		System.out.print("선택 > ");
 		int select = sc.nextInt();
 		return select;
 	}
 
-	public void readNote() {			//1. 오답보기;  오답 출력 후 출력될 출력문
-		System.out.println("조회할 오답 선택 : ");
-	
-	}
 
-	public void reTest() {
-		System.out.println("재시험하시겠습니까[y/n]?");
-	}
 
 	// ---------단어 등록_지현-------------------------------------------------------------------------------------
 
