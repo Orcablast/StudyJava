@@ -6,10 +6,7 @@ public class Start {
 
 	public static void main(String[] args) {
 		
-		new ExamController().logIn();
-
-		
-		
+		new ExamController().logIn();		
 		
 	}
 

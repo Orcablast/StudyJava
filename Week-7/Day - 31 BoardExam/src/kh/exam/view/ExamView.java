@@ -133,7 +133,12 @@ public class ExamView {
 		
 		System.out.print("게시물 번호 입력 : ");
 		
-		return sc.nextInt();
+		int slt = sc.nextInt();
+		
+		sc.nextLine();
+		
+		return slt;
+		
 	}
 	
 	public Board modifyBoard(Board b) {
@@ -144,6 +149,7 @@ public class ExamView {
 		b.setBoardContent(sc.nextLine());
 		
 		return b;
+		
 	}
 	
 }

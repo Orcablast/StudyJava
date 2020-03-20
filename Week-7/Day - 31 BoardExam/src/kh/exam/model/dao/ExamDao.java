@@ -185,46 +185,43 @@ public class ExamDao {
 	}
 
 	public ArrayList<Board> boardList(Connection conn, int key) {
-		
+
 		ArrayList<Board> list = new ArrayList<Board>();
-		
+
 		String query = null;
-		
-		if(key == 0) {
+
+		if (key == 0) {
 			query = "select * from exam_board";
 		} else {
 			query = "select board_no, board_title, board_content, nvl(member_name,'탈퇴회원'), read_count, write_date from exam_board left join exam_member on (board_writer = member_id)";
-			
+
 		}
-		
+
 		PreparedStatement pst = null;
 		ResultSet rset = null;
-		
-		
+
 		try {
-			
+
 			pst = conn.prepareStatement(query);
-			
-			if(key > 0) {
+
+			if (key > 0) {
 				pst.setInt(1, key);
 			}
-							
+
 			rset = pst.executeQuery();
-			
-			
-			while(rset.next()) {
+
+			while (rset.next()) {
 				list.add(setBoard(rset));
 			}
-			
-			
+
 		} catch (SQLException e) {
 			e.printStackTrace();
-			
+
 		} finally {
 			JDBCTemplate.close(rset);
 			JDBCTemplate.close(pst);
 		}
-		
+
 		return list;
 	}
 
@@ -273,85 +270,81 @@ public class ExamDao {
 	}
 
 	public Board readBoard(Connection conn, int slt) {
-		
+
 		Board b = null;
-		
+
 		String query = "select * from exam_board where board_no = ?";
-		
+
 		PreparedStatement pst = null;
 		ResultSet rset = null;
-		
-		
+
 		try {
 			pst = conn.prepareStatement(query);
-			
+
 			pst.setInt(1, slt);
-			
+
 			rset = pst.executeQuery();
-			
-			if(rset.next()) {
+
+			if (rset.next()) {
 				b = setBoard(rset);
 			}
-			
-			
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			JDBCTemplate.close(rset);
 			JDBCTemplate.close(pst);
 		}
-		
-		
+
 		return b;
 	}
 
 	public int modifyBoard(Connection conn, Board b) {
-		
+
 		PreparedStatement pst = null;
-		
+
 		int result = 0;
-		String query = "update exam_board set board_title = ?, board_content = ? where member_no = ?";
-		
+		String query = "update exam_board set board_title = ?, board_content = ? where board_no = ?";
+
 		try {
 			pst = conn.prepareStatement(query);
-			
+
 			pst.setString(1, b.getBoardTitle());
 			pst.setString(2, b.getBoardContent());
 			pst.setInt(3, b.getBoardNo());
-			
+
 			result = pst.executeUpdate();
-			
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			JDBCTemplate.close(pst);
 		}
-		
+
 		return result;
 	}
-	
-public int deleteBoard(Connection conn, Board b) {
-		
+
+	public int deleteBoard(Connection conn, Board b) {
+
 		PreparedStatement pst = null;
-		
+
 		int result = 0;
-		String query = "update exam_board set board_title = ?, board_content = ? where member_no = ?";
-		
+		String query = "delete from exam_board where board_no = ?";
+
 		try {
 			pst = conn.prepareStatement(query);
-			
-			pst.setString(1, b.getBoardTitle());
-			pst.setString(2, b.getBoardContent());
-			pst.setInt(3, b.getBoardNo());
-			
+
+			pst.setInt(1, b.getBoardNo());
+
 			result = pst.executeUpdate();
-			
+
 		} catch (SQLException e) {
 			e.printStackTrace();
+			
 		} finally {
 			JDBCTemplate.close(pst);
 		}
-		
+
 		return result;
 	}
 
