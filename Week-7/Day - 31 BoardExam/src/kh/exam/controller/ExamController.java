@@ -284,23 +284,47 @@ public class ExamController {
 
 		JDBCTemplate.close(conn);
 	}
+	
+	public Board checkBoard() {
+		
 
+		Connection conn = JDBCTemplate.getConnectionDB();
+
+		ExamDao db = new ExamDao();
+
+		int slt = view.selectOnList();
+		
+		Board b = db.readBoard(conn, slt);
+
+		if (b != null) {
+
+			return b;
+
+		} else {
+			view.printMsg("게시물 번호를 확인하세요.");
+		}
+
+		JDBCTemplate.close(conn);
+		
+		return null;
+	}
+	
 	public void readBoard() {
 
 		Connection conn = JDBCTemplate.getConnectionDB();
 
 		ExamDao db = new ExamDao();
 
-		ArrayList<Board> list = db.boardList(conn, 0);
-
 		int slt = view.selectOnList();
+		
+		Board b = db.readBoard(conn, slt);
 
-		if ((slt <= list.size()) && (slt > 0)) {
+		if (b != null) {
 
-			if (db.countRead(conn, list.get(slt - 1)) > 0) {
+			if (db.countRead(conn, b) > 0) {
 				JDBCTemplate.commit(conn);
 				view.printSubject("게시글 정보");
-				view.printBoardDetails(db.readBoard(conn, slt));
+				view.printBoardDetails(b);
 			} else {
 
 				JDBCTemplate.rollback(conn);
