@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>납품 정보</title>
+  </head>
+  <body>
+    <form action="test.html" method="GET">
+      <fieldset>
+        <legend>납품자정보</legend>
+        <ol type="1">
+          <li>
+            <label for="vendor_name">납품자명 :</label>
+            <input
+              type="text"
+              name="vendor_name"
+              id="vendor_name"
+              placeholder="name"
+              required
+            />
+          </li>
+          <li>
+            <label for="vendor_mail">
+              email :
+            </label>
+            <input
+              type="email"
+              name="vendor_mail"
+              id="vendor_mail"
+              placeholder="answs@naver.com"
+            />
+          </li>
+          <li>
+            <label for="vendor_site">홈페이지 : </label>
+            <input
+              type="url"
+              name="vendor_site"
+              id="vendor_site"
+              placeholder="http://"
+            />
+          </li>
+        </ol>
+      </fieldset>
+      <fieldset>
+        <legend>납품정보</legend>
+        <ul>
+          <li>
+            <label for="product_name">상품명 : </label>
+            <input type="text" name="product_name" id="product_name" required />
+          </li>
+          <li>
+            <label for="product_amount">납품수량 : </label>
+            <input
+              type="number"
+              name="product_amount"
+              id="product_amount"
+              min="100"
+              placeholder="최소100"
+              required
+            />
+          </li>
+          <li>
+            <label for="product_grade">납품등급 : </label>
+            <input
+              type="range"
+              name="product_grade"
+              id="product_grade"
+              size="5"
+            />
+          </li>
+          <li>
+            <label for="product_detail">기타사항 : </label>
+            <textarea
+              name="product_detail"
+              id="product_detail"
+              cols="30"
+              rows="3"
+            ></textarea>
+          </li>
+        </ul>
+      </fieldset>
+      <input type="submit" value="send message" />
+    </form>
+    <style>
+      li {
+        margin: 7px;
+      }
+    </style>
+  </body>
+</html>

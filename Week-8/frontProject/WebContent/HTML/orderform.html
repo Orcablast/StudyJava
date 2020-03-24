@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>피자 주문</title>
+  </head>
+  <body>
+    <form action="somewhere.html" method="GET">
+      <p>고객명 : <input type="text" name="user_name" required /></p>
+      <p>전화번호 : <input type="text" name="user_tel" required /></p>
+      <p>E-mail : <input type="email" name="user_mail" /></p>
+      <fieldset>
+        <legend>피자 사이즈</legend>
+        <p>
+          <input
+            type="radio"
+            name="size"
+            value="Small"
+            id="size_small"
+            checked
+          />
+          <label for="size_small">Small</label>
+        </p>
+        <p>
+          <input type="radio" name="size" value="Medium" id="size_medium" />
+          <label for="size_medium">Medium</label>
+        </p>
+        <p>
+          <input type="radio" name="size" value="Large" id="size_large" />
+          <label for="size_large">Large</label>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>토핑선택</legend>
+        <p>
+          <input type="checkbox" name="topping" value="bacon" id="top_bacon" />
+          <label for="top_bacon">베이컨</label>
+        </p>
+        <p>
+          <input
+            type="checkbox"
+            name="topping"
+            id="top_cheese"
+            value="cheese"
+          />
+          <label for="top_cheese">치즈</label>
+        </p>
+        <p>
+          <input type="checkbox" name="topping" id="top_onion" value="onion" />
+          <label for="top_onion">양파</label>
+        </p>
+        <p>
+          <input
+            type="checkbox"
+            name="topping"
+            id="top_mushroom"
+            value="mushroom"
+          />
+          <label for="top_mushroom">버섯</label>
+        </p>
+      </fieldset>
+      <p>
+        희망배송시간 :
+        <input type="time" name="deli_time" id="deli_time" required />
+      </p>
+      <p>
+        배송시 요청 사항 :
+        <textarea
+          name="deli_demand"
+          id="deli_demand"
+          cols="30"
+          rows="3"
+        ></textarea>
+      </p>
+      <input type="submit" value="주문하기" />
+    </form>
+  </body>
+</html>
