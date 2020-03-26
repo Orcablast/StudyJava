@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css?family=Modak&display=swap");
+
+.exam1 {
+  font-family: "궁서체";
+}
+
+.exam2 {
+  font-family: "고딕체";
+}
+
+.exam3 {
+  font-family: "도형체";
+}
+
+.exam4 {
+  font-family: "Modak", cursive;
+}
+
+a {
+  text-decoration: none;
+  color: crimson;
+}
+
+.size01 {
+  font-size: 25px;
+}
+
+.size02 {
+  font-size: 120%;
+}
+
+.weight01 {
+  font-weight: bold;
+}
+
+.weight02 {
+  font-weight: lighter;
+}
+
+.weight03 {
+  font-weight: bolder;
+}
+
+.variant02 {
+  font-variant: small-caps;
+}
+
+.style01 {
+  font-style: italic;
+}
+
+.style02 {
+  font-style: oblique;
+}
+
+.all_attri01 {
+  font: 16px "궁서체";
+}
+
+.all_attri02 {
+  font: italic bold 20px "고딕체";
+}

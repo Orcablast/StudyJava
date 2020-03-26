@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font Styles</title>
+    <style>
+      .p1 {
+        text-indent: 10px;
+      }
+      .p2 {
+        color: black;
+      }
+
+      .p3 {
+        line-height: 50px;
+      }
+      #d1 {
+        width: 200px;
+        height: 50px;
+        border: 1px solid black;
+        text-align: center;
+        line-height: 50px;
+      }
+
+      .p4,
+      .p5 {
+        border: 1px solid black;
+        width: 15em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
+      }
+
+      .p5 {
+        text-overflow: ellipsis;
+      }
+
+      ul {
+        /* 흑색 원형 *
+        list-style-type: disc;
+        /* 빈 원형 */
+        list-style-type: circle;
+        /* 정수 */
+        list-style-type: decimal;
+        /* 네모네모 고먐미 */
+        list-style-type: square;
+        /* 없워  */
+        list-style-type: none;
+        list-style-image: url("src/kakao.jpg");
+        list-style-position: inside;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="p1">테스트문구</p>
+    <p class="p2">테스트문구</p>
+    <p class="p3">
+      테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구테스트문구
+    </p>
+    <div id="d1">글자테스트</div>
+    <p class="p4">이건 테스트를 위한 문구입니다. 일부로 좀 더 길게 쓸게요.</p>
+    <p class="p5">이건 테스트를 위한 문구입니다. 일부로 좀 더 길게 쓸게요.</p>
+    <br />
+    <hr />
+    <br />
+    <ul class="ul">
+      <li>목록1</li>
+      <li>목록2</li>
+      <li>목록3</li>
+    </ul>
+  </body>
+</html>

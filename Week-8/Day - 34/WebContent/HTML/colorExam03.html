@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Style - background</title>
+    <style>
+      .gra {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        margin-bottom: 20px;
+      }
+
+      .d1 {
+        background: linear-gradient(to bottom, blue, white);
+      }
+
+      .d2 {
+        background: linear-gradient(to right, blue, white);
+      }
+      .d3 {
+        background: linear-gradient(45deg, blue, white);
+      }
+      .d4 {
+        background: linear-gradient(to top, blue, white 50%, red);
+      }
+      .d5 {
+        background: linear-gradient(
+          135deg,
+          red,
+          orange 15%,
+          yellow 30%,
+          green 45%,
+          blue 60%,
+          navy 75%,
+          purple 90%
+        );
+      }
+      .d11 {
+        background: radial-gradient(white, blue);
+      }
+      .d12 {
+        background: radial-gradient(circle, orange, red, white);
+      }
+
+      .d13 {
+        background: -webkit-radial-gradient(
+          30% 40%,
+          circle,
+          orange,
+          red,
+          white
+        );
+      }
+
+      .gra1 {
+        width: 500px;
+        height: 300px;
+        border: 1px solid black;
+        margin-bottom: 20px;
+      }
+
+      .d14 {
+        background: -webkit-radial-gradient(
+          30% 40%,
+          circle closest-corner,
+          orange,
+          red,
+          white
+        );
+      }
+
+      .d15 {
+        background: -webkit-radial-gradient(
+          30% 40%,
+          circle closest-side,
+          orange,
+          red,
+          white
+        );
+      }
+
+      .d16 {
+        background: -webkit-radial-gradient(
+          30% 40%,
+          circle farthest-corner,
+          orange,
+          red,
+          white
+        );
+      }
+
+      .d17 {
+        background: -webkit-radial-gradient(
+          30% 40%,
+          circle farthest-side,
+          orange,
+          red,
+          white
+        );
+      }
+
+      .d18 {
+        background: -webkit-repeating-radial-gradient(
+          white,
+          white 10%,
+          blue 10%,
+          blue 20%,
+          red 20%,
+          red 30%
+        );
+      }
+      .d19 {
+        background: repeating-linear-gradient(
+          red,
+          red 5%,
+          orange 5%,
+          orange 10%,
+          yellow 10%,
+          yellow 15%,
+          green 15%,
+          green 20%,
+          blue 20%,
+          blue 25%,
+          navy 25%,
+          navy 30%,
+          purple 30%,
+          purple 35%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gra d1"></div>
+    <div class="gra d2"></div>
+    <div class="gra d3"></div>
+    <div class="gra d4"></div>
+    <div class="gra d5"></div>
+    <hr />
+    <div class="gra1 d11"></div>
+    <div class="gra1 d12"></div>
+    <div class="gra1 d13"></div>
+    <div class="gra1 d14"></div>
+    <div class="gra1 d15"></div>
+    <div class="gra1 d16"></div>
+    <div class="gra1 d17"></div>
+    <hr />
+    <div class="gra1 d18"></div>
+    <div class="gra d19"></div>
+  </body>
+</html>

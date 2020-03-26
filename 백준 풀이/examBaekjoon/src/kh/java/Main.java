@@ -3,6 +3,7 @@ package kh.java;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
 
@@ -10,13 +11,11 @@ public class Main {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		try {			
-			int a = br.read();
-			int b = br.read();
+		try {
+			int a = Integer.parseInt(br.readLine());
+			int b = Integer.parseInt(br.readLine());
 			
-			System.out.println(a);
-			
-			System.out.print(a+b);
+			System.out.println();
 			
 		} catch (IOException e) {
 			e.printStackTrace();

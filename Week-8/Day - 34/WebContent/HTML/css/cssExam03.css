@@ -1,0 +1,43 @@
+body {
+  background-color: rgb(90, 166, 252);
+}
+
+.test01 {
+  background-color: white;
+  width: 500px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.box {
+  background-color: white;
+  width: 300px;
+  margin-right: 20px;
+  border: 2px solid black;
+  padding: 20px;
+}
+
+.t1 {
+  background-clip: border-box;
+}
+
+.t2 {
+  background-clip: padding-box;
+}
+
+.t3 {
+  background-clip: content-box;
+}
+
+.back-exam {
+  width: 600px;
+  height: 800px;
+  border: 2px solid black;
+  background-image: url("../src/bgsample.PNG");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 70%;
+}

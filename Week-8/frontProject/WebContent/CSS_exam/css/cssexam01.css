@@ -1,0 +1,17 @@
+p {
+  color: red;
+}
+
+#test_id2 {
+  color: yellowgreen;
+  background-color: yellow;
+}
+
+.test_class {
+  color: red;
+}
+
+.bg_color {
+  background-color: slategrey;
+  color: purple;
+}

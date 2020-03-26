@@ -1,0 +1,59 @@
+div[name="test01"] {
+  color: red;
+  background-color: yellow;
+}
+
+div > p {
+  background-color: red;
+  font-weight: bold;
+}
+
+ul {
+  background-color: yellow;
+  color: red;
+}
+
+div li {
+  background-color: aqua;
+}
+
+.test02 > .t1 ~ div {
+  background-color: rgb(255, 85, 66);
+  color: white;
+}
+
+.test02 > .t0 + div {
+  background-color: red;
+}
+
+.red_box {
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.test03:active {
+  background-color: wheat;
+}
+
+.test04:hover {
+  background-color: coral;
+}
+
+input:checked {
+  width: 20px;
+  height: 20px;
+}
+
+input:focus {
+  background-color: darksalmon;
+}
+
+option {
+  background-color: gold;
+}
+
+option:disabled {
+  background-color: firebrick;
+}

@@ -1,0 +1,63 @@
+.color1 {
+  color: blue;
+}
+
+.color2 {
+  color: #00f;
+}
+
+.color3 {
+  color: rgb(0, 0, 255);
+}
+
+.color4 {
+  color: rgba(0, 0, 255, 0.5);
+}
+
+.deco01 a {
+  text-decoration: none;
+}
+
+.deco02 {
+  text-decoration: underline;
+}
+
+.deco03 {
+  text-decoration: line-through;
+}
+
+.deco04 {
+  text-decoration: overline;
+}
+
+.trans01 {
+  text-transform: none;
+}
+
+.trans02 {
+  text-transform: capitalize;
+}
+
+.trans03 {
+  text-transform: uppercase;
+}
+
+.trans04 {
+  text-transform: lowercase;
+}
+
+.text_wrapper {
+  font-size: 80px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.shadow01 {
+  color: red;
+  text-shadow: 5px 5px orange;
+}
+
+.shadow02 {
+  text-shadow: 0px 0px 4px #ccc, 0px -5px 4px #ff3, 2px -10px 6px #fd3,
+    -2px -15px 11px #f80, 2px -19px 18px #f20;
+}
