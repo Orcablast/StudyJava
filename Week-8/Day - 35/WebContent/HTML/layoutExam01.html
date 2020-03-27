@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .pos {
+        border: 1px solid black;
+      }
+      .d1 {
+        width: 300px;
+        height: 300px;
+        background-color: yellow;
+      }
+      .d2 {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: yellowgreen;
+        top: 50px;
+        left: 50px;
+      }
+      .d3 {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+      .d4 {
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+        /* position: fixed; */
+      }
+      body {
+        height: 500vh;
+      }
+      .v1 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+      }
+      .v2 {
+        width: 100px;
+        height: 100px;
+        background-color: brown;
+        visibility: hidden;
+      }
+      .v3 {
+        width: 100px;
+        height: 100px;
+        background-color: coral;
+      }
+    </style>
+    <title></title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="pos d1"></div>
+      <div class="pos d2"></div>
+      <div class="pos d3"></div>
+    </div>
+    <hr />
+    <div class="pos d4"></div>
+    <br /><br /><br /><br /><br /><br />
+    <div class="post v1"></div>
+    <div class="post v2"></div>
+    <div class="post v3"></div>
+    <br />
+    <hr />
+    <br />
+    <style>
+      .wrap {
+        position: relative;
+      }
+      .z1 {
+        width: 150px;
+        height: 100px;
+        background-color: yellow;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        z-index: 1000;
+      }
+      .z2 {
+        width: 150px;
+        height: 100px;
+        background-color: green;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        z-index: 100;
+      }
+      .z3 {
+        width: 150px;
+        height: 100px;
+        background-color: red;
+        z-index: 10;
+      }
+      .f {
+        width: 100px;
+        height: 50px;
+        float: right;
+      }
+      .f1 {
+        clear: both;
+      }
+    </style>
+    <div class="wrap">
+      <div class="post z1"></div>
+      <div class="post z2"></div>
+      <div class="post z3"></div>
+    </div>
+    <br /><br /><br /><br /><br /><br />
+    <hr />
+    <div class="pos f">1</div>
+    <div class="pos f">2</div>
+    <div class="pos f">3</div>
+    <div class="pos f">4</div>
+    <div class="pos f1">5</div>
+    <br /><br />
+    <hr />
+    <br />
+    <style>
+      .o {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+      }
+
+      .in {
+        width: 500px;
+        height: 500px;
+        background-color: red;
+      }
+    </style>
+    <div class="pos o">
+      <div class="post in"></div>
+    </div>
+  </body>
+</html>

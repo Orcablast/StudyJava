@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: coral;
+        margin-bottom: 10px;
+      }
+      .s1 {
+        height: 100px;
+        width: 100px;
+        background-color: cornflowerblue;
+        display: block;
+      }
+      .div3 {
+        width: 100px;
+        height: 50px;
+        background-color: yellowgreen;
+        text-align: center;
+        display: inline-block;
+      }
+      a {
+        display: block;
+        line-height: 50px;
+        text-decoration: none;
+      }
+
+      #navera > a {
+        display: none;
+      }
+
+      #naver:hover {
+        display: block;
+      }
+
+      .div4 {
+        width: 50px;
+        height: 50px;
+        background-color: lemonchiffon;
+        margin-top: 50px;
+        border: 10px solid lightcoral;
+      }
+      .rad {
+        width: 100px;
+        height: 100px;
+        border: 3px solid black;
+      }
+
+      .r1 {
+        border-top-left-radius: 50px;
+      }
+
+      .r2 {
+        border-top-right-radius: 50px;
+      }
+
+      .r3 {
+        border-bottom-left-radius: 50px;
+      }
+
+      .r4 {
+        border-bottom-right-radius: 50px;
+      }
+
+      .r5 {
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        border-top-left-radius: 50px;
+      }
+
+      .r6 {
+        border-bottom-left-radius: 50px;
+        border-top-right-radius: 50px;
+      }
+
+      .sh1 {
+        box-shadow: 5px 5px 5px 5px gray;
+      }
+    </style>
+    <title>Display Styles</title>
+  </head>
+  <body>
+    <div class="box div1">1</div>
+    <div class="box div2">2</div>
+    <span class="s1">asdf</span>
+    <div id="naver" class="div3">
+      <a href="http://www.naver.com" id="navera">네이버</a>
+    </div>
+    <div class="div3"><a href="http://www.google.com">구글</a></div>
+    <div class="div3"><a href="http://www.daum.net">다음</a></div>
+    <div class="div4"></div>
+    <br />
+    <hr />
+    <br />
+    <div class="rad r1"></div>
+    <div class="rad r2"></div>
+    <div class="rad r3"></div>
+    <div class="rad r4"></div>
+    <div class="rad r5"></div>
+    <div class="rad r6"></div>
+    <div class="rad sh1"></div>
+    <hr />
+    <style>
+      .d11 {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        margin-left: 100px;
+        margin-bottom: 10px;
+        color: white;
+        font-weight: 900;
+        padding: 10px;
+        padding-left: 50px;
+      }
+
+      ul {
+        padding: 0;
+      }
+
+      .d22 {
+        width: 500px;
+        height: 300px;
+        box-sizing: content-box;
+      }
+
+      .d23 {
+        box-sizing: border-box;
+        float: left;
+        border: 1px dashed blue;
+        height: 300px;
+        width: 250px;
+      }
+    </style>
+    <div class="d11">hi</div>
+    <div class="d11">hi</div>
+    <div class="d11">hi</div>
+    <hr />
+    <ul>
+      <li>목록1</li>
+      <li>목록2</li>
+      <li>목록3</li>
+    </ul>
+    <hr />
+    <div class="d22">
+      <div class="d23"></div>
+      <div class="d23"></div>
+    </div>
+  </body>
+</html>
