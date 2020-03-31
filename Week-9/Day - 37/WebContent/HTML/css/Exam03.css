@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap");
+@import url("reset.css");
+
+header {
+  width: 1280px;
+  height: 120px;
+  background-color: #011627;
+  display: flex;
+}
+
+footer {
+  width: 1280px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gothic A1", sans-serif;
+  font-size: 14px;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.95);
+  background-color: #011627;
+}
+
+main {
+  width: 1280px;
+  height: 700px;
+  background-image: url("../src/HtmlCss.jpg");
+  background-size: cover;
+}
+
+.logo {
+  width: 13%;
+  background-image: url("../src/logo.jpg");
+  background-size: cover;
+  cursor: pointer;
+}
+
+.header_main {
+  width: 74%;
+  height: 100%;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+  font-family: "Playfair Display", serif;
+  font-size: 45px;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.6);
+}
+
+.user_stat {
+  width: 13%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user_stat div {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat {
+  text-decoration: none;
+  font-family: "Gothic A1", sans-serif;
+  font-size: 16px;
+  width: 90%;
+  height: 36px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 5px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px outset white;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.95);
+}
+
+.stat:hover {
+  background-color: rgba(255, 255, 255, 0.116);
+  font-size: 1.15em;
+  color: white;
+}
+
+.menu > ul {
+  display: flex;
+  height: 44px;
+  list-style: none;
+}
+
+.menu li {
+  height: 100%;
+  width: 25%;
+  border-bottom: none;
+}
+
+.menu li:first-child,
+.menu li:first-child a {
+  border-top-left-radius: 10px;
+}
+
+.menu li:last-child,
+.menu li:last-child a {
+  border-top-right-radius: 10px;
+}
+
+.menu a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 20px;
+}
+
+.btn_menu:hover > a {
+  transform: translateY(-2px);
+  color: rgba(255, 94, 94, 0.808);
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.164);
+  transition: 0.5s;
+}

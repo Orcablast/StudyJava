@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam 01</title>
+    <style>
+      div {
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        width: 1280px;
+        border: 1px solid black;
+        margin: 0 auto;
+      }
+
+      .header {
+        height: 150px;
+        border: 1px dashed red;
+      }
+
+      .layer1 {
+        width: 20%;
+        height: 300px;
+        border: 1px dotted blue;
+      }
+
+      .layer2 {
+        width: 80%;
+        height: 500px;
+        border: 1px dotted green;
+      }
+
+      .content {
+        overflow: hidden;
+      }
+
+      .content > div {
+        float: left;
+      }
+
+      .footer {
+        height: 150px;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 전체를 감싸는 div -->
+    <div class="wrapper">
+      <div class="header"></div>
+      <div class="content">
+        <div class="layer1"></div>
+        <div class="layer2"></div>
+      </div>
+      <div class="footer"></div>
+    </div>
+  </body>
+</html>

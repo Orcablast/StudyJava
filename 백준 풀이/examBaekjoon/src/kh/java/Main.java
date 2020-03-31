@@ -1,33 +1,35 @@
 package kh.java;
 
 import java.io.*;
-import java.util.StringTokenizer;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
 
-		try {
-			
-			String str = br.readLine();
-			StringTokenizer sT = new StringTokenizer(str, " ");
-			
-			int h = Integer.parseInt(sT.nextToken());
-			int m = Integer.parseInt(sT.nextToken());			
-						
-			if (m<45){
-				h = (h==0 ? 23 : h);
-				m += (60-45);
-			} else {
-				m -= 45;
+		
+		int count = Integer.parseInt(br.readLine());
+		
+		StringBuffer sb = new StringBuffer();
+		
+		for(int i=1; i<=count; i++) {
+			for(int h=i; h<count; h++) {
+				sb.append(" ");
 			}
-			
-			System.out.println(h+" "+m);
-
-		} catch (IOException e) {
-			e.printStackTrace();
+			for(int j=i; j>0; j--) {
+				sb.append("*");
+			}
+			sb.append("\n");
 		}
+		
+		bw.write(sb.toString());
+		bw.flush();
+		
+		br.close();
+		bw.close();
+		
 	}
 }

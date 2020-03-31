@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/Exam03_join.css" />
+    <title>Exam 03</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo"></div>
+      <div class="header_main">
+        <div class="title">Welcome To Lee's World</div>
+        <div class="menu">
+          <ul>
+            <li class="btn btn_menu"><a href="#">JAVA</a></li>
+            <li class="btn btn_menu"><a href="#">ORACLE</a></li>
+            <li class="btn btn_menu"><a href="#">HTML5/CSS</a></li>
+            <li class="btn btn_menu"><a href="#">게시판</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="user_stat">
+        <div class="login">
+          <a href="../HTML/login.html" class="btn stat">로그인</a>
+        </div>
+        <div class="join">
+          <a href="../HTML/Exam03_join.html" class="btn stat">회원가입</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="side">
+        <div class="ad">
+          <div class="ad_img ad01"></div>
+          <span class="ad_txt">상상도 못한 광고</span>
+        </div>
+        <div class="ad">
+          <div class="ad_img ad02"></div>
+          <span class="ad_txt">광고의 방으로</span>
+        </div>
+      </div>
+      <div class="content">
+        <div class="join_wrapper">
+          <div class="join_title">회원가입</div>
+          <div class="joint_content">
+            <form action="test.html" method="post">
+              <div class="input_box">
+                <div class="input_title">아이디</div>
+                <div class="input_area">
+                  <input type="text" name="id" />
+                </div>
+                <div class="input_desc">4~12자리 영숫자</div>
+              </div>
+              <div class="input_box">
+                <div class="input_title">비밀번호</div>
+                <div class="input_area">
+                  <input type="text" name="pw" />
+                </div>
+                <div class="input_desc">8자리 이상</div>
+              </div>
+              <div class="input_box">
+                <div class="input_title">비밀번호 확인</div>
+                <div class="input_area">
+                  <input type="text" name="pw_repeat" />
+                </div>
+                <div class="input_desc"></div>
+              </div>
+              <div class="input_box">
+                <div class="input_title">이름</div>
+                <div class="input_area">
+                  <input type="text" name="user_name" />
+                </div>
+                <div class="input_desc"></div>
+              </div>
+              <div class="input_box">
+                <div class="input_title">우편번호</div>
+                <div class="input_area post">
+                  <input type="text" name="post" class="post" disabled />
+                </div>
+                <div class="post_desc">
+                  <div class="box find_post">우편번호 찾기</div>
+                </div>
+              </div>
+              <div class="input_box">
+                <div class="input_title">주소</div>
+                <div class="input_area">
+                  <input type="text" name="addr" disabled />
+                </div>
+                <div class="input_desc"></div>
+              </div>
+              <div class="input_box">
+                <div class="input_title">상세주소</div>
+                <div class="input_area">
+                  <input type="text" name="addr_detail" />
+                </div>
+                <div class="input_desc"></div>
+              </div>
+              <div class="input_box">
+                <div class="input_title">전화번호</div>
+                <div class="input_area">
+                  <select name="phone1" class="select_phone">
+                    <option value="010">010</option>
+                    <option value="011">011</option>
+                    <option value="017">017</option>
+                    <option value="019">019</option> </select
+                  >- <input type="text" name="phone2" class="input_phone" />-
+                  <input type="text" name="phone3" class="input_phone" />
+                </div>
+                <div class="input_desc"></div>
+              </div>
+              <div class="input_box">
+                <div class="input_title">성별</div>
+                <div class="input_area">
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="male"
+                    id="sel_male"
+                  />
+                  <label for="sel_male" class="box gender_box male">남자</label>
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="female"
+                    id="sel_female"
+                  />
+                  <label for="sel_female" class="box gender_box female"
+                    >여자</label
+                  >
+                </div>
+                <div class="input_desc"></div>
+              </div>
+              <div class="input_box">
+                <div class="input_title">약관동의</div>
+                <div class="input_area term_area">
+                  <input
+                    type="checkbox"
+                    name="term1"
+                    id="essential"
+                    class="check_term"
+                  />
+                  <label for="essential">사이트 이용 약관(필수)</label>
+                  <input
+                    type="checkbox"
+                    name="term2"
+                    id="term2"
+                    class="check_term"
+                  />
+                  <label for="term2">개인정보 처리 약관(선택)</label>
+                </div>
+                <div class="input_desc"></div>
+              </div>
+              <div class="submit_box">
+                <input type="submit" value="회원가입" class="box" />
+                <input type="reset" value="취소" class="box" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <span>COPYRIGHT @ LEE's Cooperation</span>
+    </footer>
+  </body>
+</html>

@@ -14,56 +14,46 @@
   position: relative;
 }
 
-.box {
+.box:not(.hidden) {
   width: 250px;
   height: 200px;
   background-size: cover;
-}
-
-.d1 {
-  background-image: url("../css/imgs/sample3-1.gif");
-}
-
-.d2 {
-  background-image: url("../css/imgs/sample3-2.gif");
-}
-
-.d3 {
-  background-image: url("../css/imgs/sample3-3.jpg");
-}
-
-.d4 {
-  background-image: url("../css/imgs/sample3-4.PNG");
+  background-color: blue;
+  position: relative;
 }
 
 .hidden {
-  /* width: 500px;
-  height: 400px; */
+  width: 600px;
+  height: 450px;
   position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: rebeccapurple;
+  display: none;
 }
 
+.box:hover .hidden {
+  background-color: royalblue;
+  display: block;
+  background-size: cover;
+  z-index: 100;
+}
+
+.d1,
 .img1 {
-  top: 50px;
-  left: 50px;
+  background-image: url("../css/imgs/sample3-1.gif");
 }
 
+.d2,
 .img2 {
-  top: 50px;
-  right: 50px;
+  background-image: url("../css/imgs/sample3-2.gif");
 }
 
+.d3,
 .img3 {
-  bottom: 50px;
-  left: 50px;
+  background-image: url("../css/imgs/sample3-3.jpg");
 }
-
+.d4,
 .img4 {
-  bottom: 50px;
-  right: 50px;
-}
-
-.d1:hover + .img1 {
-  background-color: darkblue;
-  width: 500px;
-  height: 400px;
+  background-image: url("../css/imgs/sample3-4.PNG");
 }
