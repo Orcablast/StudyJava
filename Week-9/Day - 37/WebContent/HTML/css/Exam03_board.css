@@ -138,6 +138,10 @@ span.page_box {
   background-color: #51c2df;
 }
 
+div.page_box:hover {
+  background-color: #51c2df;
+}
+
 .button {
   background-color: #51c2df;
   width: 55px;
@@ -157,6 +161,11 @@ span.page_box {
 .write_btn {
   position: absolute;
   right: 20px;
+}
+
+.write_btn a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .search_box {
@@ -179,4 +188,9 @@ span.page_box {
 
 .search_box .button {
   margin-left: 5px;
+}
+
+.button:hover {
+  background-color: #5edfff;
+  transform: scale(110%);
 }
