@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      function test() {
+        alert("인터널 hi1");
+        aletr("인터널 hi1");
+        alert("인터널 hi2");
+      }
+    </script>
+    <script src="./first.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="javascript:alert('hi');">인라인 벝은</button><br />
+    <button onclick="test();">인터널 방식</button><br />
+    <button onclick="test1();">익스터널 방식</button><br />
+    <a href="#">링크</a><br /><br /><br />
+    <script>
+      function func1() {
+        document.write("<h1>추가</h1>");
+      }
+
+      function func2() {
+        console.log("로그");
+      }
+
+      function func3() {
+        var dg = confirm("동건아 영어단어 외워야지 응?");
+        alert(dg);
+
+        if (dg) {
+          alert("지금 시험보자");
+        } else {
+          alert("심한말");
+        }
+      }
+    </script>
+    <button onclick="func1();">첫번째 버튼</button>
+    <button onclick="func2();">두번째 버튼</button>
+    <button onclick="func3();">세번째 버튼</button>
+  </body>
+</html>
