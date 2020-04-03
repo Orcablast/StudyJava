@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      function test() {
+        alert("인터널 hi1");
+        aletr("인터널 hi1");
+        alert("인터널 hi2");
+      }
+    </script>
+    <script src="./first.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="javascript:alert('hi');">인라인 벝은</button><br />
+    <button onclick="test();">인터널 방식</button><br />
+    <button onclick="test1();">익스터널 방식</button><br />
+    <a href="#">링크</a><br /><br /><br />
+    <script>
+      function func1() {
+        document.write("<h1>추가</h1>");
+      }
+
+      function func2() {
+        console.log("로그");
+      }
+
+      function func3() {
+        var dg = confirm("동건아 영어단어 외워야지 응?");
+        alert(dg);
+
+        if (dg) {
+          alert("지금 시험보자");
+        } else {
+          alert("심한말");
+        }
+      }
+
+      function func4() {
+        prompt("할말1 할말2");
+      }
+    </script>
+    <button onclick="func1();">첫번째 버튼</button>
+    <button onclick="func2();">두번째 버튼</button>
+    <button onclick="func3();">세번째 버튼</button>
+    <button onclick="func4();">네번째 버튼</button>
+    <hr />
+    <script>
+      function idTest() {
+        var p1 = document.getElementById("p1");
+        p1.innerHTML = "변경되었음";
+        p1.style.color = "red";
+      }
+    </script>
+    <p id="p1">id는 p1입니다.</p>
+    <button onclick="idTest()">클릭</button>
+    <br />
+    <hr />
+    <br />
+    <script>
+      function classTest() {
+        var pp = document.getElementsByClassName("pp");
+        alert(pp[0].innerHTML);
+        alert(pp[1].innerHTML);
+        alert(pp[2].innerHTML);
+      }
+
+      function inputTest() {
+        var in1 = document.getElementById("in1");
+        alert(in1.value);
+        in1.value = "성공";
+      }
+
+      function chkbox() {
+        var chk = document.getElementById("chk");
+
+        if (chk.checked) {
+          chk.checked = false;
+        } else {
+          chk.checked = true;
+        }
+
+        // if (chk.checked) {
+        //   alert(chk.value);
+        // } else {
+        //   alert("체크하세요");
+        // }
+      }
+    </script>
+    <p class="pp">pp클래스1</p>
+    <p class="pp">pp클래스2</p>
+    <p class="pp">pp클래스3</p>
+    <button onclick="classTest();">클릭</button>
+    <br />
+    <input type="text" id="in1" readonly />
+    <button onclick="inputTest()">버튼</button>
+    <br />
+    <hr />
+    <br />
+    <input type="checkbox" value="체크" id="chk" />
+    <button onclick="chkbox();">클릭</button>
+    <br />
+    <hr />
+    <br />
+    <h3>체크된 값 읽어오기</h3>
+    <script>
+      function read_hobby() {
+        var hobbys = document.getElementsByName("hobby");
+
+        var txtBox = document.getElementsByClassName("txt_box");
+
+        clearTxtBox();
+
+        for (var i = 0; i < hobbys.length; i++) {
+          if (hobbys[i].checked) {
+            txtBox[0].innerHTML += hobbys[i].value + "<br>";
+          }
+        }
+      }
+
+      function clearTxtBox() {
+        var txtBox = document.getElementsByClassName("txt_box");
+
+        txtBox[0].innerHTML = "";
+      }
+
+      function chkAll() {
+        var chkBoxs = document.getElementsByName("hobby");
+
+        for (var i = 0; i < chkBoxs.length; i++) {
+          chkBoxs[i].checked = true;
+        }
+
+        clearTxtBox();
+      }
+
+      function unChkAll() {
+        var chkBoxs = document.getElementsByName("hobby");
+
+        for (var i = 0; i < chkBoxs.length; i++) {
+          chkBoxs[i].checked = false;
+        }
+
+        clearTxtBox();
+      }
+
+      function chkByChkBox() {
+        var chkBox = document.getElementById("chk_all");
+        var chkBoxs = document.getElementsByName("hobby");
+
+        if (chkBox.checked) {
+          chkAll();
+        } else {
+          unChkAll();
+        }
+      }
+    </script>
+    <fieldset>
+      <legend>취미</legend>
+      <div class="top_wrapper">
+        <input type="checkbox" name="hobby" value="게임" id="game" />
+        <label for="game">게임</label>
+        <input type="checkbox" name="hobby" value="음악" id="music" />
+        <label for="music">음악</label>
+        <input type="checkbox" name="hobby" value="영화보기" id="movie" />
+        <label for="movie">영화보기</label>
+      </div>
+      <div class="bot_wrapper">
+        <input type="checkbox" name="hobby" id="book" value="독서" />
+        <label for="book">독서</label>
+        <input type="checkbox" name="hobby" id="travel" value="여행" />
+        <label for="travel">여행</label>
+        <input type="checkbox" name="hobby" id="trainning" value="운동" />
+        <label for="trainning">운동</label>
+      </div>
+    </fieldset>
+    <div
+      class="txt_box"
+      style="border: 1px solid black;
+    width: 200px; height: 100px; overflow: scroll;"
+    ></div>
+    <div class="btn_wrapper">
+      <button onclick="read_hobby();">체크된 값 읽어오기</button>
+      <button onclick="chkAll();">전체체크</button>
+      <button onclick="unChkAll();">전체체크 해제</button>
+      <input
+        type="checkbox"
+        name="chk_all"
+        id="chk_all"
+        onclick="chkByChkBox();"
+      />
+      <label for="chk_all" onclick="chkByChkBox();">전체 체크</label>
+    </div>
+  </body>
+</html>
