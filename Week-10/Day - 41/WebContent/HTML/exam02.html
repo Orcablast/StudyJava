@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수</title>
+  </head>
+  <body>
+    <script>
+      function test1(msg) {
+        alert(msg);
+      }
+
+      var test2 = function() {
+        alert("test2 함수");
+        return "테스트 2 함수 리턴값";
+      };
+
+      function test3() {
+        test1("테스트 3인척 하는 1 함수", "ㅇㅇ");
+        var test = test2();
+        alert(test);
+      }
+      //   (function() {
+      //     alert("익명함수 호출");
+      //   })();
+
+      function test4(val) {
+        alert(val.innerHTML);
+      }
+    </script>
+    <button onclick="test1('ㅇㅇㅇ');">
+      선언적 함수
+    </button>
+    <br />
+    <hr />
+    <br />
+    <button onclick="test3();">함수 호출</button>
+    <br />
+    <hr />
+    <br />
+    <button onclick="test4(this);">테스트 1</button>
+    <button onclick="test4(this);">테스트 2</button>
+    <button onclick="test4(this);">테스트 3</button>
+    <hr />
+    <script>
+      var count = 0;
+      function inc() {
+        count++;
+        return count;
+      }
+      function test5() {
+        console.log(inc());
+      }
+
+      function init() {
+        var cnt = 0;
+        return function inc2() {
+          cnt++;
+          return cnt;
+        };
+      }
+
+      var x = init();
+
+      function test6() {
+        console.log(x());
+      }
+
+      function origin() {
+        var str = "http://www.kh.org?hello=안녕하세요";
+        alert(str);
+      }
+
+      function enc() {
+        var str = "http://www.kh.org?hello=안녕하세요";
+        var str2 = escape(str);
+        alert(str2);
+      }
+
+      function dec() {
+        var str = "http://www.kh.org?hello=안녕하세요";
+        var str1 = escape(str);
+        var str2 = unescape(str1);
+
+        alert(str2);
+      }
+
+      function evalTest() {
+        var str = "";
+        str += "document.getElementById('text1').value + '+'";
+        str += "+ document.getElementById('text2').value + '='";
+        str += "+ (Number(document.getElementById('text1').value)";
+        str += "+ Number(document.getElementById('text2').value))";
+        var p1 = document.getElementById("p1");
+        p1.innerHTML = eval(str);
+      }
+
+      function numberTest() {
+        var text1 = document.getElementById("text1").value;
+        var text2 = Number(document.getElementById("text2").value);
+        console.log(isFinite(text1));
+        console.log(isFinite(text2));
+        console.log(isNaN(text1));
+        console.log(isNaN(text2));
+      }
+    </script>
+
+    <button onclick="test5();">테스트</button>
+    <hr />
+    <button onclick="test6();">클로저</button>
+    <hr />
+    <button onclick="origin();">원본</button>
+    <button onclick="enc();">인코딩</button>
+    <button onclick="dec();">디코딩</button>
+    <hr />
+    첫번째 수 : <input type="text" name="text1" id="text1" /><br />
+    두번째 수 : <input type="text" name="text2" id="text2" /><br />
+    <button onclick="evalTest();">더하기</button>
+    <button onclick="numberTest()">확인</button>
+    <p id="p1"></p>
+  </body>
+</html>
