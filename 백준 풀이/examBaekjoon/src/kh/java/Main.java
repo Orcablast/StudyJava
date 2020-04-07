@@ -11,16 +11,13 @@ public class Main {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
 		StringBuffer sb = new StringBuffer();
-		StringTokenizer sT = new StringTokenizer(br.readLine()," ");
-		int a=Integer.parseInt(sT.nextToken()), b=Integer.parseInt(sT.nextToken());
 		
-		while(a!=0 || b!=0) {
-			sb.append(a+b).append("\n");
-			sT = new StringTokenizer(br.readLine()," ");
+		String str;
+		
+		while((str=br.readLine())!= null) {
 			
-			a = Integer.parseInt(sT.nextToken());
-			b = Integer.parseInt(sT.nextToken());
 		}
+		
 		
 		
 		

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        height: 100px;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function test1() {
+        var stu = {
+          name: "이도형",
+          age: 20,
+          addr: "서울",
+          test: function () {
+            alert("테스트함수");
+          },
+          info: function () {
+            var str = "";
+            str = this.name + "/" + this.age + "/" + this.addr;
+            return str;
+          },
+        };
+        var result = document.getElementById("result1");
+        // stu.test();
+        // result.innerHTML = stu["name"] + "/" + stu.age + "/" + stu.addr + "/";
+        result.innerHTML = stu.info();
+      }
+
+      function test2() {
+        var testObj = { a: 100, b: 200 };
+        // console.log("bc" in testObj);
+        with (testObj) {
+          a = 300;
+          b = 400;
+        }
+        console.log(testObj.a);
+        console.log(testObj.b);
+      }
+
+      function test3() {
+        var testObj = { a: 100, b: 200 };
+        testObj.c = 300;
+
+        console.log("c" in testObj);
+
+        testObj.d = 400;
+
+        console.log(testObj);
+        delete testObj.c;
+        console.log(testObj);
+      }
+
+      function test4() {
+        var objArr = [];
+        var test1 = { a: 100, b: 200 };
+        var test2 = { name: "이도형", age: "30", addr: "서울" };
+        var test3 = { name: "서동건", age: "28", addr: "부천" };
+        objArr.push(test1);
+        objArr.push(test2);
+        objArr.push(test3);
+        console.log(objArr);
+        console.log(objArr[2].addr);
+      }
+
+      function test5() {
+        var name = prompt("이름 :");
+        var age = prompt("나이 : ");
+        var addr = prompt("주소 : ");
+        var obj = getObj(name, age, addr);
+        console.log(obj);
+      }
+
+      function getObj(name, age, addr) {
+        var obj = { name: name, age: age, addr: addr };
+        return obj;
+      }
+      function test6() {
+        var name = prompt("이름 :");
+        var age = prompt("나이 : ");
+        var addr = prompt("주소 : ");
+        var stu = new Student(name, age, addr);
+        console.log(stu);
+      }
+
+      function Student(name, age, addr) {
+        this.name = name;
+        this.age = age;
+        this.addr = addr;
+      }
+    </script>
+    <button onclick="test1();">테슽</button>
+    <button onclick="test2();">테슽2</button>
+    <button onclick="test3();">테슽3</button>
+    <button onclick="test4();">테슽4</button>
+    <button onclick="test5();">테슽5</button>
+    <button onclick="test6();">테슽6</button>
+    <p id="result1"></p>
+    <br />
+    <hr />
+    <br />
+  </body>
+</html>

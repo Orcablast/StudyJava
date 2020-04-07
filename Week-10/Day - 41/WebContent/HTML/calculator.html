@@ -15,7 +15,7 @@
     </header>
     <main>
       <div class="frame">
-        <div class="top"></div>
+        <div class="top">0</div>
         <div class="wrapper">
           <div class="btn" onclick="readBtn(this)">(</div>
           <div class="btn" onclick="readBtn(this)">)</div>
@@ -53,8 +53,13 @@
       var str = "";
 
       function readBtn(btn) {
-        topBox.innerHTML += btn.innerHTML;
-        str += btn.innerHTML;
+        chkResult();
+        if (chkOper() || chkNum(btn.innerHTML) || chkBrk(btn.innerHTML)) {
+          topBox.innerHTML += btn.innerHTML;
+          str += btn.innerHTML;
+        } else if (topBox.innerHTML.length == 0) {
+          topBox.innerHTML = 0;
+        }
       }
 
       function getResult() {
@@ -62,7 +67,41 @@
       }
 
       function allClear() {
-        topBox.innerHTML = "";
+        topBox.innerHTML = "0";
+      }
+
+      function chkOper() {
+        if (topBox.innerHTML.length == 0) {
+          return false;
+        } else if (
+          isFinite(topBox.innerHTML.charAt(topBox.innerHTML.length - 1))
+        ) {
+          return true;
+        }
+      }
+
+      function chkNum(num) {
+        if (isFinite(num)) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      function chkResult() {
+        if (topBox.innerHTML == 0) {
+          topBox.innerHTML = "";
+        }
+      }
+
+      function chkBrk(input) {
+        var lastCh = topBox.innerHTML.charAt(topBox.innerHTML.length - 1);
+
+        if (topBox.innerHTML.length == 0 && (input == "(" || input == ")")) {
+          return true;
+        } else if (lastCh == "(" || lastCh == ")") {
+          return true;
+        }
       }
     </script>
   </body>
