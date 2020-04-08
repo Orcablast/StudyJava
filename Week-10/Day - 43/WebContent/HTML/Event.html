@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+  </head>
+  <body>
+    <script>
+      window.onload = function () {
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+
+        btn1.onclick = function () {
+          alert("버튼1 클릭");
+        };
+
+        btn2.onclick = function () {
+          alert("버튼2 클릭");
+          btn1.onclick = null;
+        };
+
+        var div1 = document.getElementById("div1");
+        div1.addEventListener("mouseenter", function () {
+          div1.innerHTML += "hi<br>";
+        });
+      };
+    </script>
+    <button id="btn1">버튼1</button>
+    <button id="btn2">버튼2</button>
+    <hr />
+    <div
+      id="div1"
+      style="border: 1px solid black; width: 100px; height: 100px;"
+    ></div>
+    <hr />
+    <style>
+      .div-test {
+        border: 1px solid black;
+        padding: 20px;
+      }
+    </style>
+    <script>
+      function test1(msg) {
+        alert(msg);
+
+        window.event.stopPropagation();
+
+        window.event.cancelBubble = true;
+      }
+
+      function test2() {
+        if (confirm("gogo?")) {
+          location.href = "http://www.naver.com";
+        } else {
+          alert("남았넹");
+        }
+      }
+    </script>
+    <div
+      onclick="test1('빨강');"
+      class="div-test"
+      style="background-color: red;"
+    >
+      <div
+        onclick="test1('노랑');"
+        class="div-test"
+        style="background-color: yellow;"
+      >
+        <div
+          onclick="test1('파랑');"
+          class="div-test"
+          style="background-color: blue;"
+        ></div>
+      </div>
+    </div>
+    <hr />
+    <a href="javascript:void(0);" onclick="test2();">안녕</a>
+    <hr />
+    <script>
+      function test3() {
+        var pw = document.getElementById("pw").value;
+        var pw_re = document.getElementById("pw_re").value;
+        if (pw != pw_re) {
+          return false;
+        }
+      }
+    </script>
+    <form action="test.html" onsubmit="return test3();">
+      아이디 : <input type="text" id="id" /><br />
+      비밀번호 : <input type="text" id="pw" /><br />
+      비밀번호확인 : <input type="text" id="pw_re" /><br />
+      <input type="submit" value="제출" onclick="return test3();" />
+    </form>
+  </body>
+</html>

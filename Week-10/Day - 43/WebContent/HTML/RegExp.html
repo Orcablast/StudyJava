@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regular Expression</title>
+  </head>
+  <body>
+    <script>
+      function check() {
+        var val = document.getElementById("id").value;
+        var regExp;
+
+        // 1. a가 하나라도 존재하면
+        // regExp = /a/;
+
+        // 2. a로 시작하면
+        // regExp = /^a/;
+
+        // 3. a 또는 b가 있다면
+        // regExp = /[ab]/;
+
+        // 4. a 또는 b로 시작한다면
+        // regExp = /^[ab]/;
+
+        // 5. a로 끝난다면
+        // regExp = /a$/;
+
+        // 6. a로 시작해서 b로 끝난다면
+        // regExp = /^a.+b$/;
+
+        // 7. 숫자만 입력해야할떄
+        // regExp = /^\d+$/; // same as /^[0-9]+$/
+
+        // 8. 영어 대/소문자만 입력
+        // regExp = /^[a-zA-Z]+$/;
+
+        // 9. 영어 대/소문자+숫자만 입력
+        // regExp = /^[a-zA-z\d]+$/;
+
+        // 10. 영어 대/소문자+숫자만 입력
+        // 영어로 시작
+        // regExp = /^[a-zA-z][a-zA-z\d]+$/;
+
+        // 11. 한글만 입력
+        // regExp = /^[가-힣]+$/; // /^[ㄱ-ㅎㅏ-ㅣ가-힣]+$/
+
+        // 12. 알파벳으로 최소 3글자, 최대 5글자
+        // regExp = /^[a-zA-Z]{3,5}$/;
+
+        if (regExp.test(val)) {
+          alert("성공");
+        } else {
+          alert("실패");
+        }
+      }
+
+      function check2() {
+        var regExp = /Hello ?World/;
+
+        // Hello World, HolloWorld
+
+        var regExp2 = /Hello(   )?World/;
+      }
+    </script>
+    <input type="text" name="id" id="id" />
+    <button onclick="check();">
+      체크
+    </button>
+    <button onclick="check2();">?사용하기</button>
+  </body>
+</html>
