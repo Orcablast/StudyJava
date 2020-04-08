@@ -12,11 +12,16 @@ public class Main {
 
 		StringBuffer sb = new StringBuffer();
 		
-		String str;
+		String str = br.readLine();
 		
-		while((str=br.readLine())!= null) {
+		int count = 0;
+		
+		while(true) {
+			count++;
+			
 			
 		}
+		
 		
 		
 		

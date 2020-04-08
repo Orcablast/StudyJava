@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - Documnet Object Model</title>
+    <style>
+      #d3 {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function test1() {
+        // 텍스트노드가 있는 문서객체 생성
+        // 요소노드 생성 -> 텍스트 노드 생성
+        // -> 요소 노드에 텍스트 노드 추가 -> HTML문서에 추가
+        var text = document.getElementById("in1").value;
+
+        // 요소노드 생성
+        var element = document.createElement("p");
+
+        // 텍스트 노드 생성
+        var textNode = document.createTextNode(text);
+
+        element.appendChild(textNode);
+
+        var d1 = document.getElementById("d1");
+        d1.appendChild(element);
+      }
+
+      function test2() {
+        // 요소노드 생성
+        var imgTag = document.createElement("img");
+        // 요소노드 속성값 설정
+        imgTag.src = "imgs/index.png";
+        imgTag.width = "150";
+        imgTag.height = "150";
+        // imgTag.myProperty = "123"; 없는 속성은 setAttribute 사용해야함
+        imgTag.setAttribute("myProperty", "123");
+        var d2 = document.getElementById("d2");
+        d2.appendChild(imgTag);
+      }
+
+      function test3() {
+        var d3 = document.getElementById("d3");
+
+        d3.style.border = "1px solid red";
+        d3.style.backgroundColor = "pink";
+        d3.style.borderRadius = "20px";
+      }
+
+      function test4() {
+        var d4 = document.getElementById("d4");
+        var element = document.createElement("p");
+        // var textNode = document.createTextNode("TEST");
+        element.className = "testP";
+
+        element.appendChild(document.createTextNode("TEST"));
+
+        d4.appendChild(element);
+      }
+
+      function test5() {
+        var elements = document.getElementsByClassName("testP");
+
+        elements[0].remove();
+      }
+
+      function test6() {
+        var d4 = document.getElementById("d4");
+        var pp = document.getElementsByClassName("testP");
+        d4.removeChild(pp[0]);
+      }
+    </script>
+    <div id="d1"></div>
+    <input type="text" id="in1" />
+    <button onclick="test1();">확인</button>
+    <hr />
+    <div id="d2"></div>
+    <button onclick="test2();">확인</button>
+    <hr />
+    <div id="d3"></div>
+    <button onclick="test3();">확인</button>
+    <hr />
+    <div id="d4"></div>
+    <button onclick="test4();">확인</button>
+    <button onclick="test5();">삭제</button>
+    <button onclick="test6();">삭제2</button>
+  </body>
+</html>

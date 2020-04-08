@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exam01</title>
+  </head>
+  <body>
+    <script>
+      var latitude;
+      var longitude;
+      window.onload = function () {
+        navigator.geolocation.getCurrentPosition(showLocation);
+      };
+
+      function showLocation(position) {
+        latitude = position.coords.latitude;
+        longitude = position.coords.longitude;
+      }
+
+      function latLong() {
+        console.log(latitude);
+        console.log(longitude);
+      }
+    </script>
+
+    <button onclick="latLong();">위경도</button>
+  </body>
+</html>
