@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      $(function () {
+        var first = $("h3").first();
+        first.css("color", "red");
+
+        var last = $("h3").last();
+        last.css("color", "blue");
+
+        var second = $("h3").eq(1);
+        second.css("color", "pink");
+
+        $("h3").filter(".h").css("background-color", "yellow");
+
+        $("h3").not(".h").css("background-color", "cyan");
+      });
+    </script>
+    <h3 class="h">header-0</h3>
+    <h3 class="h">header-1</h3>
+    <h3>header-2</h3>
+    <h3>header-3</h3>
+    <hr />
+    <style>
+      .ancestors *,
+      .descendants *,
+      .sideway * {
+        display: block;
+        border: 2px solid lightgray;
+        color: lightgray;
+        padding: 5px;
+        margin: 15px;
+      }
+    </style>
+    <div class="ancestors">
+      <div style="width: 500px;">
+        div(great-grand parent)
+        <ul>
+          ul(grand parent)
+          <li>
+            li(direct parent)
+            <span>span</span>
+          </li>
+        </ul>
+      </div>
+      <div style="width: 500px;">
+        div(grand parent)
+        <p>
+          p (direct parent)
+          <span>span</span>
+        </p>
+      </div>
+    </div>
+    <button onclick="test1();">parent()</button>
+    <button onclick="test2();">parents()</button>
+    <button onclick="test3();">parents(ul)</button>
+    <button onclick="test4();">parentsUntil(div)</button>
+    <hr />
+    <div class="descendants" style="width: 500px;">
+      div(currentElement)
+      <p class="child1">
+        p(child)
+        <span>span(grand child)</span>
+      </p>
+      <p class="child2">
+        p(child)
+        <span>span(grand child)</span>
+      </p>
+    </div>
+    <button onclick="test5();">children()</button>
+    <button onclick="test6();">find()</button>
+    <hr />
+    <div class="sideway">
+      <div>
+        <p>p</p>
+        <span>span</span>
+        <h2 id="hh">h2</h2>
+        <h3>h3</h3>
+        <h4>h4</h4>
+        <h5>h5</h5>
+        <h6>h6</h6>
+        <p>p</p>
+      </div>
+    </div>
+    <button onclick="test7();">sibling()</button>
+    <button onclick="test8();">next()</button>
+    <button onclick="test9();">nextAll()</button>
+    <button onclick="test10();">nextUntil(h6)</button>
+    <hr />
+    <button onclick="test11();">prev()</button>
+    <button onclick="test12();">prevAll()</button>
+    <button onclick="test13();">prevUntil(p)</button>
+    <script>
+      function test13() {
+        var si = $("#hh").prevUntil("p");
+        si.css("border", "2px solid red");
+      }
+
+      function test12() {
+        var si = $("#hh").prevAll();
+        si.css("border", "2px solid red");
+      }
+
+      function test11() {
+        var si = $("#hh").prev();
+        si.css("border", "2px solid red");
+      }
+
+      function test10() {
+        var si = $("#hh").nextUntil("h6");
+        si.css("border", "2px solid red");
+      }
+
+      function test9() {
+        var si = $("#hh").nextAll();
+        si.css("border", "2px solid red");
+      }
+
+      function test8() {
+        var si = $("#hh").next();
+        si.css("border", "2px solid red");
+      }
+
+      function test7() {
+        var si = $("#hh").siblings();
+        si.css("border", "2px solid red");
+      }
+
+      function test6() {
+        var child = $(".descendants").find("span");
+        child.css("border", "2px solid red");
+      }
+
+      function test5() {
+        // var child = $(".descendants").children();
+        var child = $(".descendants").children(".child1");
+        child.css("border", "2px solid red");
+      }
+
+      function test1() {
+        var par = $("span").parent();
+        par.css("border", "2px solid red");
+      }
+
+      function test2() {
+        var par = $("span").parents();
+        par.css("border", "2px solid red");
+      }
+
+      function test3() {
+        var par = $("span").parents("ul");
+        par.css("border", "2px solid red");
+      }
+
+      function test4() {
+        var par = $("span").parentsUntil("div");
+        par.css("border", "2px solid red");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam 03</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+      function clear() {
+        $("table *").removeAttr("style");
+      }
+
+      function click1() {
+        clear();
+        $("tr:eq(1) > td:gt(0)").css("color", "yellow");
+      }
+
+      function click2() {
+        clear();
+        $("tr:eq(2)> td:gt(0)").css("color", "yellow");
+      }
+
+      function click3() {
+        clear();
+        $("td:nth-child(3n+2):lt(2)").css("color", "red");
+        // $("tr").eq(1).children("td:nth-child(2)").css("color", "red");
+        // $("tr").eq(2).children("td:nth-child(2)").css("color", "red");
+      }
+
+      function click4() {
+        clear();
+
+        $("tr").eq(1).children("td:last-child").css("color", "red");
+        $("tr").eq(2).children("td:nth-child(3)").css("color", "red");
+      }
+    </script>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <th>구분</th>
+        <th>A</th>
+        <th>B</th>
+      </tr>
+      <tr>
+        <td>가</td>
+        <td>10</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>나</td>
+        <td>20</td>
+        <td>20</td>
+      </tr>
+      <tr>
+        <td>계</td>
+        <td>30</td>
+        <td>30</td>
+      </tr>
+      <input type="button" value="[가]색 변경" onclick="click1();" />
+      <input type="button" value="[나]색 변경" onclick="click2();" />
+      <input type="button" value="[A]색 변경" onclick="click3();" />
+      <input type="button" value="[B]색 변경" onclick="click4();" />
+    </table>
+  </body>
+</html>
