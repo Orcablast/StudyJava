@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.1.1.js"
+    ></script>
+    <title>Document</title>
+    <style>
+      .red {
+        color: red;
+      }
+      .bg-blue {
+        background-color: blue;
+      }
+    </style>
+    <script>
+      function func1() {
+        // var drink = $(".drink>li");
+        // $.each(drink, function (index, item) {
+        //   alert("인덱스 번호 : " + index + " / 값 : " + item.innerHTML);
+        // });
+
+        // $(".drink>li").each(function (index, item) {
+        //   alert("인덱스 번호 : " + index + " / 값 : " + item.innerHTML);
+        // });
+
+        $(".drink>li").each(function () {
+          alert($(this).html());
+        });
+      }
+
+      function func2() {
+        $(".drink>li").last().addClass("red bg-blue");
+      }
+
+      function func3() {
+        $(".drink>li").last().removeClass("red");
+      }
+
+      function func4() {
+        alert($("#img").attr("width"));
+      }
+
+      function func5() {
+        $("#img").attr("width", "500");
+        $("#img").attr("height", "400");
+      }
+
+      function func6() {
+        $("#img").removeAttr("width");
+        $("#img").removeAttr("height");
+      }
+
+      function func7() {
+        $(".drink>li").first().remove();
+      }
+
+      function func8() {
+        $(".drink").empty();
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="func1();">목록 가져오기</button>
+    <ul class="drink">
+      <li>커피</li>
+      <li>우유</li>
+      <li>콜라</li>
+    </ul>
+    <button onclick="func2();">클래스 추가</button>
+    <button onclick="func3();">클래스 삭제</button>
+    <br />
+    <img src="./imgs/imgs/sample02.jpg" width="400" height="300" id="img" />
+    <br />
+    <button onclick="func4();">파일정보 알아오기</button>
+    <button onclick="func5();">이미지 크기 변경</button>
+    <button onclick="func6();">속성 삭제</button><br />
+    <hr />
+    <br />
+    <button onclick="func7();">문서 객체 제거</button>
+    <button onclick="func8();">문서 객체 비우기</button>
+    <script>
+      function func11() {
+        $("<span>추가</span>").appendTo("#p1");
+      }
+
+      function func12() {
+        $("<span>추가</span>").prependTo("#p2");
+      }
+
+      function func13() {
+        $("<span>추가</span>").insertAfter("#p3");
+      }
+      function func14() {
+        $("<span>추가</span>").insertBefore("#p4");
+      }
+
+      function func15() {
+        $("#p1").append("<span>추가</span>");
+      }
+
+      function func16() {
+        $("#p2").prepend("<span>추가</span>");
+      }
+
+      function func17() {
+        $("#p3").after("<span>추가</span>");
+      }
+
+      function func18() {
+        $("#p4").before("<span>추가</span>");
+      }
+      function func19() {
+        $("#p1").append($("label").clone());
+      }
+    </script>
+    <hr />
+    <label>test</label>
+    <p id="p1">test1</p>
+    <p id="p2">test2</p>
+    <p id="p3">test3</p>
+    <p id="p4">test4</p>
+    <button onclick="func11();">appendTo</button>
+    <button onclick="func12();">prependTo</button>
+    <button onclick="func13();">insertAfter</button>
+    <button onclick="func14();">insertBefore</button>
+    <br />
+    <button onclick="func15();">append</button>
+    <button onclick="func16();">prepend</button>
+    <button onclick="func17();">after</button>
+    <button onclick="func18();">before</button>
+    <button onclick="func19();">append</button>
+  </body>
+</html>
