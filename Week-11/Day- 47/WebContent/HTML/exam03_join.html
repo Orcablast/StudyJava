@@ -62,11 +62,17 @@
         $(this).addClass("focused");
       });
 
+      $("input[type=reset]").click(function () {
+        $("input").prev().removeClass("focused");
+        $("input").prev().children().html("");
+        $("input").removeClass("focused");
+      });
+
       $(".row input").focusout(function () {
         if ($(this).val() == "") {
           $(this).prev().removeClass("focused");
-          $(this).removeClass("focused");
           $(this).prev().children().html("");
+          $(this).removeClass("focused");
         } else {
           var key = $(this).attr("name");
           var regExp;
