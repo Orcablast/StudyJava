@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.3.1.js"
+    ></script>
+    <title>jQuery - Effect</title>
+    <style>
+      .sub {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      $(function () {
+        $("#main>li").click(function () {
+          //   $(this).children().toggle();
+
+          //   $(this).children().slideToggle();
+
+          $(this).children().fadeToggle(3000);
+        });
+      });
+    </script>
+    <ul id="main">
+      <li>main-1</li>
+      <li>
+        main-2
+        <ul class="sub">
+          <li>sub-1</li>
+          <li>sub-2</li>
+          <li>sub-3</li>
+        </ul>
+      </li>
+      <li>
+        main-3
+        <ul class="sub">
+          <li>sub-1</li>
+          <li>sub-2</li>
+          <li>sub-3</li>
+        </ul>
+      </li>
+    </ul>
+    <hr />
+    <style>
+      #div1 {
+        width: 50px;
+        height: 50px;
+        background-color: aquamarine;
+      }
+
+      .orange_red {
+        width: 50px;
+        height: 50px;
+        background-color: orangered;
+        position: relative;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("#divBtn1").click(function () {
+          $("#div1").animate({
+            height: "300px",
+            width: "300px",
+            opacity: "0.4",
+          });
+        });
+
+        $("#divBtn2").click(function () {
+          $("#div1").animate({
+            height: "50px",
+            width: "50px",
+            opacity: "1",
+          });
+        });
+
+        $("#orange_btn").click(function () {
+          $(".orange_red").each(function (index) {
+            $(this)
+              .delay(index * 50)
+              .animate({
+                left: 500,
+              });
+          });
+        });
+      });
+    </script>
+    <div id="div1"></div>
+    <button id="divBtn1">확대</button>
+    <button id="divBtn2">축소</button>
+    <hr />
+    <div class="orange_red"></div>
+    <div class="orange_red"></div>
+    <div class="orange_red"></div>
+    <div class="orange_red"></div>
+    <div class="orange_red"></div>
+    <div class="orange_red"></div>
+    <div class="orange_red"></div>
+    <button id="orange_btn">클릭</button>
+  </body>
+</html>

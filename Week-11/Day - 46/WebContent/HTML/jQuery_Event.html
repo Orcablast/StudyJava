@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.3.1.js"
+    ></script>
+    <title>jQuery - Event</title>
+    <style>
+      .reverse {
+        background: black;
+        color: white;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("h1").hover(
+          function () {
+            $(this).addClass("reverse");
+          },
+          function () {
+            $(this).removeClass("reverse");
+          }
+        );
+
+        $("#btn2").click(function () {
+          $("#btn1").on("click", function () {
+            $("#onOff").append("!!!!!");
+          });
+        });
+
+        $("#btn3").click(function () {
+          $("#btn1").off("click");
+        });
+
+        $("#a1").click(function (event) {
+          event.preventDefault();
+          alert("a태그 클릭");
+          event.stopPropagation();
+        });
+
+        $("h2").click(function () {
+          alert("h2 태그 클릭");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Test1</h1>
+    <h1>Test2</h1>
+    <h1>Test3</h1>
+    <hr />
+    <button id="btn1">클릭</button>
+    <button id="btn2">클릭 추가</button>
+    <button id="btn3">클릭 제거</button>
+    <h1 id="onOff"></h1>
+    <hr />
+    <h2>
+      <a id="a1" href="http://www.naver.com">이동</a>
+    </h2>
+    <script>
+      $(function () {
+        function lvlUp() {
+          var cnt = Number($(this).next().html());
+          $(this)
+            .next()
+            .html(cnt + 1);
+        }
+
+        $(".btn").click(lvlUp);
+
+        $("#allLevelUp").click(function () {
+          $(".btn").each(lvlUp);
+          //   $(".btn").click();
+          //   $(".btn").trigger("click");
+        });
+      });
+    </script>
+    <button class="btn">레벨업</button>
+    자바 : <span class="level">0</span><br />
+    <button class="btn">레벨업</button>
+    DB : <span class="level">0</span><br />
+    <button class="btn">레벨업</button>
+    HTML : <span class="level">0</span><br />
+    <button id="allLevelUp">전체 레벨업</button>
+    <hr />
+    <script>
+      $(function () {
+        $("#click").click(function () {
+          {
+            $("#click").css("color", "red");
+          }
+        });
+
+        $("#dblClick").dblclick(function () {
+          $("#dblClick").css("color", "red");
+        });
+
+        $("#upDown").mousedown(function () {
+          $("#upDown").css("background-color", "blue");
+        });
+
+        $("#upDown").mouseup(function () {
+          $("#upDown").css("background-color", "red");
+        });
+
+        $("#mouseBtn").click(function () {
+          $(document).mousemove(function (event) {
+            {
+              $("#mousePoint").html(event.pageX + " / " + event.pageY);
+            }
+          });
+          // $("mousePoint").html();
+        });
+      });
+    </script>
+    <p id="click">click</p>
+    <p id="dblClick">double click</p>
+    <div
+      id="upDown"
+      style="border: 3px solid; width: 100px; height: 100px;"
+    ></div>
+    <hr />
+    <h1>Mouse is at cooridnate : <span id="mousePoint"></span></h1>
+    <button id="mouseBtn">시작</button>
+    <hr />
+    <style>
+      .outer {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+        padding: 50px;
+      }
+
+      .inner {
+        width: 100%;
+        height: 100%;
+        background-color: pink;
+        border: 1px solid black;
+      }
+
+      #test {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      $(function () {
+        var flag = 0;
+
+        // $(".outer").mouseover(function () {
+
+        $(".outer").mouseenter(function () {
+          if (flag == 0) {
+            $("#test").css("background-color", "red");
+            flag = 1;
+          } else {
+            $("#test").css("background-color", "white");
+            flag = 0;
+          }
+        });
+
+        $("#inputArea").keyup(function () {
+          var inputLength = $(this).val().length;
+          var remain = 150 - inputLength;
+          $("#textResult").html("작성 가능한 글자 수 : " + remain);
+        });
+      });
+    </script>
+    <div class="outer">
+      outer
+      <div class="inner">inner</div>
+    </div>
+    test
+    <div id="test"></div>
+    <hr />
+    <p>글작성</p>
+    <h1 id="textResult">작성 가능한 글자 수 : 150</h1>
+    <textarea id="inputArea" cols="70" rows="5"></textarea>
+    <hr />
+    <script>
+      $(function () {
+        $("input[name=id]").focus(function () {
+          $(this).css("background-color", "skyblue");
+        });
+        $("input[name=id]").change(function () {
+          // 유효성 검사
+          var regExp = /^[a-z0-9]{4,12}$/;
+
+          var value = $(this).val();
+          if (regExp.test(value)) {
+            $(this).css("background-color", "white");
+            $(this).next().html("");
+          } else {
+            $(this).next().html("다시 입력해라");
+            $(this).focus();
+            $(this).val("");
+          }
+        });
+      });
+    </script>
+    <form action="#">
+      <input type="text" name="id" id="id" /><span></span><br />
+      <input type="password" name="pw" id="pw" /><span></span>
+    </form>
+  </body>
+</html>

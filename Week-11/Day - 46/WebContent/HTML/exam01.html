@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.3.1.js"
+    ></script>
+    <title>exam01</title>
+  </head>
+  <body>
+    <script>
+      $(function () {
+        var scr = 0;
+
+        $("img").click(function () {
+          $("#score").html(scr + 1 + "점");
+        });
+
+        $("img").mouseenter(function () {
+          var i = $("img").index($(this));
+          $("img").each(function (index, item) {
+            if (index <= i) {
+              fillStar($(item));
+            } else {
+              emptyStar($(item));
+            }
+          });
+          scr = i;
+        });
+
+        function chkStar(star) {
+          if ($(star).attr("src").includes("on")) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+
+        function fillStar(star) {
+          $(star).attr("src", "./src/star-on.png");
+        }
+
+        function emptyStar(star) {
+          $(star).attr("src", "./src/star-off.png");
+        }
+      });
+    </script>
+    <h1>별점</h1>
+    <hr />
+    <span>별점 : </span>
+    <img src="./src/star-off.png" />
+    <img src="./src/star-off.png" />
+    <img src="./src/star-off.png" />
+    <img src="./src/star-off.png" />
+    <img src="./src/star-off.png" />
+    <span id="score">0점</span>
+  </body>
+</html>

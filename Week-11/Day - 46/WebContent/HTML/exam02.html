@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-3.3.1.js"
+    ></script>
+    <title>Exam 02</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 20px;
+      }
+
+      a span {
+        font-size: 22px;
+        transition: transform 0.3s;
+        text-indent: 0;
+        line-height: 100%;
+      }
+
+      .main-menu {
+        background-color: rgb(226, 103, 103);
+        width: 300px;
+      }
+
+      ul {
+        list-style: none;
+        color: rgb(245, 245, 245);
+        padding-left: 0;
+      }
+
+      li {
+        border-bottom: 1px solid rgb(58, 58, 58);
+        text-indent: 25px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .sub-menu li {
+        width: 100%;
+        background-color: rgb(58, 58, 58);
+        text-indent: 35px;
+      }
+
+      .sub-menu {
+        display: none;
+      }
+
+      .rotate {
+        transform: rotate(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="main-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">JAVA</a></li>
+      <li><a href="#">Oracle</a></li>
+      <li>
+        <a href="#">FrontEnd</a>
+        <ul class="sub-menu">
+          <li><a href="#">HTML5</a></li>
+          <li><a href="#">CSS3</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li>
+            <a href="#">jQuery</a>
+            <ul class="sub-menu">
+              <li><a href="#">객체탐색</a></li>
+              <li><a href="#">객체조작</a></li>
+              <li><a href="#">이벤트</a></li>
+              <li><a href="#">효과</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">Server</a></li>
+      <li>
+        <a href="#">Framework</a>
+        <ul class="sub-menu">
+          <li><a href="#">Mybatis</a></li>
+          <li><a href="#">Spring</a></li>
+        </ul>
+      </li>
+    </ul>
+    <script>
+      $(function () {
+        $(".sub-menu").prev().append($("<span>+</span>"));
+
+        $("a,.sub-menu").click(function () {
+          if ($(this).children("span").hasClass("rotate")) {
+            $(this).children("span").removeClass("rotate");
+          } else {
+            $(this).children("span").addClass("rotate");
+          }
+
+          $(this).nextAll(".sub-menu").slideToggle(300);
+        });
+
+        $(".sub-menu>li").hover(function () {
+          $(this).css("background-color", "white");
+        });
+      });
+    </script>
+  </body>
+</html>
