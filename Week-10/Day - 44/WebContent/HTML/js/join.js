@@ -99,7 +99,7 @@ function chkPhone(msg) {
 }
 function chkMail(msg) {
   var mail = document.getElementById("email_addr");
-  var regExp = /^[a-zA-Z0-9]{4,12}@{1}[a-zA-Z0-9]+$/;
+  var regExp = /^[a-zA-Z0-9]{4,12}@{1}[a-zA-Z0-9,.]+$/;
 
   return chkExp(regExp, mail, msg);
 }

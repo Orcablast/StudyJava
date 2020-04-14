@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab menu exam</title>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.3.1.js"
+    ></script>
+    <style>
+      main {
+        background-color: #fafafa;
+        width: 750px;
+        height: 480px;
+        border: 1px solid #f3f3f3;
+        padding: 2px;
+      }
+
+      .top {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+      }
+
+      .content-box {
+        width: calc(100% - 22px);
+        height: 68%;
+        margin-top: 4px;
+        border: 1px solid #f3f3f3;
+        color: #0464bb;
+        padding: 10px;
+      }
+
+      .bot {
+        width: 100%;
+        height: calc(100% - 104px - 68%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      button {
+        width: 90px;
+        height: 30px;
+        background-color: #5a5655;
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 8px;
+        margin: 0 7px;
+      }
+
+      button:hover {
+        background-color: #838282;
+      }
+
+      button:active {
+        border: 1px solid #dbdbdb;
+      }
+
+      .title {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        padding-top: 10px;
+      }
+
+      .article {
+        padding-top: 5px;
+        font-size: 14px;
+      }
+
+      .btn {
+        width: 24%;
+        height: 97%;
+        background-color: #0464bb;
+        margin-right: 7px;
+        border-radius: 0 40px 40px 0;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+      }
+
+      .btn span {
+        color: white;
+      }
+
+      .btn span:first-child {
+        font-weight: 600;
+        font-size: 24px;
+        margin: 5px 7px;
+      }
+
+      .btn span:last-child {
+        margin-left: 7px;
+        font-size: 14px;
+      }
+
+      .content {
+        display: none;
+      }
+
+      .btn.wait {
+        background-color: #ebebeb;
+        color: #0464bb;
+      }
+
+      .btn.selected {
+        background-color: #ea8511;
+      }
+
+      .wait span {
+        color: #0464bb;
+      }
+
+      .content.selected {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <div class="btn html5"><span>Step 1</span><span>HTML5</span></div>
+        <div class="btn css"><span>Step 2</span><span>CSS</span></div>
+        <div class="btn js"><span>Step 3</span><span>JavaScript</span></div>
+        <div class="btn jquery"><span>Step 4</span><span>jQuery</span></div>
+      </div>
+      <div class="content-box">
+        <div class="content html">
+          <div class="title">
+            HTML5
+          </div>
+          <div class="article">
+            W3C가 발표하는 HTML의 최신 버전으로, 2014년 10월 28일 완전히
+            표준화되었다. XHTML에서 다시 HTML로 회귀하게 되었다. <br />
+            <br />
+            따라서 HTML5는 XHTML의 상위 버전이 아니라, HTML4.01의 상위 버전이다.
+            완전히 XHTML 문법을 버린 것은 아니고 선택적으로 이용할 수 있게
+            되어있다. 어도비 플래시나 실버라이트 등의 플러그인을 기반으로 하는
+            응용 프로그램에 대한 필요성을 줄이는 것에 초점을 맞추고 있다. <br />
+            <br />
+            이러한 방향성 덕분에 한국에서는 웹 표준에 대한 문제가 이슈로
+            떠오르면서 함께 주목을 받기도 하였다. HTML5라는 말은 의미가 넓어져,
+            꼭 W3C의 HTML5 표준만이 아닌 최신 웹 기술(HTML Living Standard,
+            CSS3+, ECMAScript 6+ 등)을 통틀어 칭하기도 한다. HTML5가
+            상용화되면서 어도비 플래시는 지원 중단 절차를 밟게 되었다.
+          </div>
+        </div>
+
+        <div class="content css">
+          <div class="title">CSS</div>
+          <div class="article">
+            HTML 등의 마크업 언어로 작성된 문서가 실제로 웹사이트에 표현되는
+            방법을 정해주는 언어. CSS의 C가 Cascading의 약자인데, 이는 상위
+            요소의 스타일 속성을 자손 요소들에게 상속시켜주는 모습이 DOM
+            트리구조에서 마치 폭포수처럼 내려가는 모습을 닮았기 때문이다.
+          </div>
+        </div>
+        <div class="content js">
+          <div class="title">Javascript</div>
+          <div class="article">
+            프로토타입기반의 객체지향 프로그래밍 언어로, 스크립트 언어에
+            해당된다. 특수한 목적이 아닌 이상 모든 웹 브라우저에 인터프리터가
+            내장되어 있다. 오늘날 HTML, CSS와 함께 웹을 구성하는 요소 중 하나다.
+            <br />
+            HTML이 웹 페이지의 기본 구조를 담당하고, CSS가 디자인을 담당한다면
+            JavaScript는 클라이언트 단에서 웹 페이지가 동작하는 것을 담당한다.
+            <br />
+            웹 페이지를 자동차에 비유하자면, HTML은 자동차의 뼈대, CSS는
+            자동차의 외관, JavaScript는 자동차의 동력이라고 볼 수 있다. 썬
+            마이크로시스템즈(현재 오라클)에서 개발한 Java와는 별 관계가 없는
+            언어이다. 이름이 비슷하다고 같은 언어가 아니다. 사람들이 흔히
+            헷갈리는 부분 중 하나. 실질적인 구동 방식도 JVM을 이용해서 돌리는
+            Java와, 브라우저 내에 스크립트 엔진(인터프리터)이 존재하는
+            JavaScript는 완전히 다르다. JavaScript는 C에서 영향을 받은 C-Family
+            언어로 기본적인 문법이 유사 중괄호로 구분하는 블럭, 세미콜론으로
+            줄이 끝남을 알리는 것, 변수 쓰는 법, 연산자 사용법 등 기초적인
+            문법이 C 문법과 크게 다르지 않다.
+          </div>
+        </div>
+        <div class="content jquery">
+          <div class="title">jQuery</div>
+          <div class="article">
+            jQuery는 HTML 속 클라이언트 사이드 스크립트 언어를 단순화하도록
+            설계된 브라우저 호환성이 있는 JavaScript 라이브러리이다. <br />
+            존 레식에 의해 2006년 뉴욕 시 바캠프(Barcamp NYC)에서 공식적으로
+            소개되었다. 현재 가장 인기 있는 JavaScript 라이브러리이며 표준에
+            가까운 점유율을 자랑한다.
+          </div>
+        </div>
+      </div>
+      <div class="bot">
+        <button>&lt; Back</button>
+        <button>Next &gt;</button>
+      </div>
+    </main>
+  </body>
+  <script>
+    // $(function () {
+    //   $(".btn:eq(0),.content:eq(0)").addClass("selected");
+    //   $(".btn:gt(0)").addClass("wait");
+    //   $(".btn:eq(1)").on("click", moveTab);
+
+    //   $("button:eq(0)").click(function () {
+    //     var index = chkStep();
+    //     $(".btn")
+    //       .eq(index - 1)
+    //       .click();
+    //   });
+
+    //   $("button:eq(1)").click(function () {
+    //     var index = chkStep();
+    //     $(".btn")
+    //       .eq(index + 1)
+    //       .click();
+    //   });
+
+    //   btnToggle();
+
+    //   function moveTab() {
+    //     var togo = $(".btn").index($(this));
+    //     setBtn(togo);
+    //     btnToggle();
+
+    //     $(".btn")
+    //       .eq(togo - 1)
+    //       .on("click", moveTab);
+    //     $(".btn")
+    //       .eq(togo + 1)
+    //       .on("click", moveTab);
+    //   }
+
+    //   function setBtn(step) {
+    //     $(".btn").each(function (index, item) {
+    //       $(item).removeClass("wait");
+    //       $(item).off("click");
+    //       if (index < step) {
+    //         $(item).removeClass("selected");
+    //       } else if (index == step) {
+    //         $(item).addClass("selected");
+    //       } else if (index > step) {
+    //         $(item).addClass("wait");
+    //         $(item).removeClass("selected");
+    //       }
+    //     });
+    //   }
+
+    //   function btnToggle() {
+    //     var step = chkStep();
+    //     var btn = $(".bot button:eq(0)");
+
+    //     $(".bot button:eq(1)").html("Next &gt;");
+    //     $(".bot button:eq(1)").on("click");
+
+    //     if (step == 0) {
+    //       btn.hide();
+    //     } else if (step == 3) {
+    //       $(".bot button:eq(1)").html("Done");
+    //       $(".bot button:eq(1)").off("click");
+    //     } else {
+    //       btn.show();
+    //     }
+
+    //     if (btn.css("display") == "none") {
+    //       $(".bot").css("justify-content", "flex-end");
+    //     } else {
+    //       $(".bot").css("justify-content", "space-between");
+    //     }
+    //   }
+
+    //   function chkStep() {
+    //     return $(".btn").index($(".btn.selected"));
+    //   }
+    // });
+  </script>
+</html>

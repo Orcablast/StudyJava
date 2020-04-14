@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/exam03.css" />
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-3.3.1.js"
+    ></script>
+  </head>
+  <body>
+    <span>회원가입</span>
+    <form action="test.html" method="post">
+      <div class="row">
+        <div>
+          <label for="user_id">아이디*<span></span></label>
+          <input type="text" name="user_id" id="user_id" />
+        </div>
+        <div>
+          <label for="user_name">이름*<span></span></label>
+          <input type="text" name="user_name" id="user_name" />
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label for="user_pw">비밀번호*<span></span></label>
+          <input type="password" name="user_pw" id="user_pw" />
+        </div>
+        <div>
+          <label for="pw_re">비밀번호 확인*<span></span></label>
+          <input type="password" name="pw_re" id="pw_re" />
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label for="email">EMAIL*<span></span></label>
+          <input type="text" name="email" id="email" />
+        </div>
+        <div>
+          <label for="phone">PHONE*<span></span></label>
+          <input type="text" name="phone" id="phone" />
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label for="addr">주소<span></span></label>
+          <input type="text" name="addr" id="addr" />
+        </div>
+      </div>
+      <div class="submit_container">
+        <input type="submit" value="회원가입" />
+        <input type="reset" value="초기화" />
+      </div>
+    </form>
+  </body>
+  <script>
+    $(function () {
+      $(".row input").focusin(function () {
+        $(this).prev().addClass("focused");
+        $(this).addClass("focused");
+      });
+
+      $(".row input").focusout(function () {
+        if ($(this).val() == "") {
+          $(this).prev().removeClass("focused");
+          $(this).removeClass("focused");
+          $(this).prev().children().html("");
+        } else {
+          var key = $(this).attr("name");
+          var regExp;
+          var msg;
+
+          switch (key) {
+            case "user_id":
+              regExp = /^[a-z][a-z0-9]{3,12}$/;
+              msg = "영어소문자+숫자 4~12자리/영어로 시작";
+              break;
+            case "user_name":
+              regExp = /^[가-힣]{2,4}$/;
+              msg = "한글 2~4글자";
+              break;
+            case "user_pw":
+              regExp = /^[a-zA-Z0-9]{6,18}$/;
+              msg = "영문대소문자+숫자 6~18자리";
+              break;
+
+            case "pw_re":
+              break;
+
+            case "email":
+              regExp = /^[a-zA-Z0-9]+@.+$/;
+              msg = "Email형식에 맞지 않습니다.";
+              break;
+
+            case "phone":
+              msg = "전화번호 형식(000-0000-0000)";
+              break;
+          }
+
+          if (regExp != null && !regExp.test($(this).val())) {
+            $(this).prev().children().html(msg);
+          } else {
+            $(this).prev().children().html("");
+          }
+        }
+      });
+    });
+  </script>
+</html>

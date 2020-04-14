@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab menu exam</title>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.3.1.js"
+    ></script>
+    <style>
+      main {
+        padding: 50px;
+      }
+
+      .menus {
+        display: flex;
+      }
+
+      .menus div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 3px;
+        width: 130px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .menu {
+        background-color: #b3b3b3;
+        color: white;
+        height: 50px;
+        border-radius: 7px 7px 0 0;
+      }
+
+      .menu.selected {
+        background-color: #e7e7e7;
+        color: #dc446e;
+        border-top: 5px solid #dc446e;
+        height: 45px;
+      }
+
+      .content.selected {
+        display: block;
+      }
+
+      .content-box {
+        width: 640px;
+        padding: 25px;
+        background-color: #e7e7e7;
+      }
+
+      .title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .article {
+        border-top: 1px solid #a5a5a5;
+        padding-top: 15px;
+        text-shadow: 1px 1px 1px #d4d4d4;
+      }
+
+      .content {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>탭메뉴 만들기</h2>
+    <hr />
+    <main>
+      <div class="menus">
+        <div class="menu html">HTML5</div>
+        <div class="menu css">CSS</div>
+        <div class="menu js">Javascript</div>
+        <div class="menu jquery">jQuery</div>
+      </div>
+      <div class="content-box">
+        <div class="content html">
+          <div class="title">
+            HTML5
+          </div>
+          <div class="article">
+            W3C가 발표하는 HTML의 최신 버전으로, 2014년 10월 28일 완전히
+            표준화되었다. XHTML에서 다시 HTML로 회귀하게 되었다. <br />
+            따라서 HTML5는 XHTML의 상위 버전이 아니라, HTML4.01의 상위 버전이다.
+            완전히 XHTML 문법을 버린 것은 아니고 선택적으로 이용할 수 있게
+            되어있다. 어도비 플래시나 실버라이트 등의 플러그인을 기반으로 하는
+            응용 프로그램에 대한 필요성을 줄이는 것에 초점을 맞추고 있다. <br />
+            이러한 방향성 덕분에 한국에서는 웹 표준에 대한 문제가 이슈로
+            떠오르면서 함께 주목을 받기도 하였다. HTML5라는 말은 의미가 넓어져,
+            꼭 W3C의 HTML5 표준만이 아닌 최신 웹 기술(HTML Living Standard,
+            CSS3+, ECMAScript 6+ 등)을 통틀어 칭하기도 한다. HTML5가
+            상용화되면서 어도비 플래시는 지원 중단 절차를 밟게 되었다.
+          </div>
+        </div>
+        <div class="content css">
+          <div class="title">CSS</div>
+          <div class="article">
+            HTML 등의 마크업 언어로 작성된 문서가 실제로 웹사이트에 표현되는
+            방법을 정해주는 언어. CSS의 C가 Cascading의 약자인데, 이는 상위
+            요소의 스타일 속성을 자손 요소들에게 상속시켜주는 모습이 DOM
+            트리구조에서 마치 폭포수처럼 내려가는 모습을 닮았기 때문이다.
+          </div>
+        </div>
+        <div class="content js">
+          <div class="title">Javascript</div>
+          <div class="article">
+            프로토타입기반의 객체지향 프로그래밍 언어로, 스크립트 언어에
+            해당된다. 특수한 목적이 아닌 이상 모든 웹 브라우저에 인터프리터가
+            내장되어 있다. 오늘날 HTML, CSS와 함께 웹을 구성하는 요소 중 하나다.
+            <br />
+            HTML이 웹 페이지의 기본 구조를 담당하고, CSS가 디자인을 담당한다면
+            JavaScript는 클라이언트 단에서 웹 페이지가 동작하는 것을 담당한다.
+            <br />
+            웹 페이지를 자동차에 비유하자면, HTML은 자동차의 뼈대, CSS는
+            자동차의 외관, JavaScript는 자동차의 동력이라고 볼 수 있다. 썬
+            마이크로시스템즈(현재 오라클)에서 개발한 Java와는 별 관계가 없는
+            언어이다. 이름이 비슷하다고 같은 언어가 아니다. 사람들이 흔히
+            헷갈리는 부분 중 하나. 실질적인 구동 방식도 JVM을 이용해서 돌리는
+            Java와, 브라우저 내에 스크립트 엔진(인터프리터)이 존재하는
+            JavaScript는 완전히 다르다. JavaScript는 C에서 영향을 받은 C-Family
+            언어로 기본적인 문법이 유사 중괄호로 구분하는 블럭, 세미콜론으로
+            줄이 끝남을 알리는 것, 변수 쓰는 법, 연산자 사용법 등 기초적인
+            문법이 C 문법과 크게 다르지 않다.
+          </div>
+        </div>
+        <div class="content jquery">
+          <div class="title">jQuery</div>
+          <div class="article">
+            jQuery는 HTML 속 클라이언트 사이드 스크립트 언어를 단순화하도록
+            설계된 브라우저 호환성이 있는 JavaScript 라이브러리이다. <br />
+            존 레식에 의해 2006년 뉴욕 시 바캠프(Barcamp NYC)에서 공식적으로
+            소개되었다. 현재 가장 인기 있는 JavaScript 라이브러리이며 표준에
+            가까운 점유율을 자랑한다.
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    $(function () {
+      $(".html").addClass("selected");
+
+      $(".menu").click(function () {
+        clearSel();
+
+        var index = $(".menu").index($(this));
+
+        $($(".menu:eq(" + index + "), .content:eq(" + index + ")")).addClass(
+          "selected"
+        );
+      });
+
+      function clearSel() {
+        $(".menu,.content").each(function () {
+          $(this).removeClass("selected");
+        });
+      }
+    });
+  </script>
+</html>
