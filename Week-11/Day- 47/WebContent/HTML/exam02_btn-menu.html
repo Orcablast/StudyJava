@@ -73,7 +73,7 @@
         font-size: 14px;
       }
 
-      .btn {
+      .top > div {
         width: 24%;
         height: 97%;
         background-color: #0464bb;
@@ -84,17 +84,17 @@
         cursor: pointer;
       }
 
-      .btn span {
+      .top span {
         color: white;
       }
 
-      .btn span:first-child {
+      .top span:first-child {
         font-weight: 600;
         font-size: 24px;
         margin: 5px 7px;
       }
 
-      .btn span:last-child {
+      .top span:last-child {
         margin-left: 7px;
         font-size: 14px;
       }
@@ -103,12 +103,12 @@
         display: none;
       }
 
-      .btn.wait {
+      .top div.wait {
         background-color: #ebebeb;
         color: #0464bb;
       }
 
-      .btn.selected {
+      .top div.selected {
         background-color: #ea8511;
       }
 
@@ -124,13 +124,13 @@
   <body>
     <main>
       <div class="top">
-        <div class="btn html5"><span>Step 1</span><span>HTML5</span></div>
-        <div class="btn css"><span>Step 2</span><span>CSS</span></div>
-        <div class="btn js"><span>Step 3</span><span>JavaScript</span></div>
-        <div class="btn jquery"><span>Step 4</span><span>jQuery</span></div>
+        <div><span>Step 1</span><span>HTML5</span></div>
+        <div><span>Step 2</span><span>CSS</span></div>
+        <div><span>Step 3</span><span>JavaScript</span></div>
+        <div><span>Step 4</span><span>jQuery</span></div>
       </div>
       <div class="content-box">
-        <div class="content html">
+        <div class="content">
           <div class="title">
             HTML5
           </div>
@@ -151,7 +151,7 @@
           </div>
         </div>
 
-        <div class="content css">
+        <div class="content">
           <div class="title">CSS</div>
           <div class="article">
             HTML 등의 마크업 언어로 작성된 문서가 실제로 웹사이트에 표현되는
@@ -160,7 +160,7 @@
             트리구조에서 마치 폭포수처럼 내려가는 모습을 닮았기 때문이다.
           </div>
         </div>
-        <div class="content js">
+        <div class="content">
           <div class="title">Javascript</div>
           <div class="article">
             프로토타입기반의 객체지향 프로그래밍 언어로, 스크립트 언어에
@@ -182,7 +182,7 @@
             문법이 C 문법과 크게 다르지 않다.
           </div>
         </div>
-        <div class="content jquery">
+        <div class="content">
           <div class="title">jQuery</div>
           <div class="article">
             jQuery는 HTML 속 클라이언트 사이드 스크립트 언어를 단순화하도록
@@ -200,26 +200,68 @@
     </main>
   </body>
   <script>
+    $(function () {
+      $(".top div:lt(2)").click(btnClick);
+      $(".top div").eq(0).click();
+
+      $("button").eq(0).click(btnPrev);
+      $("button").eq(1).click(btnNext);
+    });
+
+    function btnClick() {
+      curr = $(".top div").index($(this));
+      $(".top div").removeClass();
+
+      $(this).addClass("selected");
+      $(this).nextAll().addClass("wait");
+
+      $(this).nextAll().off("click");
+      $(this).next().on("click", btnClick);
+
+      $(".content").hide();
+      $(".content").eq(curr).show();
+
+      var btnMsg = "Next &gt;";
+
+      $(".bot").css("justify-content", "space-between");
+
+      if (curr == 3) {
+        btnMsg = "Done";
+      } else if (curr == 0) {
+        $("button").eq(0).hide();
+        $(".bot").css("justify-content", "flex-end");
+      } else {
+        $("button").eq(0).show();
+      }
+
+      $("button").eq(1).html(btnMsg);
+    }
+
+    function btnNext() {
+      $(".top div")
+        .eq(curr + 1)
+        .click();
+    }
+
+    function btnPrev() {
+      $(".top div")
+        .eq(curr - 1)
+        .click();
+    }
+
     // $(function () {
     //   $(".btn:eq(0),.content:eq(0)").addClass("selected");
     //   $(".btn:gt(0)").addClass("wait");
     //   $(".btn:eq(1)").on("click", moveTab);
 
-    //   $("button:eq(0)").click(function () {
-    //     var index = chkStep();
-    //     $(".btn")
-    //       .eq(index - 1)
-    //       .click();
-    //   });
-
-    //   $("button:eq(1)").click(function () {
-    //     var index = chkStep();
-    //     $(".btn")
-    //       .eq(index + 1)
-    //       .click();
-    //   });
-
     //   btnToggle();
+
+    //   function btnFunc(num) {
+    //     var index = chkStep();
+    //     $(".btn")
+    //       .eq(index + num)
+    //       .click();
+    //   }
 
     //   function moveTab() {
     //     var togo = $(".btn").index($(this));
@@ -265,11 +307,11 @@
     //       btn.show();
     //     }
 
-    //     if (btn.css("display") == "none") {
-    //       $(".bot").css("justify-content", "flex-end");
-    //     } else {
-    //       $(".bot").css("justify-content", "space-between");
-    //     }
+    // if (btn.css("display") == "none") {
+    //   $(".bot").css("justify-content", "flex-end");
+    // } else {
+    //   $(".bot").css("justify-content", "space-between");
+    // }
     //   }
 
     //   function chkStep() {

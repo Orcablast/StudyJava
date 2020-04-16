@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.3.1.js"
+    ></script>
+    <title>Document</title>
+    <style>
+      div {
+        box-sizing: border-box;
+        color: #1164b5;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        height: 80px;
+        overflow: hidden;
+      }
+
+      li {
+        width: 190px;
+        height: 80px;
+        float: left;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        padding-left: 3px;
+        margin-right: 3px;
+      }
+
+      h1 {
+        padding: 0;
+        margin: 0;
+      }
+
+      .wrapper {
+        padding: 3px;
+        margin: 20px;
+        width: 800px;
+        height: 500px;
+        border: 1px solid lightgray;
+      }
+
+      .content {
+        display: none;
+      }
+
+      .c1 {
+        width: 100%;
+        height: 370px;
+        margin-top: 2px;
+        border: 1px solid lightgray;
+      }
+
+      .c2 {
+        width: 100%;
+        height: 45px;
+      }
+
+      .c2 > span {
+        width: 80px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        background-color: midnightblue;
+        color: white;
+        border-radius: 10px;
+        font-size: 13px;
+      }
+
+      .next {
+        margin-top: 5px;
+        margin-right: 5px;
+        float: right;
+      }
+
+      .back {
+        margin-top: 5px;
+        margin-left: 5px;
+        float: left;
+      }
+
+      .first {
+        background-color: lightgrey;
+        color: #1164b5;
+      }
+
+      .now {
+        background-color: orange;
+        color: white;
+      }
+
+      .past {
+        background-color: #1164b5;
+        color: white;
+      }
+    </style>
+    <script>
+      $(function () {
+        //클릭했을때
+        $(".navi")
+          .children()
+          .click(function () {
+            var index = $(".navi").children().index($(this));
+            if (
+              index == 0 ||
+              $(this).prev().attr("class") == "now" ||
+              $(this).next().attr("class") == "now"
+            ) {
+              //네비색
+              $(".navi").children().removeClass();
+              $(this).addClass("now");
+              $(this).prevAll().addClass("past");
+              $(this).nextAll().addClass("first");
+              //div꺼내기
+              $(".content").hide();
+              $(".content").eq(index).show();
+            }
+          });
+
+        //첨꺼클릭시켜놓기
+        $(".navi").children().eq(0).click();
+
+        //밑에버튼
+        $(".next").click(function () {
+          var index = $(".content").index($(this).parent().parent());
+          $(".navi")
+            .children()
+            .eq(index + 1)
+            .click();
+        });
+        $(".back").click(function () {
+          var index = $(".content").index($(this).parent().parent());
+          $(".navi")
+            .children()
+            .eq(index - 1)
+            .click();
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div>
+        <ul class="navi">
+          <li>
+            <h1>Step1</h1>
+            HTML5
+          </li>
+          <li>
+            <h1>Step2</h1>
+            CSS
+          </li>
+          <li>
+            <h1>Step3</h1>
+            Javascript
+          </li>
+          <li>
+            <h1>Step4</h1>
+            jQuery
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="c1">
+          <h3>HTML5</h3>
+          HTML 5는 별도 프로그램을 깔지 않아도 인터넷 브라우저상에서 화려한
+          그래픽 효과를 구현하며, 음악ㆍ동영상을 자유롭게 감상할 수 있는 마크업
+          언어(markup language)이다. 2004년부터 HTML 5 표준화 그룹인 WHATWG(Web
+          Hypertext Application Technology Working Group)는 HTML 5를 HTML의 차기
+          핵심 표준으로 만들기 위한 세부 작업을 시작하였고, 2014년 10월
+          웹표준화기구 월드와이드컨소시엄(W3C)은 HTML 5을 웹표준으로 선정했다.
+          이에 따라 애플ㆍ마이크로소프트(MS), 구글, 페이스북 등 글로벌 IT
+          기업들은 HTML 5 시대 주도권을 잡기 위해 치열한 경쟁에 돌입하기도 했다.
+          [네이버 지식백과] HTML 5 (시사상식사전, pmg 지식엔진연구소)
+        </div>
+        <div class="c2">
+          <span class="next">Next&gt;</span>
+        </div>
+      </div>
+      <div class="content">
+        <div class="c1">
+          <h3>CSS</h3>
+          기존의 HTML은 웹 문서를 다양하게 설계하고 수시로 변경하는데 많은
+          제약이 따르는데, 이를 보완하기 위해 만들어진 것이 스타일 시트이고
+          스타일 시트의 표준안이 바로 CSS이다. 간단히 스타일 시트라고도 한다.
+          HTML을 이용해서 웹 페이지를 제작할 경우 전반적인 틀에서 세세한 글꼴
+          하나 하나를 일일이 지정해주어야 하지만, 웹 페이지의 스타일(작성형식)을
+          미리 저장해 두면 웹 페이지의 한 가지 요소만 변경해도 관련되는 전체
+          페이지의 내용이 한꺼번에 변경되므로, 문서 전체의 일관성을 유지할 수
+          있고 작업 시간도 단축된다. 따라서 웹 개발자들은 보다 풍부한 디자인으로
+          웹을 설계할 수 있고, 글자의 크기, 글자체, 줄간격, 배경 색상, 배열위치
+          등을 자유롭게 선택하거나 변경할 수 있으며 유지·보수도 간편하게 할 수
+          있다. [네이버 지식백과] CSS [cascading style sheets] (두산백과)
+          <br />
+        </div>
+        <div class="c2">
+          <span class="back">&lt;Back</span>
+          <span class="next">Next&gt;</span>
+        </div>
+      </div>
+      <div class="content">
+        <div class="c1">
+          <h3>Javascript</h3>
+          웹 페이지에서 사용자로부터 특정 이벤트나 입력 값을 받아 동적인 처리를
+          목적으로 고안된 객체 기반의 스크립트 프로그래밍 언어. 사용자 경험을
+          향상시키기 위한 방법으로 주로 사용된다. 일반적으로 HTML 문서에
+          내재되며, 브라우저에서 실행된다. 예를 들면, 마우스를 HTML 문서의 특정
+          이미지나 텍스트 위로 가져갔을 때 이미지 크기가 커지거나 텍스트의 색이
+          바뀌는 기능이다. 또 검색창 입력 박스에 ‘자’를 입력하면 현재 기준으로
+          사용자 검색이 많은 ‘자’로 시작하는 검색어 목록을 보여주는 기능도
+          자바스크립트로 구현한 것이다. [네이버 지식백과] 자바스크립트
+          [JavaScript] (IT용어사전, 한국정보통신기술협회)
+          <br />
+        </div>
+        <div class="c2">
+          <span class="back">&lt;Back</span>
+          <span class="next">Next&gt;</span>
+        </div>
+      </div>
+      <div class="content">
+        <div class="c1">
+          <h3>jQuery</h3>
+          jQuery(제이쿼리)는 HTML의 클라이언트 사이드 조작을 단순화 하도록
+          설계된 크로스 플랫폼의 자바스크립트 라이브러리다. 존 레식이 2006년
+          뉴욕 시 바캠프(Barcamp NYC)에서 공식적으로 소개하였다. jQuery는 오늘날
+          가장 인기있는 자바스크립트 라이브러리 중 하나이다. jQuery는 MIT
+          라이선스와 GNU 일반 공중 사용 허가서v2의 듀얼 라이선스를 가진 자유
+          오픈 소프트웨어이다. jQuery의 문법은 코드 보기, 문서 객체 모델 찾기,
+          애니메이션 만들기, 이벤트 제어, Ajax 개발을 쉽게 할 수 있도록
+          디자인되었다. 또한, jQuery는 개발자가 플러그인을 개발할 수 있는 기능을
+          제공한다.
+          <br />
+        </div>
+        <div class="c2">
+          <span class="back">&lt;Back</span>
+          <span class="next">Done</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
