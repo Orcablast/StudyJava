@@ -93,6 +93,13 @@
               break;
 
             case "pw_re":
+              if ($("input").eq(2).val() != $(this).val()) {
+                regExp = /[^.]]/;
+                msg = "비밀번호가 같지 않습니다.";
+              } else {
+                regExp = /^[a-zA-Z0-9]{6,18}$/;
+                msg = "영문대소문자+숫자 6~18자리";
+              }
               break;
 
             case "email":
