@@ -97,7 +97,7 @@ public class Member {
 	
 	@Override
 	public String toString() {
-		return getMemberId()+"\t"+getMemberName()+"\t"+getAge()+"\t"+getGender()+"\t"+getHobby()+"\t"+getPhone()+"\t"+getEnrollDate();
+		return getMemberId()+"\t\t"+getMemberName()+"\t"+getAge()+"\t"+getGender()+"\t"+getHobby()+"\t"+getPhone()+"\t"+getEnrollDate();
 	}
 	
 
