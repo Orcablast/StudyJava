@@ -3,7 +3,7 @@ package kh.java.member.model.service;
 import java.sql.Connection;
 
 import common.JDBCTemplate;
-import kh.java.member.dao.MemberDao;
+import kh.java.member.model.dao.MemberDao;
 import kh.java.member.model.vo.Member;
 
 public class MemberService {

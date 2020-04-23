@@ -33,33 +33,32 @@ public class JoinServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		// 1. 인코딩
 		request.setCharacterEncoding("utf-8");
-		
+
 		// 2. 값저장
 		String memberId = request.getParameter("memberId");
 		String memberPw = request.getParameter("memberPw");
 		String memberName = request.getParameter("memberName");
 		int footSize = Integer.parseInt(request.getParameter("footSize"));
-		
+
 		Member m = new Member(0, memberId, memberPw, memberName, footSize);
-				
-		
+
 		// 3. 비즈니스 로직
-		
-		int result = new MemberService().insertMember(m);		
-		
+
+		int result = new MemberService().insertMember(m);
+
 		// 4. 결과처리
-		
+
 		response.setContentType("text/html;charset=utf-8");
-		
+
 		PrintWriter out = response.getWriter();
-		
+
 		out.println("<html><head><title>회원가입 결과</title></head>");
 		out.println("<body>");
 		out.println("<script>");
-		if(!(result > 0)) {
+		if (!(result > 0)) {
 			out.println("alert('회원가입 실패!!');");
 		} else {
 			out.println("alert('회원가입 성공!!');");
@@ -67,8 +66,7 @@ public class JoinServlet extends HttpServlet {
 		out.println("location.href='html/member/main.html';");
 		out.println("</script>");
 		out.println("</body></html>");
-	
-		
+
 	}
 
 	/**

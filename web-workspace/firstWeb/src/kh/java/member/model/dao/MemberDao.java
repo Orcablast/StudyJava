@@ -1,4 +1,4 @@
-package kh.java.member.dao;
+package kh.java.member.model.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
