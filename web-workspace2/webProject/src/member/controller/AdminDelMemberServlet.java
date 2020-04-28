@@ -34,14 +34,14 @@ public class AdminDelMemberServlet extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		
 		// 2. 변수저장
-		String memberId = request.getParameter("member_id");
+		String memberId = request.getParameter("memberId");
 		
 		// 3. 비즈니스 로직
 		int result = new MemberService().deleteMember(memberId);
 		
 		// 4. 결과처리
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/common/msg.jsp");
-		request.setAttribute("loc", "/adminDelMember");
+		request.setAttribute("loc", "/adminPage");
 		if(result > 0 ) {
 			request.setAttribute("msg", "회원이 탈퇴처리 되었습니다.");
 		} else {

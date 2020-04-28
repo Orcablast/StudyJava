@@ -114,4 +114,28 @@ public class MemberService {
 		return result;
 	}
 
+	public ArrayList<Member> searchMember(String type, String keyword) {
+		
+		Connection conn = JDBCTemplate.getConnection();
+		
+		ArrayList<Member> list = null;
+		
+		if(type.equals("memberId")) {
+			list = new ArrayList<Member>();
+			
+			Member m = new MemberDao().selectOneMember(conn, keyword);
+			
+			if(m != null) {
+				list.add(m);				
+			}
+			
+		} else {
+			list = new MemberDao().selectAllMember(conn, keyword);
+		}
+		
+		JDBCTemplate.close(conn);
+		
+		return list;
+	}
+
 }

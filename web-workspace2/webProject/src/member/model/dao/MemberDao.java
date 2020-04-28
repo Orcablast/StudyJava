@@ -215,4 +215,38 @@ public class MemberDao {
 		return result;
 	}
 
+	public ArrayList<Member> selectAllMember(Connection conn, String keyword) {
+		
+		ArrayList<Member> list = new ArrayList<Member>();
+		PreparedStatement pst = null;
+		ResultSet rset = null;
+		String query = "select * from member where member_name like '%"+keyword+"%'";
+		
+		try {
+			pst = conn.prepareStatement(query);
+			rset = pst.executeQuery();
+					
+			while(rset.next()) {
+				Member m = new Member();
+				m.setMemberId(rset.getString("member_id"));
+				m.setMemberPw(rset.getString("member_pw"));
+				m.setMemberName(rset.getString("member_name"));
+				m.setAge(rset.getInt("age"));
+				m.setEmail(rset.getString("email"));
+				m.setAddress(rset.getString("address"));
+				m.setPhone(rset.getString("phone"));
+				m.setEnrollDate(rset.getDate("enroll_date"));
+				list.add(m);
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JDBCTemplate.close(rset);
+			JDBCTemplate.close(pst);
+		}
+		
+		return list;
+	}
+
 }
