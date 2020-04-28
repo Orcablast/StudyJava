@@ -49,6 +49,8 @@ public class SearchKeywordServlet extends HttpServlet {
 		if (!list.isEmpty()) {
 			rd = request.getRequestDispatcher("/WEB-INF/views/member/adminPage.jsp");
 			request.setAttribute("list", list);
+			request.setAttribute("type", type);
+			request.setAttribute("keyword", keyword);
 		} else {
 			rd = request.getRequestDispatcher("/WEB-INF/views/common/msg.jsp");
 			request.setAttribute("msg", "해당하는 회원이 없습니다.");

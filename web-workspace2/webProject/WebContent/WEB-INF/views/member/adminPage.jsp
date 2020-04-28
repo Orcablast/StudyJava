@@ -39,6 +39,15 @@ prefix="c"%>
     </style>
   </head>
   <body>
+    <script>
+      window.onload = function () {
+        document
+          .querySelector("option[value=" + "${type}" + "]")
+          .setAttribute("selected", true);
+
+        document.querySelector("input").value = "${keyword}";
+      };
+    </script>
     <jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
     <section class="container">
       <table class="table table-hover">
@@ -76,7 +85,7 @@ prefix="c"%>
         <form action="/searchKeyword">
           <select name="type" id="form-control">
             <option value="memberId">아이디</option>
-            <option value="memberName">이름</option>
+            <option value="memberName"> 이름</option>
           </select>
           <input type="text" name="keyword" class="form-control" />
           <button type="submit" class="btn btn-outline-secondary btn-sm">
