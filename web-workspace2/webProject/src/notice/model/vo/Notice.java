@@ -28,6 +28,12 @@ public class Notice {
 		this.fileName = fileName;
 		this.filePath = filePath;
 	}
+	
+	public String getContentBr() {
+		return noticeContent.replaceAll("\r\n", "<br/>");
+	}
+	
+		
 
 	public int getNoticeNo() {
 		return noticeNo;
