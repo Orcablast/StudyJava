@@ -23,7 +23,7 @@ public class testFunc {
 	private WebDriverWait wait;
 	private JavascriptExecutor js;
 	
-	public String baseUrl;
+	public String baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0006295864";
 	
 	private String userId = "ldh5271";
 	private String userPw = "L#d4h594688";
@@ -73,7 +73,7 @@ public class testFunc {
         js = (JavascriptExecutor)driver;	
         wait = new WebDriverWait(driver, 1);
         
-        driver.get("https://secure.e-himart.co.kr/");
+        driver.get("http://www.e-himart.co.kr/");
         
         webElement = driver.findElement(By.id("loginArea"));
         
@@ -108,7 +108,8 @@ public class testFunc {
 		while(true) {
 //			driver.get("http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0006295864"); // 동숲 타이틀 링크
 //			driver.get("http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0001077642"); // 테스트 링크1 품절
-			driver.get("http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0003966502"); // 테스트 링크2 구매가능
+//			driver.get("http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0003966502"); // 테스트 링크2 구매가능
+			driver.get(baseUrl);
 			try {
 				if(wait.until(ExpectedConditions.alertIsPresent()) != null) {
 					System.out.println("저기 얼럿있네");
@@ -132,7 +133,7 @@ public class testFunc {
 				webElement = driver.findElement(By.className("btnOrder"));
 			} catch (Exception e) {
 				System.out.println("구매하기 버튼이 활성화 되지 않음");
-				driver.get("http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0001077642");
+				driver.get(baseUrl);
 				continue;
 			}
 			
