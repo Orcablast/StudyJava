@@ -23,7 +23,7 @@ public class testFunc {
 	private WebDriverWait wait;
 	private JavascriptExecutor js;
 	
-	public String baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0006295864";
+	public String baseUrl = "http://www.e-himart.co.kr/";
 	
 	
 	
@@ -107,10 +107,10 @@ public class testFunc {
         options.setExperimentalOption("debuggerAddress", "127.0.0.1:9222");
         driver = new ChromeDriver(options);
         
-        
-		baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0006295864"; // 동숲 타이틀 링크
+//        baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0006295851"; // 동디션 패키지
+//		baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0006295864"; // 동숲 타이틀 링크
 //		baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0001077642"; // 테스트 링크1 품절
-//		baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0003966502"; // 테스트 링크2 구매가능
+		baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0004177126"; // 테스트 링크2 구매가능
         
 		while(true) {
 			driver.get(baseUrl);
@@ -157,8 +157,21 @@ public class testFunc {
 		
 		// 결제하기 버튼 비활성화 시간 오래걸릴 수 있으므로 고려해야함
 		
-		webElement = driver.findElement(By.id("doPaybutton0"));		
-		js.executeScript("arguments[0].click();", webElement);		
+		while(true) {
+			
+			try {
+				
+				webElement = driver.findElement(By.id("doPaybutton0"));		
+				js.executeScript("arguments[0].click();", webElement);				
+				
+			} catch (Exception e) {
+				System.out.println("결제버튼 활성화 대기중");
+				continue;
+			}
+			
+			break;
+		}
+		
 						
 //		putPayPw();
 	}
@@ -174,7 +187,7 @@ public class testFunc {
 		while(true) {
 			
 			try {
-				webElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/div[5]/div/div[2]/div[2]/button[1]")));
+				webElement = driver.findElement(By.xpath("//*[@id=\"jzpx83fev4\"]"));
 				
 			} catch (Exception e) {
 				System.out.println("타임아웃");
@@ -183,7 +196,7 @@ public class testFunc {
 			break;
 		}
 		
-		webElement.click();
+		js.executeScript("arguments[0].selected = 'true';", webElement);
 	}
 
 }
