@@ -27,8 +27,8 @@ public class testFunc {
 	
 	
 	
-	private String userId = "ldh5271";
-	private String userPw = "L#d4h594688";
+	private String userId;
+	private String userPw;
 	
 	public void getUserInfo() {
 		
@@ -58,7 +58,7 @@ public class testFunc {
 	}
 	
 	public void setUpLogin() {
-
+		getUserInfo();
 
 		System.setProperty(WEB_DRIVER_ID, WEB_DRIVER_PATH);
 		
@@ -107,10 +107,10 @@ public class testFunc {
         options.setExperimentalOption("debuggerAddress", "127.0.0.1:9222");
         driver = new ChromeDriver(options);
         
-//        baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0006295851"; // 동디션 패키지
+        baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0006295851"; // 동디션 패키지
 //		baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0006295864"; // 동숲 타이틀 링크
 //		baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0001077642"; // 테스트 링크1 품절
-		baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0004177126"; // 테스트 링크2 구매가능
+//		baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0004177126"; // 테스트 링크2 구매가능
         
 		while(true) {
 			driver.get(baseUrl);
@@ -151,7 +151,7 @@ public class testFunc {
 		webElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("abAgreeB2")));		
 		js.executeScript("arguments[0].click();", webElement);
 		
-		webElement = driver.findElement(By.cssSelector("option[value='03:Y']"));
+		webElement = driver.findElement(By.cssSelector("option[value='06:Y']"));
 		js.executeScript("arguments[0].selected = 'true';", webElement);
 		
 		
