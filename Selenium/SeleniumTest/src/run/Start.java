@@ -1,6 +1,5 @@
 package run;
 
-import java.io.IOException;
 
 import himart.test.func.testFunc;
 

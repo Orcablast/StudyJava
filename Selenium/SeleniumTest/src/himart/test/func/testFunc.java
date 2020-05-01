@@ -25,6 +25,8 @@ public class testFunc {
 	
 	public String baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0006295864";
 	
+	
+	
 	private String userId = "ldh5271";
 	private String userPw = "L#d4h594688";
 	
@@ -90,7 +92,7 @@ public class testFunc {
         	webElement.click();
         	
         	try {
-				Thread.sleep(2000);
+				Thread.sleep(3000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -105,10 +107,12 @@ public class testFunc {
         options.setExperimentalOption("debuggerAddress", "127.0.0.1:9222");
         driver = new ChromeDriver(options);
         
+        
+		baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0006295864"; // 동숲 타이틀 링크
+//		baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0001077642"; // 테스트 링크1 품절
+//		baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0003966502"; // 테스트 링크2 구매가능
+        
 		while(true) {
-//			driver.get("http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0006295864"); // 동숲 타이틀 링크
-//			driver.get("http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0001077642"); // 테스트 링크1 품절
-//			driver.get("http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0003966502"); // 테스트 링크2 구매가능
 			driver.get(baseUrl);
 			try {
 				if(wait.until(ExpectedConditions.alertIsPresent()) != null) {
@@ -140,13 +144,18 @@ public class testFunc {
 			break;
 		}
 		
-		webElement.click();
+		webElement.click();		
+		
+		// 로딩이 오래걸릴수 있음
 		
 		webElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("abAgreeB2")));		
 		js.executeScript("arguments[0].click();", webElement);
 		
 		webElement = driver.findElement(By.cssSelector("option[value='03:Y']"));
 		js.executeScript("arguments[0].selected = 'true';", webElement);
+		
+		
+		// 결제하기 버튼 비활성화 시간 오래걸릴 수 있으므로 고려해야함
 		
 		webElement = driver.findElement(By.id("doPaybutton0"));		
 		js.executeScript("arguments[0].click();", webElement);		
