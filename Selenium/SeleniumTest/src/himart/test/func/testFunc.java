@@ -107,10 +107,10 @@ public class testFunc {
         options.setExperimentalOption("debuggerAddress", "127.0.0.1:9222");
         driver = new ChromeDriver(options);
         
-//        baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0006295851"; // 동디션 패키지
+        baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0006295851"; // 동디션 패키지
 //		baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0006295864"; // 동숲 타이틀 링크
 //		baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0001077642"; // 테스트 링크1 품절
-		baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0004177126"; // 테스트 링크2 구매가능
+//		baseUrl = "http://www.e-himart.co.kr/app/goods/goodsDetail?goodsNo=0004177126"; // 테스트 링크2 구매가능
         
 		while(true) {
 			driver.get(baseUrl);
@@ -147,6 +147,9 @@ public class testFunc {
 		webElement.click();		
 		
 		// 로딩이 오래걸릴수 있음
+		
+		webElement = wait.until(ExpectedConditions.elementToBeClickable(By.id("abPaySP")));
+		js.executeScript("arguments[0].click();", webElement);
 		
 		webElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("abAgreeB2")));		
 		js.executeScript("arguments[0].click();", webElement);
