@@ -37,7 +37,7 @@ public class DeleteNoticeServlet extends HttpServlet {
 		int noticeNo = Integer.parseInt(request.getParameter("noticeNo"));
 		
 		// 3. 비지니스 로직
-		Notice n = new NoticeService().selectOneNotice(noticeNo);
+		Notice = new NoticeService().selectOneNotice(noticeNo);
 		int result = new NoticeService().deleteNotice(noticeNo);
 		
 		// 4. 결과처리

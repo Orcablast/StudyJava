@@ -1,6 +1,8 @@
 package notice.controller;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,14 +15,14 @@ import notice.model.vo.NoticeComment;
 /**
  * Servlet implementation class NoticeCommentServlet
  */
-@WebServlet(name = "NoticeComment", urlPatterns = { "/noticeComment" })
-public class NoticeCommentServlet extends HttpServlet {
+@WebServlet(name = "NoticeCommentInsert", urlPatterns = { "/noticeCommentInsert" })
+public class NoticeCommentInsertServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public NoticeCommentServlet() {
+    public NoticeCommentInsertServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -39,12 +41,24 @@ public class NoticeCommentServlet extends HttpServlet {
 		nc.setNoticeCommentWriter(request.getParameter("noticeCommentWriter"));
 		nc.setNoticeCommentContent(request.getParameter("noticeCommentContent"));
 		nc.setNoticeRef(Integer.parseInt(request.getParameter("noticeRef")));
-		nc.setNoticeCommentRef(Integer.parseInt(request.getParameter("noticeCommentRef")));		
+		nc.setNoticeCommentRef(Integer.parseInt(request.getParameter("noticeCommentRef")));
+		System.out.println(nc.getNoticeCommentWriter());
 		
 		// 3. 비즈니스 로직
 		
 		int result = new NoticeService().noticeCommentInsert(nc);
+		
 		// 4. 결과 처리
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/common/msg.jsp");
+		
+		if(result>0) {
+			request.setAttribute("msg", "댓글 등록 성공");
+		} else {
+			request.setAttribute("msg", "댓글 등록 실패");
+		}
+		
+		request.setAttribute("loc", "/noticeView?noticeNo="+nc.getNoticeRef());
+		rd.forward(request, response);
 	}
 
 	/**

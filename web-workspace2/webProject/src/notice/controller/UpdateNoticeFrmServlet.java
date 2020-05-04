@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import notice.model.service.NoticeService;
 import notice.model.vo.Notice;
+import notice.model.vo.NoticeViewData;
 
 /**
  * Servlet implementation class UpdateNoticeFrmServlet
@@ -38,11 +39,11 @@ public class UpdateNoticeFrmServlet extends HttpServlet {
 		int noticeNo = Integer.parseInt(request.getParameter("noticeNo"));
 		
 		// 3. 비즈니스 로직
-		Notice n = new NoticeService().selectOneNotice(noticeNo);
+		NoticeViewData nvd = new NoticeService().selectOneNotice(noticeNo);
 		
 		// 4. 결과처리
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/notice/updateNotice.jsp");
-		request.setAttribute("n", n);
+		request.setAttribute("n", nvd.getN());
 		rd.forward(request, response);  
 		
 	}
