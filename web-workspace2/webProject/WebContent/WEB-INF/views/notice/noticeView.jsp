@@ -7,10 +7,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Insert title here</title>
 <style>
-.table-wrapper {
+.table-wrapper,
+.comment-write {
 	width: 1000px;
 	margin: 0 auto;
 }
+
 </style>
 </head>
 <body>
@@ -50,6 +52,26 @@
                 </th>
             </tr>
 		</table>
+		<c:if test="${not empty sessionScope.member }">
+		<div class="comment-write">
+			<form action="/noticeCommentInsert" method="post">
+				<input type="hidden" name="noticeCommentWriter" value="${sessionScope.member.memberId}">
+				<input type="hidden" name="noticeRef" value="${n.noticeNo}">
+				<input type="hidden" name="noticeCommentLevel" value="1">
+				<input type="hidden" name="noticeCommentRef" value="0">
+				<table class="table">
+					<tr>
+						<td width="85%">
+							<input type="text" class="form-control" name="noticeCommentcontent">
+						</td>
+						<td width="15%">
+							<button type="submit" class="btn btn-primary">작성</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		</c:if>
 	</div>
     </section>
     <script>

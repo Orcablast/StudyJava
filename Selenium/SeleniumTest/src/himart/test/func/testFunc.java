@@ -27,8 +27,8 @@ public class testFunc {
 	
 	
 	
-	private String userId = "ldh5271";
-	private String userPw = "L#d4h594688";
+	private String userId = "";
+	private String userPw = "";
 	
 	public void getUserInfo() {
 		
