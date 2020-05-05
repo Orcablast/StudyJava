@@ -1,6 +1,8 @@
 package dh.selenium.run;
 
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -10,14 +12,22 @@ import dh.txt.txtFunc;
 public class Start {
 
 	public static void main(String[] args) {
+		BufferedWriter bw = null;
 		
-//		try {
-//			new songCrawler().main();
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+		try {
+			bw = new BufferedWriter(new FileWriter("songsRawData.txt",true));
+			new songCrawler().main(bw);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				bw.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
 		
 	}
 

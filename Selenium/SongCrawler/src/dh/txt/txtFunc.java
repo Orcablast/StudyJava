@@ -12,13 +12,12 @@ public class txtFunc {
 
 	public String getKeyword() {
 		BufferedReader br = null;
-		BufferedWriter bw = null;
 
 		String keyword = "";
 
 		try {
 			br = new BufferedReader(new FileReader("keyword.txt"));
-
+						
 			keyword = br.readLine();
 
 		} catch (FileNotFoundException e) {
@@ -30,7 +29,6 @@ public class txtFunc {
 
 			try {
 				br.close();
-				br = null;
 
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -91,7 +89,7 @@ public class txtFunc {
 		BufferedReader br = null;
 
 		try {
-			br = new BufferedReader(new FileReader("test.txt"));
+			br = new BufferedReader(new FileReader("songsRawData.txt"));
 
 			String str = "";
 
@@ -120,49 +118,24 @@ public class txtFunc {
 		return list;
 	}
 
-	public void writeSongs(ArrayList<String> list) {
+	public StringBuffer writeSongs(ArrayList<String> list, StringBuffer sb) {
 
-		BufferedWriter bw = null;
-
-		try {
-			bw = new BufferedWriter(new FileWriter("test.txt"));
-
-			for (String str : list) {
-
-				bw.write(str + "\r\n");
-
-			}
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				bw.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		for(String str : list) {
+			sb.append(str+"\r\n");
 		}
+		
+		return sb;
 	}
 
-	public void writeSongs(StringBuffer sb) {
+	public void writeSongs(StringBuffer sb,BufferedWriter bw) {
 		
-		BufferedWriter bw = null;
 
 		try {
-			bw = new BufferedWriter(new FileWriter("test.txt"));
 
 			bw.write(sb.toString());
 
 		} catch (IOException e) {
 			e.printStackTrace();
-		} finally {
-			try {
-				bw.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		}
 	}
 
