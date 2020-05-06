@@ -245,4 +245,48 @@ public class NoticeDao {
 		return list;
 	}
 
+	public int deleteNoticeComment(Connection conn, int noticeCommentNo) {
+		
+		int result = 0;
+		PreparedStatement pst = null;
+		String query = "delete from notice_comment where notice_comment_no = ?";
+		
+		try {
+			pst = conn.prepareStatement(query);
+			pst.setInt(1, noticeCommentNo);
+			
+			result = pst.executeUpdate();			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JDBCTemplate.close(pst);
+		}
+		
+		return result;
+	}
+
+	public int updateNoticeComment(Connection conn, NoticeComment nc) {
+
+		int result = 0;
+		PreparedStatement pst = null;
+		String query = "update notice_comment set notice_comment_content = ? where notice_comment_no = ?";
+		
+		try {
+			pst = conn.prepareStatement(query);
+			pst.setString(1, nc.getNoticeCommentContent());
+			pst.setInt(2, nc.getNoticeCommentNo());
+			
+			result = pst.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JDBCTemplate.close(pst);
+		}
+		
+		
+		return result;
+	}
+
 }
