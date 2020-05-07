@@ -33,7 +33,9 @@ prefix="c"%>
             <li class="nav-item">
               <a href="/noticeList?reqPage=1" class="nav-link">공지사항</a>
             </li>
-            <li class="nav-item"><a href="#" class="nav-link">Menu2</a></li>
+            <li class="nav-item">
+              <a href="/photoList" class="nav-link">사진 게시판</a>
+            </li>
             <li class="nav-item"><a href="#" class="nav-link">Menu3</a></li>
             <li class="nav-item">
               <a href="/views/ajaxTest.jsp" class="nav-link">Ajax</a>
