@@ -43,24 +43,6 @@ public class songCrawler {
 	private String baseUrl = "https://www.melon.com/";
 
 	public void main(BufferedWriter bw) throws IOException {
-//		String keyword = null;
-//		String genre = null;
-//		while (true) {
-//			try {
-////				genre = getGenre();
-//
-//			} catch (InputMismatchException e) {
-//				System.out.println("잘못된 입력입니다.");
-//
-//			}
-//
-//			if (keyword != null && genre != null) {
-//				break;
-//			} else {
-//				System.out.println("잘못된 입력입니다.");
-//			}
-//
-//		}
 
 		String keyword = new txtFunc().getKeyword();
 		System.out.println(keyword);
