@@ -34,6 +34,7 @@ prefix="c"%>
 
       function fn_more(start) {
         var param = { start: start };
+
         $.ajax({
           url: "/photoMore",
           data: param,
@@ -52,6 +53,17 @@ prefix="c"%>
                 "<p class='caption'>" + data[i].photoContent + "</p></div>";
             }
             $("#photo-wrapper").append(html);
+            $("#more-btn").val(Number(start) + 5);
+            $("#more-btn").attr(
+              "currentCount",
+              Number($("#more-btn").attr("currentCount")) + data.length
+            );
+            const totalCount = $("#more-btn").attr("totalCount");
+            const currentCount = $("#more-btn").attr("currentCount");
+            if (totalCount == currentCount) {
+              $("#more-btn").attr("disable", true);
+              $("#more-btn").css("cursor", "not-allowed");
+            }
           },
           error: function () {
             console.log("실패!");
@@ -61,6 +73,9 @@ prefix="c"%>
 
       $(function () {
         fn_more(1);
+        $("#more-btn").click(function () {
+          fn_more($(this).val());
+        });
       });
     </script>
   </body>
