@@ -19,6 +19,7 @@ public class txtFunc {
 			br = new BufferedReader(new FileReader("keyword.txt"));
 						
 			keyword = br.readLine();
+			System.out.println(keyword);
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -26,7 +27,6 @@ public class txtFunc {
 			e.printStackTrace();
 
 		} finally {
-
 			try {
 				br.close();
 

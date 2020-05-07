@@ -11,7 +11,7 @@ prefix="c" %>
     <jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
     <section class="container">
       <form
-        action="/inserPhoto"
+        action="/insertPhoto"
         method="post"
         enctype="multipart/form-data"
         style="width: 1000px; margin: 0 auto;"

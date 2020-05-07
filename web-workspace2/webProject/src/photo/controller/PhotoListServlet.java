@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import photo.model.service.PhotoService;
+
 /**
  * Servlet implementation class PhotoListServlet
  */
@@ -28,7 +30,10 @@ public class PhotoListServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int totalCount = new PhotoService().totalCount();
+		
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/photo/photoList.jsp");
+		request.setAttribute("totalCount", totalCount);
 		rd.forward(request, response);
 		
 	}
