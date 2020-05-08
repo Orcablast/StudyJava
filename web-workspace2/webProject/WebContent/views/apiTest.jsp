@@ -104,8 +104,45 @@ pageEncoding="UTF-8"%>
       />
       <button class="btn btn-primary" id="lolBtn">전적검색</button>
       <p id="lolResult"></p>
+      <h3>6. 메일 보내기</h3>
+      <input type="text" name="" id="mail" />
+      <button class="btn btn-primary" id="mailBtn">메일 전송</button>
+      <input type="text" name="" id="mailCode" style="display: none;" />
+      <button id="mailResult" class="btn btn-primary" style="display: none;">
+        메일 확인
+      </button>
+      <span id="mailMsg"></span>
     </section>
     <script>
+      let mailCode = "";
+
+      $("#mailResult").click(function () {
+        if ($("#mailCode").val() == mailCode) {
+          $("#mailMsg").html("인증성공");
+          $("#mailMsg").css("color", "green");
+        } else {
+          $("#mailMsg").html("인증실패");
+          $("#mailMsg").css("color", "red");
+        }
+      });
+
+      $("#mailBtn").click(function () {
+        const email = $("#mail").val();
+        $.ajax({
+          url: "/sendMail",
+          type: "post",
+          data: { email: email },
+          success: function (data) {
+            mailCode = data;
+            $("#mailCode").show();
+            $("#mailResult").show();
+          },
+          error: function () {
+            console.log("메일전송 실패");
+          },
+        });
+      });
+
       $("#lolBtn").click(function () {
         const id = $("#lol").val();
         $.ajax({
