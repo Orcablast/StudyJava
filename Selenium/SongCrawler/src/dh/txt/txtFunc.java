@@ -86,8 +86,7 @@ public class txtFunc {
 			
 			String str = br.readLine();
 			
-			while(str != null) {
-				System.out.println(str);				
+			while(str != null) {	
 				StringTokenizer sT = new StringTokenizer(str,"^");
 				map.put(sT.nextToken()+"^"+sT.nextToken(), Integer.parseInt(sT.nextToken()));
 				
@@ -379,13 +378,24 @@ public class txtFunc {
 			ArrayList<String> list = new txtFunc().readSongs();				
 			
 			HashSet<String> set = new HashSet<String>();
+			
+			StringBuffer sb = new StringBuffer();
 			int dups = 0;
 			
 			System.out.println("贸府 傈 Volume : "+list.size());
 			
 			for(String str : list) {
-				if(!set.add(str)) {
-					dups++;
+				
+				StringTokenizer sT = new StringTokenizer(str,"^");
+				
+				String title = sT.nextToken();
+				String artist = sT.nextToken();
+				String albumName = sT.nextToken();
+				
+				if(set.add(title+"^"+artist+"^"+albumName)) {
+					sb.append(str+"\r\n");
+				} else {
+					dups++;					
 				}
 			}
 			
@@ -393,11 +403,7 @@ public class txtFunc {
 			System.out.println("贸府 饶 Volume : "+set.size());
 			bw = new BufferedWriter(new FileWriter("songsRawData.txt"));
 			
-			Iterator<String> iter = set.iterator();
-			
-			while(iter.hasNext()) {
-				bw.write(iter.next()+"\r\n");
-			}
+			bw.write(sb.toString());
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

@@ -185,7 +185,6 @@ Shine (Yuchun)^천상지희^Best Selection 2010^505^kpop
 Love In The Ice (Jejung)^동방신기^Best Selection 2010^817^kpop
 In Our Time^동방신기^FINE COLLECTION ～Begin Again～^426^kpop
 Million Men^동방신기^Tri-Angle^883^kpop
-기다려^아이유^Modern Times^12891^kpop
 Free Your Mind^동방신기^The 1st Live Concert: Rising Sun^283^kpop
 금요일에 만나요 (Feat. 장이정 Of HISTORY)^아이유^Modern Times^222450^kpop
 졸업하는 날^아이유^Growing Up^18271^kpop
@@ -614,7 +613,6 @@ I Know (Less Vocal)^동방신기^Catch Me (If You Wanna)^584^kpop
 逢いたくて逢いたくてたまらない / Aitakute Aitakute Tamaranai (보고싶어서 보고싶어서 견딜 수 없어)^동방신기^FINE COLLECTION ～Begin Again～^520^kpop
 밤편지^아이유^밤편지^364150^kpop
 Lovin` You^동방신기^Lovin` You^1387^kpop
-(Bonus Track) Voice Mail (Korean Ver.)^아이유^Modern Times^48777^kpop
 낙원 (Paradise)^동방신기^The Fourth Album `MIROTIC` (Special Edition)^1175^kpop
 Android^동방신기^Time^808^kpop
 Forever Love (Verite CM주제가)^천상지희^Forever Love^875^kpop
@@ -681,7 +679,6 @@ Catch Me (If You Wanna)^동방신기^Catch Me (If You Wanna)^1688^kpop
 Force^동방신기^The Secret Code^723^kpop
 HOT^TWICE^FANCY YOU^8889^kpop
 이제 막 시작된 이야기 (The Story Has Just Begun)^동방신기^O -正.反.合. (정반합)^1138^kpop
-Obliviate^아이유^Modern Times^24541^kpop
 Break Up The Shell^동방신기^Heart, Mind And Soul^517^kpop
 LOVE LINE^TWICE^Merry & Happy^7957^kpop
 Two Hearts^동방신기^Two Hearts / Wild Soul (Changmin From 동방신기)^544^kpop
@@ -740,7 +737,6 @@ Forever Love (Bell`n`Snow Edit)^천상지희^Together^321^kpop
 Heart Shaker -Japanese ver.-^TWICE^#TWICE2^2985^kpop
 No Pain No Gain (Less Vocal)^동방신기^Sky^237^kpop
 새 신발^아이유^CHAT-SHIRE^58030^kpop
-싫은 날^아이유^Modern Times^40103^kpop
 아테나 (ATHENA) (Inst.)^동방신기^`ATHENA` 아테나 OST^491^kpop
 Ride On -Nonstop Mix-^천상지희^The Secret Code^293^kpop
 Bolero^동방신기^Bolero / Kiss The Baby Sky / 忘れないで / Bolero / Kiss The Baby Sky / Wasurenaide (Bolero / Kiss The Baby Sky / 잊지마)^6864^kpop
@@ -766,7 +762,6 @@ Crazy Crazy Crazy^동방신기^TREE^998^kpop
 Heart Shaker^TWICE^Merry & Happy^140762^kpop
 Remember^동방신기^O -正.反.合. (정반합)^1204^kpop
 Time Works Wonders^동방신기^Time Works Wonders^1075^kpop
-입술 사이 (50cm)^아이유^Modern Times^26375^kpop
 Be as ONE^TWICE^BDZ^6012^kpop
 Last Angel (Feat. 동방신기) (Inst.)^동방신기^Last Angel (Feat. 동방신기)^30^kpop
 반달^동방신기^The 3rd Asia Tour Concert `Mirotic` Live Album^432^kpop
@@ -801,7 +796,6 @@ Darkness Eyes^동방신기^Ｔ^684^kpop
 Runaway (Less Vocal)^동방신기^Runaway / My Girlfriend (Yuchun From 동방신기)^266^kpop
 오아시스^동방신기^2006 Summer Smtown^996^kpop
 Catch Me -If You Wanna-^동방신기^Time^798^kpop
-Havana^아이유^Modern Times^19043^kpop
 기차를 타고^아이유^IU...IM^30890^kpop
 Try My Love^동방신기^Stay With Me Tonight^659^kpop
 Beautiful Life^동방신기^Ｔ^413^kpop
@@ -885,7 +879,6 @@ ROLLIN`^TWICE^Merry & Happy^7613^kpop
 Close To You^동방신기^Close To You / Crazy Life (Yunho From 동방신기)^582^kpop
 사랑을 믿어요^아이유^사랑의 리퀘스트^15417^kpop
 Weep (Two of Us Ver.)^동방신기^Two of Us^343^kpop
-우울시계 (Feat. 종현 Of SHINee)^아이유^Modern Times^45055^kpop
 Dominus^동방신기^RISE AS GOD^2555^kpop
 Box In The Ship^동방신기^The Secret Code^495^kpop
 너희들것이니까 (Inst.)^동방신기^2005 Summer: Hi Ya Ya (여름날) (Single)^283^kpop
@@ -918,7 +911,6 @@ Clap! (Soul Of Soul Remix)^동방신기^Beautiful You / 千年戀歌 / Beautiful You / S
 Winter Rose (Reversible Ver.)^동방신기^Winter Rose^774^kpop
 그리고…(Holding Back The Tears)^동방신기^Vacation^3646^kpop
 Crazy Love^동방신기^The Fourth Album `MIROTIC` (Special Edition)^1921^kpop
-Box In The Ship^동방신기^どうして君を好きになってしまったんだろう? / Dousite Kimiwo Sukininatte Simattandarou? (왜 너를 좋아하게 되버렸을까?)^579^kpop
 どうして君を好きになってしまったんだろう？ / Dousite Kimiwo Sukininatte Simattandarou? (어째서 널 좋아하게 되버린 걸까?) (Re-recording Ver.)^동방신기^FINE COLLECTION ～Begin Again～^912^kpop
 비밀^아이유^Last Fantasy^47623^kpop
 사랑 안녕 사랑 (Love Bye Love)^동방신기^The Fourth Album `MIROTIC` (Special Edition)^3817^kpop
@@ -1058,7 +1050,6 @@ I Know (Unplugged Ver.)^동방신기^Catch Me (If You Wanna)^854^kpop
 소원 (Wish)^동방신기^The Fourth Album `MIROTIC` (Special Edition)^1934^kpop
 주문-MIROTIC (Acoustic Ver.)^동방신기^The Fourth Album `MIROTIC` (Special Edition)^1202^kpop
 Destiny^동방신기^Catch Me^4604^kpop
-Ment^동방신기^The 1st Live Concert: Rising Sun^265^kpop
 My Destiny (Less Vocal)^동방신기^My Destiny^272^kpop
 HUG (포옹)^동방신기^The 1st Live Concert: Rising Sun^380^kpop
 My Destiny^동방신기^Heart, Mind And Soul^1830^kpop
@@ -1127,7 +1118,6 @@ Crimson Saga^동방신기^XV^280^kpop
 I WANT YOU BACK (영화 `センセイ君主` OST)^TWICE^I WANT YOU BACK (영화 `センセイ君主` OST)^9209^kpop
 SOMEONE LIKE ME^TWICE^SIGNAL^18455^kpop
 Shine (Less Vocal)^동방신기^Shine / Ride On^240^kpop
-누구나 비밀은 있다 (Feat. 가인 Of Brown Eyed Girls)^아이유^Modern Times^24122^kpop
 AFTER MOON^TWICE^The year of "YES"^4522^kpop
 I WANT YOU BACK (영화 `センセイ君主` OST)^TWICE^BDZ^4079^kpop
 ON & ON^동방신기^O -正.反.合. (정반합)^2357^kpop
@@ -1177,7 +1167,6 @@ Kiss The Baby Sky^동방신기^The Secret Code^851^kpop
 Android (Modest Gothic Remix)^동방신기^Android^455^kpop
 Spellbound Of TVXQ^동방신기^The 3rd Asia Tour Concert `Mirotic` Live Album^359^kpop
 L.O.V.E^TWICE^BDZ -Repackage-^2960^kpop
-Modern Times^아이유^Modern Times^42009^kpop
 Like a Fool^TWICE^THE STORY BEGINS^27731^kpop
 작은 고백 (Love Is All I Need)^동방신기^Rising Sun^2226^kpop
 체크메이트 (Checkmate) - U-Know^동방신기^The 3rd Asia Tour Concert `Mirotic` Live Album^683^kpop
@@ -1226,7 +1215,6 @@ Share The World^동방신기^Share The World^4427^kpop
 Closer (Sung By MAX)^동방신기^New Chapter #1 : The Chance of Love^6296^kpop
 Jukebox In AD2055^동방신기^The 3rd Asia Tour Concert `Mirotic` Live Album^329^kpop
 Ride On (Less Vocal)^동방신기^Shine / Ride On^234^kpop
-을의 연애 (With 박주원)^아이유^Modern Times^27524^kpop
 Keyword -Nonstop Mix-^천상지희^The Secret Code^289^kpop
 SAY YOU LOVE ME^TWICE^YES or YES^14058^kpop
 Duet (Winter Ver.)^동방신기^Winter Rose^1234^kpop
@@ -1242,7 +1230,6 @@ Lovin` You^동방신기^Ｔ^620^kpop
 HAPPY HAPPY (collapsedone Remix)^TWICE^HAPPY HAPPY^2281^kpop
 Baby Don`t Cry -Less Vocal-^동방신기^Time Works Wonders^517^kpop
 Like You (Feat. 아이유) (멜로디MR)^Top^MR반주 뮤직섬 2012 최신가요 7^387^kpop
-분홍신^아이유^Modern Times^98686^kpop
 오늘밤 (Moonlight Fantasy)^동방신기^TVXQ! The 7th Album `TENSE`^7137^kpop
 Something (Japanese Ver.)^동방신기^Hide & Seek / Something^882^kpop
 Red Queen (Feat. Zion.T)^아이유^CHAT-SHIRE^45982^kpop
