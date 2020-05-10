@@ -1,0 +1,6 @@
+insert into licensed_artist values('동방신기', null, null, null);
+insert into licensed_artist values('아이유', null, null, null);
+insert into licensed_artist values('Top', null, null, null);
+insert into licensed_artist values('언니네', null, null, null);
+insert into licensed_artist values('TWICE', null, null, null);
+insert into licensed_artist values('천상지희', null, null, null);

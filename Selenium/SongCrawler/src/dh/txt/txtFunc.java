@@ -17,6 +17,64 @@ import java.util.StringTokenizer;
 
 public class txtFunc {
 	
+	public void writeArtist() {
+		
+		Set<String> list = readAlbum().keySet();
+				
+		HashSet<String> set = new HashSet<String>();
+		
+		StringBuffer sb1 = new StringBuffer();
+		StringBuffer sb2 = new StringBuffer();
+		
+		for(String str : list) {
+			StringTokenizer sT = new StringTokenizer(str,"^");
+			sT.nextToken();
+			
+			String artist = sT.nextToken();
+			
+			if(set.add(artist)) {
+				sb1.append(artist+"\r\n");	
+				sb2.append("insert into licensed_artist values('"+artist+"', null, null, null);\r\n");
+			}			
+		}
+		
+		BufferedWriter bw = null;
+		
+		try {
+			bw = new BufferedWriter(new FileWriter("artist.txt"));
+			bw.write(sb1.toString());
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				bw.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		try {
+			bw = new BufferedWriter(new FileWriter("artistSQL.txt"));
+			bw.write(sb2.toString());
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				bw.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		System.out.println(set.size()+"건의 가수이름 작성 완료");
+	}
+	
 	public HashMap<String, Integer> readAlbum(){
 		
 		HashMap<String, Integer> map = new HashMap<String, Integer>();

@@ -38,6 +38,7 @@ public class Start {
 			case 2:
 				txtFunc.cleanDups();
 				txtFunc.writeAlbum();
+				txtFunc.writeArtist();
 				break;
 
 			case 3:				
