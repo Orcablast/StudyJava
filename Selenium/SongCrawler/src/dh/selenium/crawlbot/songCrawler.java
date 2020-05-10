@@ -1,32 +1,21 @@
 package dh.selenium.crawlbot;
 
-import java.awt.List;
-import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.InputMismatchException;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
-import javax.swing.text.StyledEditorKit.BoldAction;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.net.UrlChecker.TimeoutException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import dh.txt.txtFunc;
-import net.bytebuddy.asm.Advice.Enter;
 
 public class songCrawler {
 
@@ -37,53 +26,88 @@ public class songCrawler {
 	private WebElement webElement;
 	private java.util.List<WebElement> webElements;
 	private WebDriverWait wait;
-	private JavascriptExecutor js;
 	private StringBuffer sb;
-
+	private String genre;
 	private String baseUrl = "https://www.melon.com/";
 
-	public void main(BufferedWriter bw) throws IOException {
+	public void main() throws IOException {
 
-		String keyword = new txtFunc().getKeyword();
-		System.out.println(keyword);
-//		while (keyword != null) {}
-
-//		ArrayList<String> list = new txtFunc().readSongs();
-
-//		sb = new txtFunc().writeSongs(list, new StringBuffer());
-		
+		genre = getGenre();
 
 		System.setProperty(WEB_DRIVER_ID, WEB_DRIVER_PATH);
 		driver = new ChromeDriver();
 		wait = new WebDriverWait(driver, 1);
-		js = (JavascriptExecutor) driver;
 
-		
-		sb = new StringBuffer();
-		mainSearch(keyword);
-		switchLinkTab();
+		BufferedWriter bw = null;
 
-		while (true) {
-			int pageNum = 0;
+		String keyword = new txtFunc().getKeyword();
 
-			while (pageNum == 0) {
+		while (keyword != null) {
 
-				try {
-					pageNum = wait.until(ExpectedConditions
-							.presenceOfAllElementsLocatedBy(By.xpath("//*[@id=\"pageObjNavgation\"]/div/span/a")))
-							.size();
+			sb = new StringBuffer();
+			mainSearch(keyword);
 
-				} catch (Exception e) {
-					System.out.println("pageNum 색인불가 재검색");
-					continue;
+			switchLinkTab();
+
+			while (true) {
+				int pageNum = 0;
+
+				while (pageNum == 0) {
+
+					try {
+						pageNum = wait.until(ExpectedConditions
+								.presenceOfAllElementsLocatedBy(By.xpath("//*[@id=\"pageObjNavgation\"]/div/span/a")))
+								.size();
+
+					} catch (Exception e) {
+						System.out.println("pageNum 색인불가 재검색");
+						continue;
+					}
+					break;
 				}
-				break;
-			}
 
-			for (int i = 1; i <= pageNum + 1; i++) {
+				for (int i = 1; i <= pageNum + 1; i++) {
+
+					try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e2) {
+						// TODO Auto-generated catch block
+						e2.printStackTrace();
+					}
+
+					while (true) {
+						try {
+							webElements = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(
+									By.xpath("//*[@id=\"frm_defaultList\"]/div/table/tbody/tr")));
+
+						} catch (Exception e) {
+							try {
+								Thread.sleep(300);
+								continue;
+							} catch (InterruptedException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
+						}
+
+						break;
+					}
+
+					for (WebElement w : webElements) {
+
+						if (w.getAttribute("class").equals("no_result")) {
+							break;
+						}
+						getSongDesc(w);
+					}
+
+					if (i != pageNum + 1) {
+						driver.findElement(By.xpath("//*[@id=\"pageObjNavgation\"]/div/span/a[" + i + "]")).click();
+					}
+				}
 
 				try {
-					Thread.sleep(1000);
+					Thread.sleep(500);
 				} catch (InterruptedException e2) {
 					// TODO Auto-generated catch block
 					e2.printStackTrace();
@@ -115,55 +139,31 @@ public class songCrawler {
 					getSongDesc(w);
 				}
 
-				if (i != pageNum + 1) {
-					driver.findElement(By.xpath("//*[@id=\"pageObjNavgation\"]/div/span/a[" + i + "]")).click();
+				if (nextPagesLoad() == -1) {
+					break;
 				}
 			}
 
 			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e2) {
+				bw = new BufferedWriter(new FileWriter("songsRawData.txt", true));
+			} catch (IOException e3) {
 				// TODO Auto-generated catch block
-				e2.printStackTrace();
-			}
-
-			while (true) {
+				e3.printStackTrace();
+			} finally {
 				try {
-					webElements = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(
-							By.xpath("//*[@id=\"frm_defaultList\"]/div/table/tbody/tr")));
-
-				} catch (Exception e) {
-					try {
-						Thread.sleep(300);
-						continue;
-					} catch (InterruptedException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
+					bw.write(sb.toString());
+					bw.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
-
-				break;
 			}
 
-			for (WebElement w : webElements) {
+			System.out.println(keyword + "검색 완료");
 
-				if (w.getAttribute("class").equals("no_result")) {
-					break;
-				}
-				getSongDesc(w);
-			}
-
-			if (nextPagesLoad() == -1) {
-				break;
-			}
+			new txtFunc().setKeyword(keyword);
+			keyword = new txtFunc().getKeyword();
 		}
-				
-		bw.write(sb.toString());
-		System.out.println(keyword + "검색 완료");
-		
-		new txtFunc().setKeyword(keyword);
-		keyword = new txtFunc().getKeyword();
-
 	}
 
 	public int nextPagesLoad() {
@@ -195,7 +195,6 @@ public class songCrawler {
 			}
 			return 1;
 		}
-		
 
 	}
 
@@ -213,23 +212,28 @@ public class songCrawler {
 		StringTokenizer sT = new StringTokenizer(likes, ",");
 		int likeCnt = getLikeCnt(sT);
 		System.out.println(title + "^" + artist + "^" + albumName + "^" + likeCnt);
-		sb.append(title + "^" + artist + "^" + albumName + "\r\n");
+		sb.append(title + "^" + artist + "^" + albumName + "^" + likeCnt + "^" + genre + "\r\n");
 
 	}
-	
+
 	public int getLikeCnt(StringTokenizer sT) {
 		String str = "";
-		
-		while(sT.hasMoreTokens()) {
+
+		while (sT.hasMoreTokens()) {
 			str += sT.nextToken();
-		}		
-		
+		}
+
 		return Integer.parseInt(str);
 	}
 
 	public void mainSearch(String keyword) {
 		driver.get(baseUrl);
-
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		webElement = driver.findElement(By.id("top_search"));
 		webElement.sendKeys(keyword + Keys.ENTER);
 
@@ -237,71 +241,44 @@ public class songCrawler {
 
 	public void switchLinkTab() {
 
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		webElement = driver.findElement(By.xpath("/html/body/div/div[3]/div/div[1]/div[2]/ul/li[3]/a"));
 		webElement.click();
 
 	}
 
-	public String getKeyword() {
-
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String keyword = null;
-
-		try {
-			while (keyword == null) {
-
-				System.out.print("검색할 키워드 : ");
-				keyword = br.readLine();
-			}
-		} catch (InputMismatchException | IOException e) {
-			System.out.println("입력 오류");
-			return null;
-		} finally {
-			try {
-				br.close();
-				br = null;
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-
-		return keyword;
-	}
-
 	public String getGenre() {
 
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("1. 국내가요");
+		System.out.println("2. 해외가요");
+		System.out.print("선택 > ");
+
 		String genre = null;
 
-		try {
+		while (genre == null) {
 
-			System.out.print("검색할 장르");
-			System.out.println("1. [kpop] - 국내가요");
-			System.out.println("2. [pop] - 해외가요");
-			System.out.print("선택 > ");
-			switch (Integer.parseInt(br.readLine())) {
+			switch (sc.nextInt()) {
 			case 1:
 				genre = "kpop";
 				break;
+
 			case 2:
 				genre = "pop";
 				break;
 
 			default:
-				System.out.println("범위를 벗어난 입력입니다.");
-				return null;
-			}
-
-		} catch (InputMismatchException | IOException e) {
-			System.out.println("입력 오류");
-			return null;
-		} finally {
-			try {
-				br.close();
-			} catch (IOException e) {
-				e.printStackTrace();
+				System.out.println("잘못 입력하셨습니다.");
 			}
 		}
+				
+		sc.close();
 
 		return genre;
 	}

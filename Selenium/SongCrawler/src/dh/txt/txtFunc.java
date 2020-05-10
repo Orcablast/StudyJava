@@ -2,15 +2,187 @@ package dh.txt;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Random;
+import java.util.Set;
+import java.util.StringTokenizer;
 
 public class txtFunc {
+	
+	public HashMap<String, Integer> readAlbum(){
+		
+		HashMap<String, Integer> map = new HashMap<String, Integer>();
+		
+		BufferedReader br = null;
+		
+		try {
+			br = new BufferedReader(new FileReader("album.txt"));
+			
+			String str = br.readLine();
+			
+			while(str != null) {
+				System.out.println(str);				
+				StringTokenizer sT = new StringTokenizer(str,"^");
+				map.put(sT.nextToken()+"^"+sT.nextToken(), Integer.parseInt(sT.nextToken()));
+				
+				str = br.readLine();
+			}
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				br.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+				
+		
+		return map;
+	}
+	
+			
+	public void writeAlbum() {
+		
+		BufferedWriter bw = null;
+		
+		ArrayList<String> list = readSongs();
+		HashSet<String> set = new HashSet<String>();
+		
+		
+		StringBuffer sb1 = new StringBuffer();
+		StringBuffer sb2 = new StringBuffer();
+		
+		
+		int index = 1;
+		
+		int imgCnt = 0;
+		for(String str : list) {
+			StringTokenizer sT = new StringTokenizer(str,"^");
+			sT.nextToken();
+			
+			String artist = sT.nextToken();
+			String albumName = sT.nextToken();
+			
+			if(set.add(albumName+artist)) {
+				sb1.append(albumName+"^"+artist+"^"+(index++) +"\r\n");
+				
+				File img = new File("albumImg/"+artist+"-"+albumName+".jpg");
+				
+				String albumPath = "null";
+				
+				if(img.exists()) {
+					System.out.println(albumName+"찾음");
+					albumPath = artist+"-"+albumName+".jpg";
+					sb2.append("insert into album values (seq_album_no.nextval,'"+artist+"','"+albumName+"','"+albumPath+"');\r\n");
+					imgCnt++;
+					
+				} else {
+					sb2.append("insert into album values (seq_album_no.nextval,'"+artist+"','"+albumName+"',null);\r\n");
+				}
+				
+			}
+			
+		}
+			
+		
+		
+		
+		try {
+			bw = new BufferedWriter(new FileWriter("album.txt"));
+			bw.write(sb1.toString());
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				bw.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+
+		try {
+			bw = new BufferedWriter(new FileWriter("albumSQL.txt"));
+			bw.write(sb2.toString());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				bw.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		
+		System.out.println(imgCnt+"건의 앨범자켓 확인");
+		System.out.println(set.size()+"건의 앨범목록 기록완료");
+		
+	}
+	
+	
+	
+	public void writeSongQuerys() {
+		
+		Random rnd = new Random();
+		ArrayList<String> list = readSongs();
+		HashMap<String, Integer> map = readAlbum();
+		
+		BufferedWriter bw = null;
+		StringBuffer sb = new StringBuffer();
+		
+		for(String str : list) {
+			StringTokenizer sT = new StringTokenizer(str,"^");
+			
+			String title = sT.nextToken();
+			String artist = sT.nextToken();
+			String albumName = sT.nextToken();				
+			String likeCnt = sT.nextToken();
+			String genre = sT.nextToken();
+			
+			sb.append("insert into song values(seq_song_no.nextval,'"+title+"','"+artist+"','"+genre+"',"+map.get(albumName+"^"+artist)+","+0+","+likeCnt+",'"+title+"','"+(rnd.nextInt(20)+1)+"',"+1+"); \r\n");
+			
+		}		
+		
+		try {
+			bw = new BufferedWriter(new FileWriter("songSQL.txt"));
+			bw.write(sb.toString());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				bw.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		System.out.println(list.size()+"건의 곡 정보 생성 완료");
+		
+	}
 
 	public String getKeyword() {
 		BufferedReader br = null;
@@ -161,12 +333,12 @@ public class txtFunc {
 			
 			System.out.println("중복된 Volume : " + dups);
 			System.out.println("처리 후 Volume : "+set.size());
-			bw = new BufferedWriter(new FileWriter("cleanSongs.txt"));
+			bw = new BufferedWriter(new FileWriter("songsRawData.txt"));
 			
 			Iterator<String> iter = set.iterator();
 			
 			while(iter.hasNext()) {
-				bw.write(iter.next());
+				bw.write(iter.next()+"\r\n");
 			}
 			
 		} catch (IOException e) {
@@ -179,9 +351,7 @@ public class txtFunc {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}
-		
-		
+		}		
 	}
 
 }
