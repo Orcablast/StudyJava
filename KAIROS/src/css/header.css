@@ -1,6 +1,7 @@
 header {
   margin: 0 auto;
   width: 1200px;
+  border-bottom: 2px solid rgb(255, 246, 163);
   height: 120px;
 }
 

@@ -52,7 +52,7 @@ public class songCrawler {
 			while (true) {
 				int pageNum = 0;
 
-				while (pageNum == 0) {
+				for(int i=0; i<5;i++) {
 
 					try {
 						pageNum = wait.until(ExpectedConditions
