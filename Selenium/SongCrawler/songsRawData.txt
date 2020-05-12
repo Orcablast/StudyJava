@@ -165,7 +165,7 @@ Balloon Flies With Memories^동방신기^The 3rd Asia Tour Concert `Mirotic` Live Al
 Sweat (Two of Us Ver.)^동방신기^Two of Us^343^kpop
 Duet^동방신기^FINE COLLECTION ～Begin Again～^592^kpop
 그대네요^아이유^그대네요^74930^kpop
-(MR 반주곡) o'-正.反.合.(오-정반합) (동방신기)^동방신기^MR반주곡  1집 ^10^kpop
+(MR 반주곡) o`-正.反.合.(오-정반합) (동방신기)^동방신기^MR반주곡  1집 ^10^kpop
 (MR반주곡) 주문 (MIROTIC) (동방신기)^동방신기^MR반주곡 27집^32^kpop
 Hug (Yunho)^동방신기^Best Selection 2010^478^kpop
 Blink (Less Vocal)^동방신기^Android^419^kpop
@@ -1307,10 +1307,10 @@ Seattle Alone^볼빨간사춘기^사춘기집Ⅰ 꽃기운^32192^kpop
 My Trouble^볼빨간사춘기^WHY : 당신이 연인에게 차인 진짜 이유 OST^31239^kpop
 나들이 갈까^볼빨간사춘기^사춘기집Ⅰ 꽃기운^27722^kpop
 우리집을 못 찾겠군요 (Feat. 볼빨간사춘기)^볼빨간사춘기^우리집을 못 찾겠군요^88308^kpop
-어색한 사이^볼빨간사춘기^쇼파르뮤직 컴필레이션 Vol.3 '어색한 사이'^9306^kpop
+어색한 사이^볼빨간사춘기^쇼파르뮤직 컴필레이션 Vol.3 `어색한 사이`^9306^kpop
 안녕, 곰인형^볼빨간사춘기^Red Diary Page.2^26717^kpop
 New York^볼빨간사춘기^New York^14105^kpop
-행복은 늘 가까이에 있어^볼빨간사춘기^쇼파르뮤직 컴필레이션 Vol.3 '어색한 사이'^3342^kpop
+행복은 늘 가까이에 있어^볼빨간사춘기^쇼파르뮤직 컴필레이션 Vol.3 `어색한 사이`^3342^kpop
 심술^볼빨간사춘기^Full Album RED PLANET^30945^kpop
 반지^볼빨간사춘기^Half Album RED ICKLE^23082^kpop
 바람사람^볼빨간사춘기^Red Diary Page.2^32528^kpop
@@ -1590,7 +1590,7 @@ Whalien 52^방탄소년단^화양연화 Young Forever^79021^kpop
 Dream Glow (BTS WORLD OST Part.1)^방탄소년단^Dream Glow (BTS WORLD OST Part.1)^86153^kpop
 Lights^방탄소년단^Lights / Boy With Luv^42326^kpop
 Jamais Vu^방탄소년단^MAP OF THE SOUL : 7^40567^kpop
-Who (feat. BTS)^방탄소년단^~how i'm feeling~^44256^kpop
+Who (feat. BTS)^방탄소년단^~how i`m feeling~^44256^kpop
 고엽^방탄소년단^화양연화 Young Forever^81111^kpop
 N.O^방탄소년단^O!RUL8,2?^78714^kpop
 Interlude : Shadow^방탄소년단^MAP OF THE SOUL : 7^112618^kpop
@@ -2077,7 +2077,7 @@ Lover, Lover^Terry^A White Sport Coat (And a Pink Carnation)^0^kpop
 A White Sport Coat (And a Pink Carnation)^Terry^A White Sport Coat (And a Pink Carnation)^0^kpop
 A White Sport Coat (And A Pink Carnation)^Terry^Oldies Hit Best Collection 3 ^18^kpop
 A White Sports Coat (And A Pink Carnation)^Terry^Shakin` Johnny：The Evolution of 60s Pop Music^2^kpop
-A White Sport Coat (And a Pink Carnation)^Terry^Your Mother's Favourite Love Songs^0^kpop
+A White Sport Coat (And a Pink Carnation)^Terry^Your Mother`s Favourite Love Songs^0^kpop
 A White Sports Coat (And A Pink Carnation)^Terry^History Of 1960s Pop^1^kpop
 A White Sport Coat and a Pink Carnation^Terry^The Ray Conniff Collection 1938-62, Vol. 2^0^kpop
 A White Sport Coat (And A Pink Carnation)^Terry^Best Pop Hits 1957^3^kpop
@@ -2282,7 +2282,7 @@ Bike Song^Marty^A Pink Whale and a Very Tall Tree^0^kpop
 Great Mystery^Marty^A Pink Whale and a Very Tall Tree^0^kpop
 A White Sports Coat (And A Pink Carnation)^Marty^Drug Stores, Truck Stops & Soda Pops: 75 Slices Of Teen Angst^0^kpop
 A White Sport Coat (And a Pink Carnation)^Marty^Marty Robbins^0^kpop
-You're A Pink Toothbrush^Marty^Flick^15^kpop
+You`re A Pink Toothbrush^Marty^Flick^15^kpop
 A White Sport Coat (And A Pink Carnation)^Marty^The Very Best Of The King Brothers^0^kpop
 A Pink Cocktail For A Blue Lady (Digitally Remastered)^Marty^Reflections^0^kpop
 A Pink Cocktail For A Blue Lady (Digitally Remastered)^Marty^Autograph^0^kpop
@@ -2301,7 +2301,7 @@ Flavour^Marty^Six White Russians And A Pink Pussycat^24^kpop
 One Of These Days^Marty^Six White Russians And A Pink Pussycat^33^kpop
 Come Closer^Marty^Six White Russians And A Pink Pussycat^14^kpop
 All Right^Marty^Six White Russians And A Pink Pussycat^16^kpop
-It's Raining^Marty^Six White Russians And A Pink Pussycat^14^kpop
+It`s Raining^Marty^Six White Russians And A Pink Pussycat^14^kpop
 Somedays^Marty^Six White Russians And A Pink Pussycat^116^kpop
 Listen^Marty^Six White Russians And A Pink Pussycat^11^kpop
 A White Sport Coat and a Pink Carnation^Marty^The Ultimate Country-Pop Collection Vol. 1^0^kpop
@@ -2946,13 +2946,13 @@ Inside^백현미^Find Voice In Song^2^kpop
 비^폴킴^비^248881^kpop
 너를 만나^폴킴^너를 만나^258467^kpop
 커피 한 잔 할래요^폴킴^커피 한 잔 할래요^33676^kpop
-우리 만남이^폴킴^정규 2집 '마음, 둘'^43488^kpop
+우리 만남이^폴킴^정규 2집 `마음, 둘`^43488^kpop
 안녕^폴킴^호텔 델루나 OST Part.10^164371^kpop
 초록빛^폴킴^초록빛^121481^kpop
 있잖아^폴킴^연애플레이리스트2 OST Part.2^78847^kpop
-허전해^폴킴^정규 2집 '마음, 하나'^67140^kpop
+허전해^폴킴^정규 2집 `마음, 하나`^67140^kpop
 Day By Day (베를린 테라스 라이브 Ver.)^폴킴^JTBC 비긴어게인3 Episode 9^10286^kpop
-나의 봄의 이유^폴킴^정규 2집 '마음, 둘'^7982^kpop
+나의 봄의 이유^폴킴^정규 2집 `마음, 둘`^7982^kpop
 이런 엔딩^폴킴^[Vol.11] 유희열의 스케치북 10주년 프로젝트 : 다섯 번째 목소리 `유스케 X 폴킴`^24402^kpop
 마음^폴킴^마음^25118^kpop
 편지^폴킴^The 1st Mini Album `Song Diary`^58782^kpop
@@ -2961,13 +2961,13 @@ Loveship^폴킴^Loveship^36160^kpop
 사랑 알 수 없나봐^폴킴^WHY : 당신이 연인에게 차인 진짜 이유 OST^36973^kpop
 헤어질 걸 알아^폴킴^헤어질 걸 알아^29127^kpop
 내 사랑^폴킴^Dear my Love^29122^kpop
-나를 사랑하지 않는 나에게^폴킴^정규 2집 '마음, 하나'^11983^kpop
-카톡^폴킴^정규 2집 '마음, 둘'^4920^kpop
+나를 사랑하지 않는 나에게^폴킴^정규 2집 `마음, 하나`^11983^kpop
+카톡^폴킴^정규 2집 `마음, 둘`^4920^kpop
 사랑은 타이밍^폴킴^정규 1집 Part.2 `터널`^25366^kpop
 Not Over Yet^폴킴^The 1st Mini Album `Song Diary`^31266^kpop
-Hero^폴킴^정규 2집 '마음, 둘'^6074^kpop
-HOLIDAY^폴킴^정규 2집 '마음, 둘'^4640^kpop
-New Day^폴킴^정규 2집 '마음, 하나'^22415^kpop
+Hero^폴킴^정규 2집 `마음, 둘`^6074^kpop
+HOLIDAY^폴킴^정규 2집 `마음, 둘`^4640^kpop
+New Day^폴킴^정규 2집 `마음, 하나`^22415^kpop
 Wanna Love You^폴킴^Wanna Love You^24407^kpop
 느낌^폴킴^정규 1집 Part.2 `터널`^32992^kpop
 너란 주의보^폴킴^The 1st Mini Album `Song Diary`^12718^kpop
@@ -2978,7 +2978,7 @@ Dream^폴킴^더 킹 : 영원의 군주 OST Part 8^2248^kpop
 사랑의 의미^폴킴^The 2nd Mini Album `Her`^12318^kpop
 눈치^폴킴^유플래쉬^18522^kpop
 Je T`aime^폴킴^[Vol.12] 유희열의 스케치북 10주년 프로젝트 : 다섯 번째 목소리 `유스케 X 폴킴`^11031^kpop
-만나볼래요^폴킴^정규 2집 '마음, 하나'^5320^kpop
+만나볼래요^폴킴^정규 2집 `마음, 하나`^5320^kpop
 Additional^폴킴^Additional^19852^kpop
 보통날의 기적 (Feat. 폴킴)^폴킴^보통날의 기적 (Feat. 폴킴)^17337^kpop
 Say You Love Me (Feat. 오늘)^폴킴^The 2nd Mini Album `Her`^13467^kpop
@@ -2998,7 +2998,7 @@ Goodbye Days^민서^정규 1집 Part.2 `터널`^9081^kpop
 Ex^민서^Ex^12769^kpop
 있잖아^민서^연애플레이리스트3 Part.2^10766^kpop
 한 달을 못 가서^민서^한 달을 못 가서^10143^kpop
-Young Selfish^민서^정규 2집 '마음, 하나'^5046^kpop
+Young Selfish^민서^정규 2집 `마음, 하나`^5046^kpop
 서툰 기대^민서^서툰 기대^7273^kpop
 모든 날, 모든 순간 (Every day, Every Moment) (Inst.)^민서^`키스 먼저 할까요?` OST Part.3^3152^kpop
 안녕^민서^호텔 델루나 OST^4231^kpop
@@ -3150,7 +3150,7 @@ Come Back (Feat. 에스더) - CCM^Cri^Joy^8^kpop
 나 주를 멀리 떠났다 (찬 273)^조이안^조이듀엣 2nd Hymns Album 회개^2^kpop
 Melancholy^조이안^파란^20^kpop
 Malaysia Chabor^조이안^I Miss You^46^kpop
-'어부들' 모음곡 중 저녁의 노래^조이안^My Way^386^kpop
+`어부들` 모음곡 중 저녁의 노래^조이안^My Way^386^kpop
 LOOSEN UP (Prod. SLO)^조이안^EXIT^45^kpop
 영미^조이안^YBDJ: 上^32^kpop
 나라는 꿈^조이안^오늘의 탐정 OST^1635^kpop
@@ -4626,7 +4626,7 @@ Lucky^EXO^EXOLOGY CHAPTER 1: THE LOST PLANET^23632^kpop
 Psycho^EXO^EXO PLANET #4 ?The EℓyXiOn (dot)? Live Album^17254^kpop
 늑대와 미녀 (Wolf) (Chinese Ver.)^EXO^The 1st Album XOXO (KISS＆HUG)^27557^kpop
 Shake^EXO^MAGIC^13870^kpop
-Don't Go (EXO-CBX “MAGICAL CIRCUS” 2019 -Special Edition-)^EXO^EXO-CBX “MAGICAL CIRCUS” 2019 -Special Edition-^2829^kpop
+Don`t Go (EXO-CBX “MAGICAL CIRCUS” 2019 -Special Edition-)^EXO^EXO-CBX “MAGICAL CIRCUS” 2019 -Special Edition-^2829^kpop
 마마 (MAMA)^EXO^SM BEST ALBUM 3^12308^kpop
 KING and QUEEN^EXO^GIRLS^17674^kpop
 Girl Problems^EXO^MAGIC^10515^kpop
@@ -4915,7 +4915,7 @@ Doktor K^Gratec^Mutopia^1^kpop
 Stay On Your Lane (J.A.H.N.O Remix)^Gratec^Exo Fam vs BAT Records^1^kpop
 Witches (Ikadub Remix)^Gratec^Exo Fam vs BAT Records^1^kpop
 Exo^Gratec^Manifest^7^kpop
-Exo Ap' Adiko^Gratec^Ta Gousta^0^kpop
+Exo Ap` Adiko^Gratec^Ta Gousta^0^kpop
 Skywalker(Extended Mix)^Gratec^Ferry Corsten presents Corsten`s Countdown March 2019^0^kpop
 Exo Vrehi^Gratec^Mia Agapi, Mia Zoi^0^kpop
 Exo Dertia Ke Kaimi (Live)^Gratec^Horepste Giati Hanomaste (Live)^0^kpop
@@ -4933,12 +4933,12 @@ For You (FYH117) (Tom Exo Remix)^Gratec^Find Your Harmony Radioshow #117^4^kpop
 Exo Dertia Ke Kaimi^Gratec^I Megaliteres Epitihies Tou (Vol. 2)^0^kpop
 Exo Dertia Ke Kaimi^Gratec^Afti I Nihta Meni^0^kpop
 Exo Dertia Ke Kaimi^Gratec^Stelios Kazadzidis 1961^0^kpop
-Exo Ap' Adiko^Gratec^O Laos Tragoudi Theli^0^kpop
+Exo Ap` Adiko^Gratec^O Laos Tragoudi Theli^0^kpop
 Exo Dertia Ke Kaimi^Gratec^I Ellada Tou Steliou Ke Tou Stratou^0^kpop
 Exo Ap` Adiko^Gratec^14 Hrises Epitihies (Vol. 2)^0^kpop
 Exo Ap` Adiko^Stratos^14 Hrises Epitihies (Vol. 2)^0^kpop
 Exo Dertia Ke Kaimi^Stratos^Stelios Kazadzidis^0^kpop
-Exo Ap' Adiko (Feat. Zoi Nahi & Manolis Hiotis)^Stratos^Sto Gledi Tis Zois Mas^0^kpop
+Exo Ap` Adiko (Feat. Zoi Nahi & Manolis Hiotis)^Stratos^Sto Gledi Tis Zois Mas^0^kpop
 Behemoth^Stratos^Exo Vol.1^0^kpop
 Destructor^Stratos^Exo Vol.1^0^kpop
 Shocker Knocker^Stratos^Exo Vol.1^0^kpop
@@ -4977,7 +4977,7 @@ Tresna Sing Harus Gelahang^Stratos^Sube Kadung Belus^0^kpop
 Hidup Do Bes Ruwet^Stratos^Sube Kadung Belus^0^kpop
 Ape Pelih Beli Luh^Stratos^Sube Kadung Belus^0^kpop
 Sou `Ha Pi Pos Peftis Exo (Live)^Stratos^Zoom `96 (Live)^0^kpop
-Sou 'Ha Pi Pos Peftis Exo^Stratos^Ta Tragoudia Tis Psihis Mou^0^kpop
+Sou `Ha Pi Pos Peftis Exo^Stratos^Ta Tragoudia Tis Psihis Mou^0^kpop
 Exo (Original Mix)^Stratos^Entity^46^kpop
 Mia Ki Exo^Stratos^Prosanamma^0^kpop
 Exo Dertia Ke Kaimi^Stratos^The Greek Belly Dance^0^kpop
@@ -4986,9 +4986,9 @@ Exo Dertia Ke Kaimi^Stratos^I Zoi Mou Oli...^0^kpop
 Jeronymo Yanka / Apopse se thelo / I glikia agapimeni / Efkoli zoi / Exo apo ton kosmo / Ela pali ela / Tha minoume panta pedia^Stratos^Tha Minoume Pada Pedia^0^kpop
 Universe - EXO (Melody 포함 MR)^Stratos^MR반주 뮤직엔 2018 Vol.03^30^kpop
 Universe - EXO (MR 원키)^Stratos^MR반주 뮤직엔 2018 Vol.03^37^kpop
-Sou 'Ha Pi Pos Peftis Exo^Dimitris^I Megaliteres Epitihies Tou^1^kpop
+Sou `Ha Pi Pos Peftis Exo^Dimitris^I Megaliteres Epitihies Tou^1^kpop
 Exo Fisai Ke Vrehi^Dimitris^Tou Kosmou I Kiriakes^0^kpop
-Sou 'Ha Pi Pos Peftis Exo (Live)^Dimitris^Kalokeria Ke Himones (Live)^0^kpop
+Sou `Ha Pi Pos Peftis Exo (Live)^Dimitris^Kalokeria Ke Himones (Live)^0^kpop
 S.E.X.O. (Stephan F Remix)^Dimitris^In Da Houz^1^kpop
 S.E.X.O. (remastered) (Original Mix)^Dimitris^In Da Houz^0^kpop
 S.E.X.O. (Daniele Sirnico Remix)^Dimitris^House Life Vol. 18^0^kpop
@@ -5072,7 +5072,7 @@ S.e.x.o. (Mauro Cannone Remix)^TNJX^House Space Mix^0^kpop
 Tzin Xevammeno^TNJX^Tzin Xevammeno^0^kpop
 S.e.x.o. (Mauro Cannone Remix)^TNJX^Il Padrino 6^0^kpop
 S.E.X.O. (Stephan F Remix)^TNJX^Art Of House^0^kpop
-Stin Tsepi Tin Ap' Exo (Feat. Voula Gika)^TNJX^Tragoudia Apo Tis 45 Strofes^1^kpop
+Stin Tsepi Tin Ap` Exo (Feat. Voula Gika)^TNJX^Tragoudia Apo Tis 45 Strofes^1^kpop
 S.E.X.O. (Stephan F Remix)^TNJX^Sliding Door Vol.16^0^kpop
 S.E.X.O. (Stephan F Remix)^TNJX^Fade Out 15^0^kpop
 S.E.X.O. (Lorenzo Lellini Remix)^TNJX^Living Electro^0^kpop
@@ -5207,7 +5207,7 @@ Taipei (Club Mix)^Exo^Taipei^0^kpop
 Taipei (Festival Mix)^Exo^Taipei^0^kpop
 Without You (feat. Becky Gaber)^Exo^Without You^4^kpop
 Exo^Exo^Fine Sine^9^kpop
-Sou 'Ha Pi Pos Peftis Exo (Live)^Exo^Mia Ekdromi Ine I Zoi Mou^0^kpop
+Sou `Ha Pi Pos Peftis Exo (Live)^Exo^Mia Ekdromi Ine I Zoi Mou^0^kpop
 You & Me (feat. Becky Gaber)^Exo^You & Me (feat. Becky Gaber)^3^kpop
 Exo Planete (Live)^Exo^Concepted (Live)^0^kpop
 Starlight^Exo^Trance 4 Friends, Vol. 3^3^kpop
@@ -5266,7 +5266,7 @@ Metal (TAO)^Salina^EXOLOGY CHAPTER 1: THE LOST PLANET^17194^kpop
 Exo ta heili mou gelan^Salina^Taxidi fos mou einai i zoi^0^kpop
 Exo Ap`to Horo^Salina^Apostoli Sto Diastima^0^kpop
 Exo Fisai Ke Vrehi^Salina^M` Ena Oniro Trelo^3^kpop
-Exo Apo 'do^Salina^Bar Code^4^kpop
+Exo Apo `do^Salina^Bar Code^4^kpop
 Exo Planet (Original Mix)^Salina^You Still Have Time^0^kpop
 Exo-Atmospheric Kill Vehicle^Salina^In the Clutches of the Novae^0^kpop
 Exo Esena^Salina^Antonis Remos Best Of 2008-2014^0^kpop
@@ -5497,20 +5497,20 @@ Exo Dertia Kai Kaimi^Exo^Greek Taverna^0^kpop
 Exo ntertia ke kaimi^Exo^Ola kanonismena^0^kpop
 Exo Fisai Ke Vrehi^Exo^Hrisi Diskothiki 1968^0^kpop
 Exo Dertia Ke Kaimi^Exo^Hrisi Diskothiki 1961^0^kpop
-Exo Ap' Adiko (Feat. Zoi Nahi & Manolis Hiotis)^Exo^Gia Pada (Vol. 2)^0^kpop
-WANNABE^ITZY^IT'z ME^72137^kpop
+Exo Ap` Adiko (Feat. Zoi Nahi & Manolis Hiotis)^Exo^Gia Pada (Vol. 2)^0^kpop
+WANNABE^ITZY^IT`z ME^72137^kpop
 달라달라^ITZY^IT`z Different^143387^kpop
 ICY^ITZY^IT`z ICY^78295^kpop
-NOBODY LIKE YOU^ITZY^IT'z ME^5727^kpop
+NOBODY LIKE YOU^ITZY^IT`z ME^5727^kpop
 IT`z SUMMER^ITZY^IT`z ICY^7322^kpop
 WANT IT?^ITZY^IT`z Different^10985^kpop
-24HRS^ITZY^IT'z ME^3896^kpop
-THAT’S A NO NO^ITZY^IT'z ME^5715^kpop
+24HRS^ITZY^IT`z ME^3896^kpop
+THAT’S A NO NO^ITZY^IT`z ME^5715^kpop
 달라달라 (DallasK Remix)^ITZY^IT`z ICY^5704^kpop
 CHERRY^ITZY^IT`z ICY^6800^kpop
-TING TING TING with Oliver Heldens^ITZY^IT'z ME^4488^kpop
-I DON’T WANNA DANCE^ITZY^IT'z ME^3350^kpop
-YOU MAKE ME^ITZY^IT'z ME^3512^kpop
+TING TING TING with Oliver Heldens^ITZY^IT`z ME^4488^kpop
+I DON’T WANNA DANCE^ITZY^IT`z ME^3350^kpop
+YOU MAKE ME^ITZY^IT`z ME^3512^kpop
 WANT IT? (Imad Royal Remix)^ITZY^IT`z ICY^3615^kpop
 Itzy Bitzy^ITZY^Itzy Bitzy^12^kpop
 Itzy Bitzy Spider^ITZY^You Got Me Wrong^2^kpop
@@ -5937,7 +5937,7 @@ La Paloma^노을^저녁스케치 Vol.6 (노을 속에 흐르는 추억의 팝송)^47^kpop
 저녁 노을에 감사를^노을^Thanks to^124^kpop
 붉은 노을 (빅뱅)^노을^블로그에서 배경 음악으로 가장 많이 사랑받는 인기 댄스 가요^220^kpop
 이젠 보낸다^노을^TIME FOR LOVE^3501^kpop
-노을^노을^동요집 '빛과 바람의 유영'^236^kpop
+노을^노을^동요집 `빛과 바람의 유영`^236^kpop
 축가 (Inst.)^노을^2018戀歌 (연가), 6월의 고백 `축가`^30^kpop
 그날이야 (The Day)^노을^그날이야 (The Day)^4947^kpop
 노을 (들녘길에서)^노을^흘러간 옛날노래 3, 4집^20^kpop
@@ -6028,7 +6028,7 @@ TIAN MI MI (첨밀밀)^노무현^저녁 노을의 감성을 품은 영화 & 뉴에이지 피아노 베스트
 노을 속에 비친 그대 모습^노무현^We Hate All Kinds Of Violence^1155^kpop
 Don`t Play Your Rock `n` Roll To Me^노무현^저녁스케치 Vol.6 (노을 속에 흐르는 추억의 팝송)^41^kpop
 Romantica^노무현^저녁스케치 Vol.6 (노을 속에 흐르는 추억의 팝송)^11^kpop
-노을 (드라마 '사랑의 불시착')^노무현^답답한 마음을 달래주는 드라마 피아노 베스트^3^kpop
+노을 (드라마 `사랑의 불시착`)^노무현^답답한 마음을 달래주는 드라마 피아노 베스트^3^kpop
 밤잠을 위한 가을 바다소리 (노을빛 서해의 파도 사운드)^노무현^꿀잠 잘 때 듣는 파도소리 백색소음 모음집 2^0^kpop
 살기 위해서^노무현^빠담빠담 OST^6320^kpop
 노을빛 서해대교^노무현^흘러간 옛날노래 5, 6집^12^kpop
@@ -7422,56 +7422,6 @@ Brahms : Liebeslieder Walzer Op.52 - IV. Wie Des Abends Schone Rote (브람스 : 왈
 그대는 언제나^add_P^온 마음으로^0^kpop
 노을과 별 이야기^add_P^그 목소리 내 맘속에^3^kpop
 온 마음으로^add_P^온 마음으로^1^kpop
-노을^L'Hirondelle^About us^2^kpop
-Oesten : Alpenabendrote Op.193 (외스텐 : 알프스의 저녁노을 작품번호 193) (새소리)^L'Hirondelle^잠들기 전에 듣기 좋은 잔잔한 음악 8^1^kpop
-노을^L'Hirondelle^미리듣는초등학교필수동요100^2^kpop
-Schubert : Im Abendrot D.799 (슈베르트 : 저녁 노을 속에서)^L'Hirondelle^The Complete Recitals On Warner Classics^1^kpop
-서쪽 노을^L'Hirondelle^서쪽 노을^0^kpop
-Brahms : Zigeunerlieder Op.103 - VIII. Rote Abendwolken Ziehen (브람스 : 집시의 노래 작품번호 103 - 8번. 붉은 저녁 노을)^L'Hirondelle^The Complete Recitals On Warner Classics^0^kpop
-노을과 세발 자전거^L'Hirondelle^엄마랑 함께 듣는 동요 3^0^kpop
-노을빛 사랑 (MR)^L'Hirondelle^LOVE & PASSION^1^kpop
-노을 채색 (Nature Ver.)^L'Hirondelle^자연의 숨이 스며든 아름다운 피아노^0^kpop
-노을^L'Hirondelle^행복한 유아동요 인기동요^0^kpop
-노을 채색^L'Hirondelle^봄 풍경을 산책하는 힐링의 시간 (감성 피아노)^0^kpop
-밤노을^L'Hirondelle^밤노을^0^kpop
-노을의 여행자^L'Hirondelle^아늑함이 있는 힐링 피아노^0^kpop
-노을^L'Hirondelle^뽀로롱 뽀로롱 즐거운 동요^0^kpop
-노을 채색^L'Hirondelle^마음의 평화가 찾아오는 힐링 피아노^0^kpop
-저녁 노을^L'Hirondelle^하루 자장가^11^kpop
-노을 채색^L'Hirondelle^일상 속에 스며든 아름다운 피아노 음악^0^kpop
-노을 채색^L'Hirondelle^평화로운 하루를 위하여 (힐링 피아노)^0^kpop
-내 인생 지금부터^L'Hirondelle^노을진 금강/내 인생 지금부터^4^kpop
-노을^L'Hirondelle^꿈꾸는 유아인기동요^1^kpop
-노을진 금강^L'Hirondelle^노을진 금강/내 인생 지금부터^13^kpop
-노을 (위키드 인기동요)^L'Hirondelle^그뤠잇 위키드 인기 유아동요 30^3^kpop
-노을 속을 헤엄치는 구름^L'Hirondelle^스트레스를 줄여줄 힐링 피아노 모음집^0^kpop
-Osten : Alpen Abendrote B Flat Major (오스틴 : 알프스의 저녁 노을 내림 나장조)^L'Hirondelle^동화적인 감성을 즐기기 좋은 피아노 클래식 태교^0^kpop
-노을 채색^L'Hirondelle^마음을 위로하는 치유의 피아노 멜로디^0^kpop
-노을 (84년 MBC 창작동요제 `대상`)^L'Hirondelle^슈퍼 그레잇 인기 창작동요^2^kpop
-Oesten : Alpenabendrote Op.193 (외스텐 : 알프스의 저녁노을 작품번호 193) (새소리)^L'Hirondelle^자장가 편안한 휴식을 위한 감성 피아노 연주곡 베스트 2^1^kpop
-Only You^L'Hirondelle^엄마와 아기의 사랑의 교감 (태교 피아노)^0^kpop
-노을 진 풍경^L'Hirondelle^노을 진 풍경^0^kpop
-노을빛 서해대교^L'Hirondelle^정통 콜라텍 전자올겐 경음악 110곡^1^kpop
-아름다운 순간^L'Hirondelle^노을 진 풍경^0^kpop
-158장 서쪽 하늘 붉은 노을^L'Hirondelle^새 찬송가 (151장~180장) (피아노 Ver.)^0^kpop
-노을의 자장가^L'Hirondelle^피아노자장가 모음집 Vol.1^0^kpop
-어제와 같은 밤^L'Hirondelle^새벽 노을^0^kpop
-새벽 노을^L'Hirondelle^새벽 노을^0^kpop
-Oesten : Alpenabendrote Op.193 (외스텐 : 알프스의 저녁노을 작품번호 193) (바람소리)^L'Hirondelle^자장가 태교를위한 잔잔한감성 연주곡 모음집 5^1^kpop
-빛나는 밤^L'Hirondelle^저녁노을^0^kpop
-저녁노을^L'Hirondelle^저녁노을^0^kpop
-어린왕자 이야기 (2010 노을동요제 대상) (Piano Ver.) - Vocal by 이준용^L'Hirondelle^Voice of Light (이준용)^4^kpop
-저녁 노을^L'Hirondelle^By Your Side^0^kpop
-희망을 노래하다^L'Hirondelle^희망을 노래하다^0^kpop
-아름다운 노을 아래서^L'Hirondelle^희망을 노래하다^0^kpop
-Oesten : Alpenabendrote Op.193 (외스텐 : 알프스의 저녁노을 작품번호 193) (Water Ver.)^L'Hirondelle^잠잘 때 듣기 좋은 잔잔한 감성 클래식 피아노 EP 연주곡 6^2^kpop
-노을이 지고 있어요^L'Hirondelle^노을이 지고 있어요^0^kpop
-Only You^L'Hirondelle^밝은 피아노 선율이 흐르는 평온한 아침^0^kpop
-그대라는 계절^L'Hirondelle^희망과 사랑을 그린 뉴에이지 피아노 모음집^0^kpop
-그대라는 계절^L'Hirondelle^행복함을 느끼게 하는 감성적인 피아노 선율^0^kpop
-그대라는 계절 (Nature Ver.)^L'Hirondelle^봄날의 향기가 스며든 감미로운 피아노^0^kpop
-Only You^L'Hirondelle^사랑하는 사람과 함께 듣는 따듯한 피아노^0^kpop
-Only You (Nature Ver.)^L'Hirondelle^완벽한 공부 시간을 만들어줄 자연의 소리와 힐링 피아노^0^kpop
 Only You^노을빛^지친 마음에 힘을 주는 힐링 피아노^0^kpop
 Oesten : Alpenabendrote Op.193 (외스텐 : 알프스의 저녁노을 작품번호 193)^노을빛^태교, 자장가, 머리가 좋아지는 클래식^1^kpop
 노을 채색^노을빛^저녁 빛^0^kpop
@@ -11273,7 +11223,7 @@ Buenos Aires^IZ*ONE^Buenos Aires (Special Edition)^7343^kpop
 Tomorrow^IZ*ONE^Buenos Aires (Special Edition)^6912^kpop
 ケンチャナヨ^IZ*ONE^好きと言わせたい (Type B)^7492^kpop
 ケンチャナヨ^IZ*ONE^好きと言わせたい (Type WIZ*ONE)^7690^kpop
-I'm Not The Only One (Armand Van Helden’s DAT SHIZNIT IZ SLAMMIN’ Remix)^IZ*ONE^I'm Not The Only One^38^kpop
+I`m Not The Only One (Armand Van Helden’s DAT SHIZNIT IZ SLAMMIN’ Remix)^IZ*ONE^I`m Not The Only One^38^kpop
 Sabotaros^Pink^Infinity I: Zone Remorse^0^kpop
 Izone^Pink^Closer^0^kpop
 Life Iz... feat. Awol One^Pink^Undersounds of the 562^0^kpop
@@ -12088,7 +12038,7 @@ Love Lane^마마무^연애말고 결혼 OST^13841^kpop
 loveagain (Feat. 솔라 Of 마마무)^마마무^Say^7923^kpop
 WOW^마마무^검색어를 입력하세요 WWW OST^2849^kpop
 갑과 을 (No no no)^마마무^Pink Funky^12416^kpop
-유혹^마마무^MBC 다시쓰는 차트쇼 '지금 1위는?'^2683^kpop
+유혹^마마무^MBC 다시쓰는 차트쇼 `지금 1위는?`^2683^kpop
 You Don`t Know Me^마마무^Decalcomanie (Japanese ver.)^4111^kpop
 행복하지마 (With 범키)^마마무^Hello^14132^kpop
 rEALITY^마마무^reality in BLACK^9062^kpop
@@ -12702,7 +12652,7 @@ I`ll Be There^ASTRO^Dream Part.01^11258^kpop
 너라서^ASTRO^Dream Part.01^10117^kpop
 Run^ASTRO^Dream Part.02^9822^kpop
 1 In A Million^ASTRO^All Light^10487^kpop
-You're my world^ASTRO^BLUE FLAME^7571^kpop
+You`re my world^ASTRO^BLUE FLAME^7571^kpop
 찬바람 불 때면 (When The Wind Blows)^ASTRO^BLUE FLAME^7566^kpop
 북극성^ASTRO^Summer Vibes^8030^kpop
 You & Me (Thanks AROHA)^ASTRO^Winter Dream^9501^kpop
@@ -13021,7 +12971,7 @@ Don`t U Wait No More^Red^The Red^22206^kpop
 Taste^Red^RBB^12615^kpop
 Time Slip^Red^The Red^20688^kpop
 Body Talk^Red^Rookie^18647^kpop
-Jumpin'^Red^‘The ReVe Festival’ Finale^5102^kpop
+Jumpin`^Red^‘The ReVe Festival’ Finale^5102^kpop
 Heart Stop (Feat. SEULGI of Red Velvet)^Red^MOVE^15283^kpop
 눈 맞추고, 손 맞대고 (Eyes Locked, Hands Locked)^Red^‘The ReVe Festival’ Day 2^11497^kpop
 LP^Red^‘The ReVe Festival’ Finale^5251^kpop
@@ -13104,7 +13054,7 @@ Sand^Ashley^Red Velvet Car^0^kpop
 Hey You^Ashley^Red Velvet Car^0^kpop
 There You Go Again^Ashley^Red Velvet Car^1^kpop
 Red Velvet Car^Ashley^Red Velvet Car^1^kpop
-Safronia's Mark^Ashley^Red Velvet Car^0^kpop
+Safronia`s Mark^Ashley^Red Velvet Car^0^kpop
 W.T.F.^Ashley^Red Velvet Car^0^kpop
 Wheels^Ashley^Red Velvet Car^0^kpop
 Death Valley^Ashley^Red Velvet Car^0^kpop
@@ -14225,7 +14175,7 @@ Livin`La Vida Loca (Ricky Martin)^버스커^슈퍼스타K 3 Top11 Part 2^3575^kpop
 엄마 나 처음부터 다시 시작하고 싶어^버스커^버스커의 버스킹 감성뉴에이지, 기분좋은 하루를 위한 피아노 멜로디 모음집^7^kpop
 그댈 마주하는건 힘들어 (그마힘) (MR)^버스커^MR 반주 버스커 버스커 1집 마무리^111^kpop
 첫사랑 (MR)^버스커^MR 반주 버스커 버스커 1집^143^kpop
-버스커의 휴일 (Busker's day off)^버스커^고요한 밤바다 구경하기 [여수 바다]^2^kpop
+버스커의 휴일 (Busker`s day off)^버스커^고요한 밤바다 구경하기 [여수 바다]^2^kpop
 서울사람들 (Inst.)^버스커^서울사람들^1153^kpop
 외로움 증폭장치 (MR)^버스커^MR 반주 버스커 버스커 1집^89^kpop
 지친 그대를 위해^버스커^버스커의 버스킹 감성뉴에이지, 기분좋은 하루를 위한 피아노 멜로디 모음집^1^kpop
@@ -15015,7 +14965,7 @@ The Eensy Weensy Spider (조그만 거미)^거미^신세대 엄마들이 선택한 우리아이 첫 영
 Dance Dance^거미^It`s Different^180^kpop
 왕거미송^거미^왕거미송^1^kpop
 Somebody To Love (with 빅마마, 거미, 세븐)^거미^Color Of The Soul Train 1집^256^kpop
-Eensy Weensy Spider (작은 거미)^Animation^유아영어 영재발굴단 (CD1: 미국 유치원 영어 동요, CD2: 인기 kids Pop, 애니메이션 주제가 영화 OST, CD3: 자장가) English Children's Songs^5^kpop
+Eensy Weensy Spider (작은 거미)^Animation^유아영어 영재발굴단 (CD1: 미국 유치원 영어 동요, CD2: 인기 kids Pop, 애니메이션 주제가 영화 OST, CD3: 자장가) English Children`s Songs^5^kpop
 Special Love (Inst.)^Animation^Special Love^503^kpop
 거미송^Animation^와와 진짜 신나는 동요 댄스^2^kpop
 꾀 많은 거미^Animation^토토의 이야기나라 2집^2^kpop
@@ -15490,7 +15440,7 @@ Chasing August^Roque^The Girl in the Spider`s Web (Original Motion Picture Sound
 거미는 다리가 많아요^Roque^세상을 배우는 동요 1집 곤충나라^0^kpop
 거미가 줄을 타고 올라갑니다 (Incey Wincey Spider) (Night Sound Ver.)^Roque^자연의?소리를?담은?자장가 (Night Sound)^0^kpop
 거미^Roque^키가 쑥쑥 동요 팡팡 베스트100^1^kpop
-The Itsy Bitsy Spider (작은 거미)^Roque^유아영어 영재발굴단 (CD1: 미국 유치원 영어 동요, CD2: 인기 kids Pop, 애니메이션 주제가 영화 OST, CD3: 자장가) English Children's Songs^2^kpop
+The Itsy Bitsy Spider (작은 거미)^Roque^유아영어 영재발굴단 (CD1: 미국 유치원 영어 동요, CD2: 인기 kids Pop, 애니메이션 주제가 영화 OST, CD3: 자장가) English Children`s Songs^2^kpop
 거미^Roque^2018 여름동요 베스트 50 Vol.1^0^kpop
 코끼리와 거미줄^Roque^어린이 인기 동요 유치원동요 20곡^8^kpop
 거미^Roque^유아동요 어린이집 인기동요 베스트^5^kpop
@@ -17858,7 +17808,7 @@ Comedian^Zion.T^OO^7685^kpop
 일주일 (247) (Feat. Zion.T, Crush, DEAN)^Zion.T^247^16640^kpop
 bestdriverZ (Feat. Zion.T, DEAN)^Zion.T^쇼미더머니 6 Special^1076^kpop
 Fly Girl (Feat. Kid Ash, Zion.T)^Zion.T^탑승수속^1491^kpop
-Can't Act^Zion.T^20 / 20^0^kpop
+Can`t Act^Zion.T^20 / 20^0^kpop
 비밀 2 (Feat. Zion.T)^Zion.T^Love & Life, The Album^3922^kpop
 돌아버려^Zion.T^미러볼^4183^kpop
 ? (물음표) (Feat. 최자 Of 다이나믹듀오, Zion.T)^Zion.T^MR반주 뮤직엔 2012 Vol.29^28^kpop
@@ -17899,7 +17849,7 @@ Be with You (Remix) (Feat. Pieter T, Tomorrow People, K.One, Sons of Zion, Forta
 Kiss Me (Inst.)^버벌진트^피노키오 OST Part.6^509^kpop
 Yes I Am (Feat. Juvie Train, Deepflow, J`Kyun & Zion.T)^버벌진트^High Frequency^239^kpop
 MO`Better (Feat. Zion.T)^버벌진트^M.O.B^331^kpop
-Won't Stop Now^버벌진트^New Era: Songs and Revelation for the Days Ahead^0^kpop
+Won`t Stop Now^버벌진트^New Era: Songs and Revelation for the Days Ahead^0^kpop
 C.C.C.P.C.C.T.V.^버벌진트^Matrix: Reb00ted^0^kpop
 I`m Da One (Feat. Zion.T) (멜로디 MR)^버벌진트^MR반주 뮤직섬 2012 최신가요 31^9^kpop
 Like A Star (Feat. Zion.T)^버벌진트^T.F.O.N^564^kpop
@@ -18012,7 +17962,7 @@ Can`t Nobody Do Me Like Jesus^Tyler^New Orleans Gospel Glory!^0^kpop
 Don`t Burn the Zion Church^Tyler^Sunday Morning Blue^0^kpop
 Won`t You Try Jah Love^Tyler^Thirteen Months in Zion^1^kpop
 Ain`t God Good^Tyler^A Call To Worship: LIVE! at the City of the Lord Zion^0^kpop
-Failure Isn't Final^Tyler^Marching To Zion^4^kpop
+Failure Isn`t Final^Tyler^Marching To Zion^4^kpop
 I Don`t Want My Soul to Be Lost^Tyler^Holy Spirit^0^kpop
 Holy Mt. Zion^Tyler^Live Vol. 1- Underground Roots^0^kpop
 They Didn`t Know^Tyler^Blow The Trumpet In Zion : A Living Testimony^0^kpop
@@ -19586,7 +19536,7 @@ YOU^벤^힐러 OST Part.4^22327^kpop
 별 짓 다해봤는데 (잘자요 꿈의 요정 드림캐처)^벤^복면가왕 132회^6389^kpop
 잘해준 것 밖에 없는데^벤^어마어마한 라이브 STAGE 2^11573^kpop
 소개받기로 했어^벤^소개받기로 했어^19616^kpop
-I'll Give My All To You^벤^Off The Record^856^kpop
+I`ll Give My All To You^벤^Off The Record^856^kpop
 그대여 그대여 나의 그대여^벤^하이에나 OST Part.3^3351^kpop
 서로의 서로^벤^서로의 서로 (Made in THE VIBE)^12558^kpop
 Looby Loo^벤^My Name Is BEN^9818^kpop
@@ -19950,7 +19900,7 @@ Merry Christmas (We Wish A Merry Christmas 삽입)^벤쳐스^나홀로 크리스마스 (Made 
 맨발에서 벤츠까지^벤쳐스^Tough Like Metal^6^kpop
 에벤에셀 하나님 (MR)^벤쳐스^에벤에셀 찬양과 경배^2^kpop
 와이프 아웃^벤쳐스^칸소네 / 샹송 / 빌리 본 / 벤 쳐스^7^kpop
-Ben (영화 '벤' OST)^벤쳐스^영화의 감동을 다시 한번! 레전드 영화음악 피아노^3^kpop
+Ben (영화 `벤` OST)^벤쳐스^영화의 감동을 다시 한번! 레전드 영화음악 피아노^3^kpop
 호수 앞 벤치^벤쳐스^호수 앞 벤치^0^kpop
 Jiri Anton Benda : Sonatine A Minor (지리 안톤 벤다 : 소나티네 가단조)^벤쳐스^별이 쏟아지는 밤 아름다운 클래식 음악과 함께라면^0^kpop
 Alfven : The Mountain King - IV. Dance Of The Shepherd Girl (Vallflickans Dans) (Arr. For Jazz Ensemble) (알프벤 : 산왕 - 4번. 양치기 소녀의 춤)^벤쳐스^Trio X Of Sweden : Atonement^0^kpop
@@ -20257,7 +20207,7 @@ Thanksgiving, 1930^벤^벤자민 버튼의 시간은 거꾸로 간다 OST^5^kpop
 Defined By Opportunities^벤^벤자민 버튼의 시간은 거꾸로 간다 OST^1^kpop
 Cry Me A River (브이 포 벤데타)^벤^Cinema Jazz^35^kpop
 Alien On Earth^벤^Old Shoes^0^kpop
-Goonie's R Good Enough^벤^Old Shoes^0^kpop
+Goonie`s R Good Enough^벤^Old Shoes^0^kpop
 Feeling So Good^벤^벤쵸스 앰프 기타^4^kpop
 Blue Star^벤^벤쵸스 앰프 기타^6^kpop
 태양보다 밝은 빛^벤^한국인의 Worship 2집^10^kpop
@@ -21590,9 +21540,9 @@ Headache^벤젠^Old Shoes^0^kpop
 Crusades From Nowhere^벤젠^Benzene & Skrew Attack Split^0^kpop
 Your Teeth Behind^벤젠^Old Shoes^1^kpop
 Down Right Life^벤젠^Old Shoes^0^kpop
-Boogie's Edge^벤젠^Old Shoes^0^kpop
+Boogie`s Edge^벤젠^Old Shoes^0^kpop
 One Of My Friend,1993^벤젠^Old Shoes^1^kpop
-Clergyman's Daughter^벤젠^Old Shoes^0^kpop
+Clergyman`s Daughter^벤젠^Old Shoes^0^kpop
 One Way Trip^벤젠^Old Shoes^0^kpop
 Singing In The Rain^벤젠^Old Shoes^4^kpop
 Her June^벤젠^Old Shoes^0^kpop
@@ -21826,7 +21776,7 @@ Ben (벤)^홍민^사랑의 연주 시리즈 10^3^kpop
 아로하^다비치^[Vol.27] 유희열의 스케치북 10주년 프로젝트 : 열두 번째 목소리 `유스케 X 다비치`^8983^kpop
 시간아 멈춰라^다비치^Innocence^22960^kpop
 너 없는 시간들^다비치^&10^60632^kpop
-Please Don't Cry^다비치^더 킹 : 영원의 군주 OST Part 6^4161^kpop
+Please Don`t Cry^다비치^더 킹 : 영원의 군주 OST Part 6^4161^kpop
 사고쳤어요^다비치^Davichi In Wonderland^27312^kpop
 괜찮아 사랑이야^다비치^괜찮아 사랑이야 OST Part 2^67504^kpop
 슬픈 다짐^다비치^AMARANTH^17188^kpop
@@ -21937,7 +21887,7 @@ Happy Together^조영수^Happy Together^8649^kpop
 FLY DAY^조영수^FLY DAY^2824^kpop
 다시 사랑 할 수 있을까 (Feat. 다비치)^조영수^Voice Of Autumn^10217^kpop
 물병^조영수^에덴의 동쪽 OST^2288^kpop
-Please Don't Cry (Inst.)^조영수^더 킹 : 영원의 군주 OST Part 6^83^kpop
+Please Don`t Cry (Inst.)^조영수^더 킹 : 영원의 군주 OST Part 6^83^kpop
 영원한 사랑 (Remix)^조영수^여성시대/영원한 사랑^1430^kpop
 나만 아픈 일^조영수^from h^1770^kpop
 슬픈약속 (Feat. 다비치)^조영수^SPEED OF LIGHT^5177^kpop
@@ -22259,7 +22209,7 @@ Taxi (Feat. Thama, 스윙스)^이현도^Can I Cosmic^1621^kpop
 찢어 (Feat. Black Nut)^이현도^Swings #1 Mixtape Vol.II^3143^kpop
 The Tipping Point (Feat. C Jamm, BewhY)^이현도^Levitate 2^1470^kpop
 내 뒤에 서줘 2014 (Feat. 김나영)^이현도^Vintage Swings^2551^kpop
-COOLEST FIRE EVER (Feat. GEM, JUSTHIS, HORIM, Khundi Panda, Symba J, 스윙스)^이현도^DON'T THINK TOO MUCH^190^kpop
+COOLEST FIRE EVER (Feat. GEM, JUSTHIS, HORIM, Khundi Panda, Symba J, 스윙스)^이현도^DON`T THINK TOO MUCH^190^kpop
 Special (Prod. By IOAH)^이현도^[부스러기(Crumbs)] Mixtape Vol.1^3059^kpop
 Jon Snow (Feat. DEAN) (Prod. By Lnb)^스윙스^Upgrade III^3082^kpop
 We Do Not^스윙스^Series^4728^kpop
@@ -22638,7 +22588,7 @@ HOW R U TODAY^엔플라잉^N.Flying 4TH MINI ALBUM [HOW ARE YOU?]^16927^kpop
 Autumn Dream^엔플라잉^야호(夜好)^11078^kpop
 놔 (Leave It)^엔플라잉^봄이 부시게^14845^kpop
 진짜가 나타났다^엔플라잉^N.Flying 2nd Mini Album `THE REAL : N.Flying`^10977^kpop
-Don't Cry^엔플라잉^투유프로젝트^3966^kpop
+Don`t Cry^엔플라잉^투유프로젝트^3966^kpop
 꽃 (Like a Flower)^엔플라잉^FLY HIGH PROJECT #1 `꽃`^5734^kpop
 골목길에서^엔플라잉^N.Flying 3rd Mini Album `THE HOTTEST : N.Flying`^6381^kpop
 Sunset^엔플라잉^야호(夜好)^5665^kpop
@@ -22669,7 +22619,7 @@ Doll^엔플라잉^Doll/Kick-Ass^1161^kpop
 I Know U Know^엔플라잉^N.Flying 3rd Mini Album `THE HOTTEST : N.Flying`^2610^kpop
 Songbird^엔플라잉^BROTHERHOOD^1366^kpop
 꽃 (Like a Flower)^엔플라잉^봄이 부시게^3193^kpop
-Don't Cry (Inst.)^엔플라잉^투유프로젝트^200^kpop
+Don`t Cry (Inst.)^엔플라잉^투유프로젝트^200^kpop
 딱 하루만^엔플라잉^N.Flying 3rd Mini Album `THE HOTTEST : N.Flying`^2007^kpop
 Kick-Ass^엔플라잉^Doll/Kick-Ass^1098^kpop
 짠해^엔플라잉^N.Flying 2nd Mini Album `THE REAL : N.Flying`^1673^kpop
@@ -23644,7 +23594,7 @@ Avrai (소유)^영암^Italian Barista^2^kpop
 나의 모습 나의 소유 (색소폰 연주)^영암^씨씨엠 골든 힛트^2^kpop
 나의 모습 나의 소유^영암^씨씨엠 골든 힛트^0^kpop
 나의 모습 나의 소유^영암^워십 콘서트^0^kpop
-詩はただ, 病める魂の所有者と孤獨者との寂しい `慰` めである. / Siwa Tada, Yameru Tamashiino Syoyusya To Kodokumonotono Sabisii `Nagusa` Mede Aru. (시는 단지 병든 영혼의 소유자와 고독한 사람과의 쓸쓸한 위로이다.)^영암^まして, 心と五感が一致するなら全て最上の `音樂` に變ずる. / Mashite Kokoro To Gokanga Icchi Surunara Subete Sizou No Ongakuni Henzuru. (하물며, 마음과 오감이 일치한다면 모두 최고의 '음악'으로 바뀐다.)^6^kpop
+詩はただ, 病める魂の所有者と孤獨者との寂しい `慰` めである. / Siwa Tada, Yameru Tamashiino Syoyusya To Kodokumonotono Sabisii `Nagusa` Mede Aru. (시는 단지 병든 영혼의 소유자와 고독한 사람과의 쓸쓸한 위로이다.)^영암^まして, 心と五感が一致するなら全て最上の `音樂` に變ずる. / Mashite Kokoro To Gokanga Icchi Surunara Subete Sizou No Ongakuni Henzuru. (하물며, 마음과 오감이 일치한다면 모두 최고의 `음악`으로 바뀐다.)^6^kpop
 나의모습나의소유^영암^베스트 CCM 특송모음 1집^5^kpop
 나의 모습 나의 소유^영암^색소폰 씨씨엠 연주^2^kpop
 나의 모습 나의 소유^영암^어쿠스틱 씨씨엠 베스트^5^kpop
@@ -24562,20 +24512,20 @@ Oh Yeah (Feat. 박봄) (MR)^박봄슬^뮤직섬 MR 반주 6집^5^kpop
 SOLO^제니^SOLO^183350^kpop
 Black (Feat. 제니 of BLACKPINK)^제니^쿠데타 (COUP D`ETAT)^89401^kpop
 Special (Feat. 제니 of BLACKPINK)^제니^First Love^13907^kpop
-I didn't know - 삼성전자 갤럭시S20 '제니 레드' 광고 삽입곡^제니^Pschent Decade^506^kpop
+I didn`t know - 삼성전자 갤럭시S20 `제니 레드` 광고 삽입곡^제니^Pschent Decade^506^kpop
 GG Be (지지베) (Feat. 제니 of BLACKPINK)^제니^LET`S TALK ABOUT LOVE^14655^kpop
 사랑할거야^제니^제니 주노 OST^1815^kpop
 티라미수 케익 (Feat. 최유리) (원곡가수 위아더나잇)^제니^투제니 (TO.JENNY) OST Part.1^4904^kpop
 Grab Me (Feat. 이상이) (원곡가수 최낙타)^제니^투제니 (TO.JENNY) OST Part.1^2607^kpop
-I didn't know - 삼성전자 갤럭시S20 '제니 레드' 광고 삽입곡^제니^I didn't know (삼성전자 갤럭시S20 '제니 레드' 광고 삽입곡)^189^kpop
+I didn`t know - 삼성전자 갤럭시S20 `제니 레드` 광고 삽입곡^제니^I didn`t know (삼성전자 갤럭시S20 `제니 레드` 광고 삽입곡)^189^kpop
 Gimme All Your Love (영화 `조이` (제니퍼로렌스 주연) 배경음악 삽입)^제니^Sound & Color^2075^kpop
-I didn`t know (Erik Omen Mix)^제니^I didn't know (삼성전자 갤럭시S20 '제니 레드' 광고 삽입곡)^35^kpop
+I didn`t know (Erik Omen Mix)^제니^I didn`t know (삼성전자 갤럭시S20 `제니 레드` 광고 삽입곡)^35^kpop
 Your Song (원곡가수 샘김 (SAM KIM))^제니^투제니 (TO.JENNY) OST Part.2^3588^kpop
 조심스러운 이유 (원곡가수 멜로망스)^제니^투제니 (TO.JENNY) OST Part.1^2034^kpop
 논현동 삼겹살 (원곡가수 알고보니 혼수상태)^제니^투제니 (TO.JENNY) OST Part.1^1066^kpop
 차르다시 (czardas)^제니^So Wonderful Days With Violin^219^kpop
 To. Jenny^제니^투제니 (TO.JENNY) OST Part.2^1862^kpop
-I didn't know - 삼성전자 갤럭시S20 '제니 레드' 광고 삽입곡^제니^Tristesse contemporaine^177^kpop
+I didn`t know - 삼성전자 갤럭시S20 `제니 레드` 광고 삽입곡^제니^Tristesse contemporaine^177^kpop
 모기송 (Feat. 수지)^제니^모기송^250^kpop
 종이의 날개 (Violin By 제니윤)^제니^종이의 날개^334^kpop
 통증 (Feat. 제니 Of 가비엔제이)^제니^Variety Show^1447^kpop
@@ -24924,7 +24874,7 @@ WOW^비투비^Press Play^35001^kpop
 Blue Moon^비투비^THIS IS US^41335^kpop
 At The End^비투비^Piece of BTOB Vol.1^57319^kpop
 Call me^비투비^THIS IS US^38748^kpop
-그날의 바람^비투비^YOOK O'clock^24573^kpop
+그날의 바람^비투비^YOOK O`clock^24573^kpop
 Last Day^비투비^I Mean^42395^kpop
 제발^비투비^HOUR MOMENT^41420^kpop
 Finale : 우리들의 콘서트^비투비^Brother Act.^35047^kpop
@@ -25014,7 +24964,7 @@ Young & One^임현식^ONE^9480^kpop
 L.U.V^임현식^L.U.V^7101^kpop
 무료해 (콕 To Me)^임현식^NEW MEN^24474^kpop
 Everything`s Good - 일훈 Solo (Outro)^임현식^Complete^27261^kpop
-할많하않 (With 정일훈)^임현식^YOOK O'clock^4984^kpop
+할많하않 (With 정일훈)^임현식^YOOK O`clock^4984^kpop
 RENDEZ-VOUS^임현식^RENDEZ-VOUS^11056^kpop
 시간이 흐른 뒤엔^임현식^몬스타 OST Part 2^21053^kpop
 サヨナラを繰り返して / 이별을 되돌아보며^임현식^夏色 MY GIRL / 여름색 MY GIRL^6416^kpop
@@ -25022,14 +24972,14 @@ RENDEZ-VOUS^임현식^RENDEZ-VOUS^11056^kpop
 Shake It^임현식^Complete^22414^kpop
 아름답고도 아프구나 (Inst.)^임현식^HOUR MOMENT^18137^kpop
 내사랑 내곁에 (With 일훈 Of 비투비)^임현식^내사랑 내곁에^5590^kpop
-뭍 (陸)^임현식^YOOK O'clock^4658^kpop
+뭍 (陸)^임현식^YOOK O`clock^4658^kpop
 크리스탈같이^임현식^스릴러^23501^kpop
 Happening^임현식^Move^20890^kpop
 U & I^임현식^Press Play^19973^kpop
 Beautiful Girl (Feat. 프니엘 of 비투비)^임현식^Beautiful Girl^1529^kpop
-겨울 속에서^임현식^YOOK O'clock^4526^kpop
+겨울 속에서^임현식^YOOK O`clock^4526^kpop
 심장어택^임현식^I Mean^24987^kpop
-CHICKEN^임현식^YOOK O'clock^4162^kpop
+CHICKEN^임현식^YOOK O`clock^4162^kpop
 Dear Bride^임현식^Dear Bride^5606^kpop
 어기여차 디여차^임현식^Complete^22386^kpop
 바빠 보여요 (Feat. 정일훈 Of 비투비)^임현식^바빠 보여요 (Feat. 정일훈 Of 비투비)^7601^kpop
@@ -25039,10 +24989,10 @@ DOCKING^임현식^RENDEZ-VOUS^9096^kpop
 북 치고 장구 치고^임현식^Complete^22690^kpop
 Anymore^임현식^Remember that^22145^kpop
 봄에 오면 괴롭힐 거예요^임현식^봄에 오면 괴롭힐 거예요^10686^kpop
-W.A.U^임현식^YOOK O'clock^4456^kpop
+W.A.U^임현식^YOOK O`clock^4456^kpop
 Brand new days ～どんな未?を～ / Brand new days ~어떤 미래를~^임현식^Brand new days ~ どんな未?を ~ / Brand new days ~어떤 미래를~^6949^kpop
 Special Christmas^임현식^2016 United Cube Project Part 1^8894^kpop
-Hypnotized (With 프니엘)^임현식^YOOK O'clock^4159^kpop
+Hypnotized (With 프니엘)^임현식^YOOK O`clock^4159^kpop
 Monday To Sunday^임현식^Born TO Beat (Asia Special Edition)^14951^kpop
 NEW MEN^임현식^NEW MEN^23982^kpop
 사차선도로 (Feat. 육성재 Of 비투비)^임현식^황문섭^9087^kpop
@@ -25124,7 +25074,7 @@ Ha-Na-Bi^비투비^24/7 (TWENTY FOUR/SEVEN)^3725^kpop
 For You (Ballad Ver.)^비투비^신데렐라와 네 명의 기사 OST^5911^kpop
 MAGIC TIME^비투비^未來（あした）/ 미래^2907^kpop
 또 사랑하고 만다 (Inst.)^비투비^밤을 걷는 선비 OST Part.3^3439^kpop
-Guess Who's Back^비투비^24/7 (TWENTY FOUR/SEVEN)^3607^kpop
+Guess Who`s Back^비투비^24/7 (TWENTY FOUR/SEVEN)^3607^kpop
 Regrets of Love^비투비^未來（あした）/ 미래^2881^kpop
 Further Rise^비투비^Brand new days ~ どんな未?を ~ / Brand new days ~어떤 미래를~^4272^kpop
 Hello Mello (JPN ver.) - Rap Line^비투비^24/7 (TWENTY FOUR/SEVEN)^3339^kpop
@@ -25439,7 +25389,7 @@ Fly Away^에일리^더 콜 (The Call) 첫 번째 프로젝트^20613^kpop
 No No No^에일리^A`s Doll House^13481^kpop
 다시 쓰고 싶어^에일리^이런 꽃 같은 엔딩 OST Part.3^26003^kpop
 아무도 모르게 (Prod. by MC몽)^에일리^언프리티 랩스타 Track 6^45249^kpop
-어제처럼^에일리^[Vol.52] 유희열의 스케치북 : 스물아홉 번째 목소리 '유스케 X 에일리'^1610^kpop
+어제처럼^에일리^[Vol.52] 유희열의 스케치북 : 스물아홉 번째 목소리 `유스케 X 에일리`^1610^kpop
 Rainy Day^에일리^A`s Doll House^13582^kpop
 Is You^에일리^알함브라 궁전의 추억 OST Part 3^13490^kpop
 그대도 같은가요^에일리^빛나거나 미치거나 OST Part.1^15798^kpop
@@ -26228,7 +26178,7 @@ Foolish^어니언스^I Believe^104^kpop
 Never Again (이수영)^어니언스^Sweet Lessons 52^2^kpop
 시간을 달려서 (Rough)^여자친구^여자친구 3rd Mini Album `SNOWFLAKE`^155696^kpop
 오늘부터 우리는 (Me Gustas Tu)^여자친구^여자친구 2nd Mini Album `Flower Bud`^132133^kpop
-밤 (Time for the moon night)^여자친구^여자친구 The 6th Mini Album 'Time for the moon night'^145530^kpop
+밤 (Time for the moon night)^여자친구^여자친구 The 6th Mini Album `Time for the moon night`^145530^kpop
 너 그리고 나 (NAVILLERA)^여자친구^여자친구 The 1st Album `LOL`^112037^kpop
 유리구슬 (Glass Bead)^여자친구^여자친구 1st Mini Album `Season Of Glass`^71062^kpop
 열대야 (Fever)^여자친구^여자친구 The 7th Mini Album `FEVER SEASON`^50914^kpop
@@ -26245,7 +26195,7 @@ Labyrinth^여자친구^回:LABYRINTH^10960^kpop
 이분의 일 1/2 (ONE-HALF)^여자친구^여자친구 The 5th Mini Album `PARALLEL`^21074^kpop
 Mermaid^여자친구^여자친구 The 1st Album `LOL`^19666^kpop
 사랑별 (Luv Star)^여자친구^여자친구 3rd Mini Album `SNOWFLAKE`^20031^kpop
-Love Bug^여자친구^여자친구 The 6th Mini Album 'Time for the moon night'^17016^kpop
+Love Bug^여자친구^여자친구 The 6th Mini Album `Time for the moon night`^17016^kpop
 칵테일 사랑^여자친구^투유프로젝트^4532^kpop
 RAINBOW^여자친구^여자친구 The 5th Mini Album Repackage `RAINBOW`^20605^kpop
 White (하얀마음)^여자친구^여자친구 1st Mini Album `Season Of Glass`^16946^kpop
@@ -26256,7 +26206,7 @@ TRUST^여자친구^여자친구 3rd Mini Album `SNOWFLAKE`^21559^kpop
 물꽃놀이 (Water Flower)^여자친구^여자친구 The 1st Album `LOL`^14077^kpop
 바람 바람 바람 (Windy Windy)^여자친구^여자친구 Summer Mini Album `Sunny Summer`^12141^kpop
 Vacation^여자친구^여자친구 Summer Mini Album `Sunny Summer`^13053^kpop
-휘리휘리 (Flower Garden)^여자친구^여자친구 The 6th Mini Album 'Time for the moon night'^15006^kpop
+휘리휘리 (Flower Garden)^여자친구^여자친구 The 6th Mini Album `Time for the moon night`^15006^kpop
 지금 만나러 갑니다 (Eclipse)^여자친구^回:LABYRINTH^8429^kpop
 자격지심 (Feat. 은하 Of 여자친구)^여자친구^자격지심^114022^kpop
 물들어요 (Fall in Love)^여자친구^여자친구 The 1st Album `LOL`^16862^kpop
@@ -26307,9 +26257,9 @@ LOL^이승기^여자친구 The 1st Album `LOL`^13637^kpop
 슬픔 속에 그댈 지워야만 해 (상큼한 산토리니)^이승기^복면가왕 68회^6204^kpop
 From Me^이승기^回:LABYRINTH^6488^kpop
 내 이름을 불러줘 (Say my name)^이승기^여자친구 3rd Mini Album `SNOWFLAKE`^13948^kpop
-Bye^이승기^여자친구 The 6th Mini Album 'Time for the moon night'^12038^kpop
+Bye^이승기^여자친구 The 6th Mini Album `Time for the moon night`^12038^kpop
 Wow Thing (Inst.)^이승기^Wow Thing^2910^kpop
-별 (You are my star)^이승기^여자친구 The 6th Mini Album 'Time for the moon night'^10671^kpop
+별 (You are my star)^이승기^여자친구 The 6th Mini Album `Time for the moon night`^10671^kpop
 고백 (Feat. 시진)^이승기^신데렐라와 네 명의 기사 OST Part.3^8100^kpop
 Satie : Gymnopedie No.1 - Lent Et Douloureux (사티 : 짐노페디 1번) (영화 내 여자 친구를 소개합니다, 광고 시몬스 침대 삽입곡)^이승기^영화 드라마 CF(광고) 속 클래식 피아노 명곡 모음 베스트 연주곡 OST^1596^kpop
 나의 일기장 (Sunshine)^이승기^여자친구 The 1st Album `LOL`^12898^kpop
@@ -26326,7 +26276,7 @@ Je T`aime (SOS 해상구조대, 상큼한 산토리니)^이승기^복면가왕 67회^3591^kpop
 Paradise^이승기^여자친구 The 7th Mini Album `FEVER SEASON`^5763^kpop
 내품에 라바와 친구들^이승기^내품에 친구들 OST^2688^kpop
 이별로 오지마^이승기^육룡이 나르샤 OST Part.7^8149^kpop
-밤 (Time for the moon night ) (Inst.)^여자친구^여자친구 The 6th Mini Album 'Time for the moon night'^7506^kpop
+밤 (Time for the moon night ) (Inst.)^여자친구^여자친구 The 6th Mini Album `Time for the moon night`^7506^kpop
 니 여자친구^여자친구^니 여자친구^1663^kpop
 칵테일 사랑 (Inst.)^여자친구^투유프로젝트^860^kpop
 빨간우산 (RED UMBRELLA)^여자친구^여자친구 The 5th Mini Album `PARALLEL`^10830^kpop
@@ -26358,7 +26308,7 @@ The Way^여자친구^쇼핑왕 루이 OST Part.2^8785^kpop
 좋은 말 할 때 (Smile)^여자친구^여자친구 The 7th Mini Album `FEVER SEASON`^6206^kpop
 열대야 (Fever) (Inst.)^여자친구^여자친구 The 7th Mini Album `FEVER SEASON`^4098^kpop
 친구의 여자친구^여자친구^Complete^22625^kpop
-틱틱 (Tik Tik)^여자친구^여자친구 The 6th Mini Album 'Time for the moon night'^9860^kpop
+틱틱 (Tik Tik)^여자친구^여자친구 The 6th Mini Album `Time for the moon night`^9860^kpop
 기적을 넘어 (L.U.V.)^여자친구^여자친구 The 2nd Album `Time for us`^7612^kpop
 전 여자친구^여자친구^전 여자친구^1331^kpop
 내 여자 친구를 소개합니다 (Feat. 진(眞))^여자친구^1St Check^981^kpop
@@ -26382,7 +26332,7 @@ A Starry Sky^놈놈놈^여자친구 The 2nd Album `Time for us`^7281^kpop
 우연히 봄^놈놈놈^냄새를 보는 소녀 OST^10933^kpop
 울랄라^놈놈놈^내 여자친구는 구미호 OST Part.2^199^kpop
 여자사람친구^놈놈놈^여자사람친구^3069^kpop
-INTRO (Daytime)^놈놈놈^여자친구 The 6th Mini Album 'Time for the moon night'^7423^kpop
+INTRO (Daytime)^놈놈놈^여자친구 The 6th Mini Album `Time for the moon night`^7423^kpop
 여우비 (Main Theme)^놈놈놈^내 여자친구는 구미호 OST^5474^kpop
 주머니 속 편지^놈놈놈^포켓몬 더 무비 XY&Z (볼케니온: 기계왕국의 비밀)^7374^kpop
 LIFE IS A PARTY^놈놈놈^여자친구 The 5th Mini Album `PARALLEL`^10671^kpop
@@ -26570,7 +26520,7 @@ Bizet : Les Pecheurs De Perles Act.II - De Mon Amie, Fleur Endormie... Leila ! L
 그만 만나자^제이데이^너의 여자친구 OST^1^kpop
 더러운 거래^제이데이^너의 여자친구 OST^1^kpop
 Beautiful Day^제이데이^너의 여자친구 OST^4^kpop
-Satie : Gymnopedie No.1 - Lent Et Douloureux (사티 : 짐노페디 1번) (영화 ‘내 여자친구를 소개합니다')^제이데이^한국인이 사랑하는 영화속 클래식 이야기^5^kpop
+Satie : Gymnopedie No.1 - Lent Et Douloureux (사티 : 짐노페디 1번) (영화 ‘내 여자친구를 소개합니다`)^제이데이^한국인이 사랑하는 영화속 클래식 이야기^5^kpop
 니여자친구불편해^제이데이^니여자친구불편해^18^kpop
 Satie : Gymnopedie No.1 - Lent Et Douloureux (사티 : 짐노페디 1번) (영화 `내 여자친구를 소개합니다`, `사랑과 욕망의 짐노페디`)^제이데이^별이 빛나는 밤에 : 잔잔한 클래식이 흐르는 밤^3^kpop
 Satie : 3 Gymnopedie No.1 - Lent Et Douloureux (사티 : 3개의 짐노페디 1번 - 천천히 부드럽게) (영화 `내 여자친구를 소개합니다` OST)^제이데이^엄마! 난 가야금이 좋아요^1^kpop
@@ -26707,7 +26657,7 @@ Satie : Trois Gymnopedies No.1 - I. Lent Et Douloureux (사티 : 3개의 짐노페디 1�
 남자는 여자와 달라^Ayane^노래친구들 랄라라 Vol.09^0^kpop
 Satie : Trois Gymnopedies No.1 - I. Lent Et Douloureux (사티 : 3개의 짐노페디 1번) (영화 `내 여자친구를 소개합니다`, `사랑과 욕망의 짐노페디`)^Ayane^비 오는 날 듣는 세미클래식 (영화, 방송 시그널, CF광고 테마^1^kpop
 Satie : Trois Gymnopedies No.1 - I. Lent Et Douloureux (사티 : 3개의 짐노페디 1번) (영화 `내 여자친구를 소개합니다`, `사랑과 욕망의 짐노페디`)^Ayane^집중력과 사고력을 높여주는 학습음악 (영화, 방송 시그널, CF 광고 테마, 클래식, 피아노^0^kpop
-Satie : Trois Gymnopedies No.1 - I. Lent Et Douloureux (사티 : 3개의 짐노페디 1번) (영화 '내 여자친구를 소개합니다', '사랑과 욕망의 짐노페디')^Ayane^불면증을 다스리는 음악 (영화, 방송 시그널, CF광고 테마, 클래식, 피아노^0^kpop
+Satie : Trois Gymnopedies No.1 - I. Lent Et Douloureux (사티 : 3개의 짐노페디 1번) (영화 `내 여자친구를 소개합니다`, `사랑과 욕망의 짐노페디`)^Ayane^불면증을 다스리는 음악 (영화, 방송 시그널, CF광고 테마, 클래식, 피아노^0^kpop
 Satie : Trois Gymnopedies No.1 - I. Lent Et Douloureux (사티 : 3개의 짐노페디 1번) (영화 `내 여자친구를 소개합니다`, `사랑과 욕망의 짐노페디`)^Ayane^클래식 연가 Best Classic Love Songs (영화, 방송 시그널, CF 광고 테마^0^kpop
 Satie : Trois Gymnopedies No.1 - I. Lent Et Douloureux (사티 : 3개의 짐노페디 1번) (영화 `내 여자친구를 소개합니다`, `사랑과 욕망의 짐노페디`)^Ayane^편안한 잠을 위한 숙면 음악 (잔잔한 피아노 클래식 연주곡 모음^1^kpop
 Satie : Gymnopedies No.1 - Lent Et Douloureux (사티 : 짐노페디 1번) (영화 `내 여자친구를 소개합니다` OST)^Ayane^영화 속에 흐르던 아름다운 클래식 테마 베스트 8^3^kpop

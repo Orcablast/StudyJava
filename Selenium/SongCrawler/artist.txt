@@ -24,7 +24,6 @@ Andre
 거미
 옥주현
 TWICE
-L'Hirondelle
 먼데이
 브라운아이드걸스
 소유란
@@ -317,6 +316,7 @@ Marc
 오렌지나무
 Luciani
 엔플라잉
+폴킴
 karl
 부활
 TNJX
@@ -334,7 +334,6 @@ Yoshida
 최고MR
 Brodin
 벤젠
-IZ*ONE
 무드홀릭
 김디지
 악보노래방
@@ -357,9 +356,9 @@ Ennio
 Piano
 헤이즈
 Little
-폴킴
 Dok2
 Leila
+IZ*ONE
 EQ
 윤하
 전소미

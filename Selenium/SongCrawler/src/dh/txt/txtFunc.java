@@ -385,6 +385,7 @@ public class txtFunc {
 			System.out.println("Ã³¸® Àü Volume : "+list.size());
 			
 			for(String str : list) {
+				str = str.replaceAll("'", "`");
 				
 				StringTokenizer sT = new StringTokenizer(str,"^");
 				
