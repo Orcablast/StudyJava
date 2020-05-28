@@ -8,19 +8,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import board.model.service.BoardService;
-import board.model.vo.BoardData;
+import board.model.vo.Board;
 
 /**
- * Servlet implementation class BoardListServlet
+ * Servlet implementation class BoardViewServlet
  */
-@WebServlet(name = "BoardList", urlPatterns = { "/boardList" })
-public class BoardListServlet extends HttpServlet {
+@WebServlet(name = "BoardView", urlPatterns = { "/boardView" })
+public class BoardViewServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public BoardListServlet() {
+    public BoardViewServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,22 +33,16 @@ public class BoardListServlet extends HttpServlet {
 		// 1. 인코딩
 		request.setCharacterEncoding("utf-8");
 		
-		// 2. 변수에 값 저장
-		int reqPage = Integer.parseInt(request.getParameter("reqPage"));
-		String type = request.getParameter("type");
-		String keyword = request.getParameter("keyword");
+		// 2. 변수저장
+		int boardNo = Integer.parseInt(request.getParameter("boardNo"));
 		
 		// 3. 비지니스 로직
-		BoardData bd = new BoardService().selectList(reqPage,type,keyword);
+		Board b = new BoardService().selectOneBoard(boardNo);
 		
 		// 4. 결과처리
-		request.setAttribute("reqPage", reqPage);
-		request.setAttribute("list", bd.getList());
-		request.setAttribute("pageNavi", bd.getPageNavi());
-		request.setAttribute("type", type);
-		request.setAttribute("keyword", keyword);
-		request.getRequestDispatcher("/WEB-INF/views/board/boardList.jsp").forward(request, response);
-		
+		request.setAttribute("b", b);
+		request.getRequestDispatcher("/WEB-INF/views/board/boardView.jsp").forward(request, response);
+				
 	}
 
 	/**

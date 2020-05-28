@@ -8,19 +8,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import board.model.service.BoardService;
-import board.model.vo.BoardData;
 
 /**
- * Servlet implementation class BoardListServlet
+ * Servlet implementation class DeleteBoardServlet
  */
-@WebServlet(name = "BoardList", urlPatterns = { "/boardList" })
-public class BoardListServlet extends HttpServlet {
+@WebServlet(name = "DeleteBoard", urlPatterns = { "/deleteBoard" })
+public class DeleteBoardServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public BoardListServlet() {
+    public DeleteBoardServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,25 +29,22 @@ public class BoardListServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		// 1. 인코딩
+		// 1.인코딩
 		request.setCharacterEncoding("utf-8");
 		
-		// 2. 변수에 값 저장
-		int reqPage = Integer.parseInt(request.getParameter("reqPage"));
-		String type = request.getParameter("type");
-		String keyword = request.getParameter("keyword");
+		// 2.변수저장
+		String[] delNo = request.getParameterValues("delNo");
 		
-		// 3. 비지니스 로직
-		BoardData bd = new BoardService().selectList(reqPage,type,keyword);
+		// 3.비지니스 로직
+		int result = new BoardService().deleteBoard(delNo);
 		
-		// 4. 결과처리
-		request.setAttribute("reqPage", reqPage);
-		request.setAttribute("list", bd.getList());
-		request.setAttribute("pageNavi", bd.getPageNavi());
-		request.setAttribute("type", type);
-		request.setAttribute("keyword", keyword);
-		request.getRequestDispatcher("/WEB-INF/views/board/boardList.jsp").forward(request, response);
-		
+		if(result>0) {
+			request.setAttribute("msg", "삭제가 완료되었습니다.");
+		} else {
+			request.setAttribute("msg", "게시글 삭제 실패");
+		}
+		request.setAttribute("loc","/boardList?reqPage=1");
+		request.getRequestDispatcher("/WEB-INF/views/msg.jsp").forward(request, response);
 	}
 
 	/**
