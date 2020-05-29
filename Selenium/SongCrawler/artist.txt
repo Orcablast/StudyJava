@@ -5,7 +5,9 @@ Story
 윤건
 노을
 조이
+10CM
 가야금
+제이홀리
 락캣츠
 방탄소년단
 마마무
@@ -30,17 +32,15 @@ TWICE
 엠씨더맥스
 박상문뮤직웍스
 Exo
-Apink
 장혜진
 노을빛
-씨야
 헤이즈문
-제이홀리
 수호
 에픽하이
 Christina
 휘성
 스윙스
+현아
 조이플
 Marty
 제시
@@ -56,7 +56,6 @@ Daviddance
 M
 Musicen
 백현
-현아
 허각
 Sarah
 이윤한
@@ -96,6 +95,7 @@ Joymin
 마음쉼표
 이기찬
 리쌍
+Apink
 Fernando
 Klara
 온음
@@ -166,7 +166,6 @@ Terry
 태연
 아빠동요
 김상배
-이권희
 영암
 벤치위레오
 Flower
@@ -204,6 +203,7 @@ Keytalk
 노무현
 개나리
 언니네
+제니
 EXO
 랄랄라동요
 행복한
@@ -223,8 +223,6 @@ FM43
 선은경
 수피아
 NCT
-핑크키즈
-필리아
 ITZY
 노도
 휘인
@@ -235,8 +233,8 @@ ITZY
 Danny
 Roque
 AKMU
+어반자카파
 자장가하프
-10CM
 제이데이
 다비치
 Mx
@@ -249,7 +247,6 @@ Niklas
 동요상자
 2ndName
 (여자)아이들
-어반자카파
 조이풀사운드
 백하나
 성시경
@@ -260,6 +257,7 @@ Niklas
 PSMArtists
 아이코닉스
 선미
+최고MR
 Gillian
 이관희
 UV
@@ -278,11 +276,13 @@ Jozsef
 크레페
 Isaac
 허니
+이권희
 빅
 Karaoke
 클래식피아노
 Critical
 민서
+씨야
 라
 스윗피아노
 유나
@@ -315,12 +315,14 @@ Red
 Marc
 오렌지나무
 Luciani
+벤젠
 엔플라잉
 폴킴
 karl
 부활
 TNJX
 ASTRO
+필리아
 피아노을
 음악치료사
 Benjamin
@@ -330,10 +332,8 @@ Aros
 Yoshida
 전상근
 조이럭클럽
-제니
-최고MR
+핑크키즈
 Brodin
-벤젠
 무드홀릭
 김디지
 악보노래방

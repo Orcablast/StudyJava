@@ -385,7 +385,18 @@ public class txtFunc {
 			System.out.println("Ã³¸® Àü Volume : "+list.size());
 			
 			for(String str : list) {
-				str = str.replaceAll("'", "`");
+				if(str.contains("'")) {
+					str = str.replaceAll("'", "&#39;");					
+				}
+				
+				if(str.contains("&")) {
+					str = str.replaceAll("&", "&amp;");
+				}
+				
+				if(str.contains("#38;")) {
+					str = str.replaceAll("#38;", "");
+				}
+				
 				
 				StringTokenizer sT = new StringTokenizer(str,"^");
 				

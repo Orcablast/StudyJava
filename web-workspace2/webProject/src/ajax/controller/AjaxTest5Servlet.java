@@ -53,6 +53,7 @@ public class AjaxTest5Servlet extends HttpServlet {
 		out.print(result);
 		out.flush(); // 버퍼링 되어서 아직 기록되지 않은 데이터를 출력스트림에 모두 출력
 		out.close(); // 출력되지 않은 데이터가 있으면 먼저 출력하고 스트림 종료
+	
 	}
 
 	/**
