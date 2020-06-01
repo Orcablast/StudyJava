@@ -29,50 +29,27 @@ public class MemberDao {
 		return session.selectOne("member.selectOneMember",m);
 	}
 
-//	public int insertMember(Member m) {
-//		
-//		String query = "insert into member values(member_seq.nextval, ?, ?, ?, ?, sysdate)";
-//		
-//		Object[] params = {m.getMemberId(), m.getMemberPw(), m.getMemberName(), m.getAge()};
-//		
-//		return jdbcTemplate.update(query, params);
-//	}
-//
-//	public int updateMember(Member m) {
-//		
-//		String query = "update member set member_pw = ?, member_name = ?, age = ? where member_id = ?";
-//		
-//		Object[] params = {m.getMemberPw(), m.getMemberName(), m.getAge(), m.getMemberId()};
-//		
-//		return jdbcTemplate.update(query, params);
-//	}
-//
-//	public int deletMember(Member m) {
-//		
-//		String query = "delete from member where member_id = ?";		
-//		
-//		return jdbcTemplate.update(query, m.getMemberId());
-//	}
-//
-//	public List checkId(String memberId) {
-//
-//		String query = "select * from member where member_id = ?";
-//		Object[] params = {memberId};
-//		
-//		List list = jdbcTemplate.query(query, params, new MemberRowMapper());
-//		
-//		return list;
-//	}
-//
-//	public List selectAllMember() {
-//		String query = "select * from member";
-//		
-//		List list = jdbcTemplate.query(query, new MemberRowMapper());
-//		
-//		return list;
-//	}
+	public int insertMember(Member m) {
+		return session.insert("member.insertMember", m);
+	}
 
+	public int updateMember(Member m) {
+		
+		return session.update("member.updateMember",m);
+	}
 
-	
-	
+	public int deletMember(Member m) {	
+		
+		return session.delete("member.deleteMember",m);
+	}
+
+	public int checkId(String memberId) {
+		
+		return session.selectOne("member.checkId",memberId);
+	}
+
+	public List selectAllMember() {
+		
+		return session.selectList("member.selectAllMember");
+	}	
 }

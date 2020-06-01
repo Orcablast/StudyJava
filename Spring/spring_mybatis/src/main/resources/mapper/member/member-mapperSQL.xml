@@ -13,5 +13,34 @@
 		where member_id = #{memberId}
 		and member_pw = #{memberPw}
 	</select>
-	
+	<insert id="insertMember" parameterType="member">
+		insert into member values(
+			member_seq.nextval,
+			#{memberId},
+			#{memberPw},
+			#{memberName},
+			#{age},
+			sysdate
+		)
+	</insert>	
+	<update id="updateMember" parameterType="member">
+		update member set member_pw = #{memberPw}, member_name = #{memberName}, age = #{age}
+		where member_id = #{memberId}
+	</update>
+	<delete id="deleteMember" parameterType="member">
+		delete from member where member_id = #{memberId}
+	</delete>
+	<select id="checkId" parameterType="string" resultType="_int">
+		select count(*) as cnt from member where member_id = #{_parameter}
+	</select>
+	<select id="selectAllMember" resultType="member">
+		select 
+			member_no as memberNo,
+			member_id as memberId,
+			member_pw as memberPw,
+			member_name as memberName,
+			age,
+			enroll_date as enrollDate
+		from member
+	</select>
 </mapper>

@@ -19,13 +19,15 @@ pageEncoding="UTF-8"%>
   </body>
   <script>
     $("#btn1").click(function () {
+      $(".desc").remove();
+
       $.ajax({
         url: "/selectAllMember.do",
         success: function (data) {
           html = "";
           for (let i = 0; i < data.length; i++) {
             html +=
-              "<tr><td>" +
+              "<tr class='desc'><td>" +
               data[i].memberId +
               "</td><td>" +
               data[i].memberName +

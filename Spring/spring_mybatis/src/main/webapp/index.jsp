@@ -23,6 +23,9 @@ prefix="c" %>
       <a href="/mypage.do">마이페이지</a>
       <a href="/logout.do">로그아웃</a>
       <a href="/delete.do">회원 탈퇴</a>
+      <hr>
+      <a href="/noticeWriteFrm.do">게시글 작성</a>      
+      <a href="/noticeList.do?reqPage=1">게시글 목록</a>      
     </c:if>
   </body>
 </html>

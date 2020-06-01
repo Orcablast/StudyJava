@@ -25,7 +25,7 @@ pageEncoding="UTF-8"%>
           html = "";
           for (let i = 0; i < data.length; i++) {
             html +=
-              "<tr><td>" +
+              "<tr class='desc'><td>" +
               data[i].memberId +
               "</td><td>" +
               data[i].memberName +

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="notice">
+	<insert id="insertNotice" parameterType="notice">
+		insert into notice values(
+			notice_seq.nextval,
+			#{noticeTitle},
+			#{noticeWriter},
+			#{noticeContent},
+			#{filename},
+			#{filepath},
+			sysdate
+		)
+	</insert>
+	<select id="countNotice" resultType="_int">
+		select count(*) from notice
+	</select>
+	<select id="selectNoticeList" parameterType="map" resultType="notice">
+		SELECT 
+			NOTICE_NO AS noticeNo,
+			NOTICE_TITLE AS noticeTitle,
+			NOTICE_WRITER AS noticeWriter,
+			NOTICE_CONTENT AS noticeContent,
+			FILENAME,
+			FILEPATH,
+			REG_DATE AS regDate		 
+		FROM (SELECT ROWNUM AS RNUM, T.* FROM (SELECT * FROM NOTICE N ORDER BY NOTICE_NO DESC)T) 
+		WHERE RNUM BETWEEN #{start} AND #{end}
+	</select>
+	<select id="selectOneNotice" parameterType="notice" resultType="notice">
+		select
+			NOTICE_NO AS noticeNo,
+			NOTICE_TITLE AS noticeTitle,
+			NOTICE_WRITER AS noticeWriter,
+			NOTICE_CONTENT AS noticeContent,
+			FILENAME,
+			FILEPATH,
+			REG_DATE AS regDate
+		from notice
+		where notice_no = #{noticeNo}
+	</select>
+	<delete id="deleteNotice" parameterType="notice">
+		delete from notice where notice_no = #{noticeNo}
+	</delete>
+</mapper>
