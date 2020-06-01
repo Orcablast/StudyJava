@@ -1,5 +1,7 @@
 package kr.or.iei.member.controller;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +9,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.google.gson.Gson;
 
 import kr.or.iei.member.model.service.MemberService;
 import kr.or.iei.member.model.vo.Member;
@@ -22,7 +27,7 @@ public class MemberController {
 		super();
 		System.out.println("멤바 컨트롤러 생성");
 	}
-
+	
 	@RequestMapping(value="/login.do")
 	public String loginMember(HttpSession session, Member m) {		
 		
@@ -34,6 +39,34 @@ public class MemberController {
 			return "member/loginSuccess";
 		} else {
 			return "member/loginFailed";
+		}
+	}
+	
+	@ResponseBody
+	@RequestMapping(value="/selectAllMember.do", produces = "application/json;charset=utf-8")
+	public String selectAllMember() {
+		
+		ArrayList<Member> list = service.selectAllMember();
+		
+		return new Gson().toJson(list);
+	}
+	
+	@RequestMapping(value="/allMember.do")
+	public String allMember() {
+		return "member/allMember";
+	}
+	
+	// ajax 통신의 return 방식
+	@ResponseBody
+	@RequestMapping(value="/checkId.do",produces = "text/html;charset=utf-8")
+	public String checkId(String memberId) {		
+		// 비지니스 로직 호출
+		Member member = service.checkId(memberId);
+		
+		if(member == null) { // 사용가능한 아이디
+			return "0";
+		} else { // 사용중인 아이디
+			return "1";			
 		}
 	}
 	

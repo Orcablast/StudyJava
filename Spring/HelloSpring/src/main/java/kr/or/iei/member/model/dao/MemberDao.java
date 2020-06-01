@@ -15,7 +15,7 @@ public class MemberDao {
 	@Autowired
 	@Qualifier("jdbcTemplate")
 	private JdbcTemplate jdbcTemplate;
-	
+
 	public MemberDao() {
 		super();
 		System.out.println("DAO 객체 생성");
@@ -23,39 +23,54 @@ public class MemberDao {
 
 	public List selectOneMember(Member m) {
 		String query = "select * from member where member_id = ? and member_pw = ?";
-		
-		Object[] params = {m.getMemberId(), m.getMemberPw()};
-		
-		List list = jdbcTemplate.query(query, params, new MemberRowMapper());	
-		
+
+		Object[] params = { m.getMemberId(), m.getMemberPw() };
+
+		List list = jdbcTemplate.query(query, params, new MemberRowMapper());
+
 		return list;
 	}
 
 	public int insertMember(Member m) {
-		
+
 		String query = "insert into member values(member_seq.nextval, ?, ?, ?, ?, sysdate)";
-		
-		Object[] params = {m.getMemberId(), m.getMemberPw(), m.getMemberName(), m.getAge()};
-		
+
+		Object[] params = { m.getMemberId(), m.getMemberPw(), m.getMemberName(), m.getAge() };
+
 		return jdbcTemplate.update(query, params);
 	}
 
 	public int updateMember(Member m) {
-		
+
 		String query = "update member set member_pw = ?, member_name = ?, age = ? where member_id = ?";
-		
-		Object[] params = {m.getMemberPw(), m.getMemberName(), m.getAge(), m.getMemberId()};
-		
+
+		Object[] params = { m.getMemberPw(), m.getMemberName(), m.getAge(), m.getMemberId() };
+
 		return jdbcTemplate.update(query, params);
 	}
 
 	public int deletMember(Member m) {
-		
-		String query = "delete from member where member_id = ?";		
-		
+
+		String query = "delete from member where member_id = ?";
+
 		return jdbcTemplate.update(query, m.getMemberId());
 	}
 
-	
-	
+	public List checkId(String memberId) {
+
+		String query = "select * from member where member_id = ?";
+		Object[] params = { memberId };
+
+		List list = jdbcTemplate.query(query, params, new MemberRowMapper());
+
+		return list;
+	}
+
+	public List selectAllMember() {
+		String query = "select * from member";
+
+		List list = jdbcTemplate.query(query, new MemberRowMapper());
+
+		return list;
+	}
 }
