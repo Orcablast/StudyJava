@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%> <%@ taglib uri="http://java.sun.com/jsp/jstl/core"
-prefix="c" %>
+prefix="c"%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -29,23 +29,33 @@ prefix="c" %>
         </tr>
         <tr>
           <th>첨부파일</th>
-          <td class="img_container">
-            <img src="/resources/upload/notice/${n.filepath}" />
-            <div class="btn_container">
-              <button type="button" id="imgMod">수정</button>
-              <button type="button" id="imgDel">삭제</button>
-            </div>
-          </td>
+          <c:if test="${not empty n.filepath }">
+            <td class="img_container">
+              <img src="/resources/upload/notice/${n.filepath}" />
+              <div class="btn_container">
+                <button type="button" id="imgMod">변경</button>
+              </div>
+            </td>
+          </c:if>
+          <c:if test="${empty n.filepath }">
+			<td>
+			  <input type="file" name="file" id="inputFile">
+			</td>
+		  </c:if>
         </tr>
         <tr>
           <th>내용</th>
-          <td>${n.noticeContent}</td>
+          <td>
+            <textarea name="noticeContent" cols="30" rows="10">${n.noticeContent}</textarea>
+          </td>
         </tr>
       </table>
-      <input type="hidden" name="noticeNo" value="${n.noticeNo}" />
-      <input type="hidden" name="filepath" value="${n.filepath}" />
+	  <input type="hidden" name="noticeNo" value="${n.noticeNo}" />
+	  <c:if test="${not empty n.filepath }">
+	  <input type="hidden" name="filepath" value="${n.filepath}" />
+	</c:if>
       <div>
-        <button type="submit">수정 완료</button>
+        <button type="submit" id="submitBtn">수정 완료</button>
         <button type="button" id="cancelBtn">취소</button>
       </div>
     </form>
@@ -53,7 +63,7 @@ prefix="c" %>
   <script>
     let html = "";
 
-    $("#imgMod").click(function () {
+    function modFunc() {
       const container = $(".img_container");
       html = container.html();
       container.children().remove();
@@ -65,16 +75,21 @@ prefix="c" %>
       const btn = document.createElement("button");
       btn.type = "button";
       btn.id = "cancel";
-      btn.html("복원");
+      btn.innerHTML = "취소";
 
       container.append(input);
       container.append(btn);
 
-      $("#cancel").click(function () {
-        const container = $(".img_container");
-        container.children().remove();
-        container.append(html);
-      });
-    });
+      $("#cancel").click(cancelFunc);
+    }
+
+    function cancelFunc() {
+      const container = $(".img_container");
+      container.children().remove();
+      container.append(html);
+      $("#imgMod").click(modFunc);
+    }
+
+    $("#imgMod").click(modFunc);
   </script>
 </html>

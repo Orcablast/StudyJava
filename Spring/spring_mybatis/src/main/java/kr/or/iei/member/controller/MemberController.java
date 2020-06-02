@@ -23,8 +23,6 @@ public class MemberController {
 	@Qualifier("memberService")
 	private MemberService service;
 	
-	
-	
 	public MemberController() {
 		super();		
 		System.out.println("멤바 컨트롤러 생성");

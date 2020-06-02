@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +27,40 @@ public class NoticeController {
 	@Autowired
 	@Qualifier("noticeService")
 	private NoticeService service;
+	
+	@RequestMapping(value = "/modifyNotice.do")
+	public String modifyNotice(Notice n, HttpServletRequest request, Model m, MultipartFile file) {
+		
+		File f = null;
+		
+		if(file != null && !file.isEmpty()) {
+			// 저장 경로
+			String savePath = request.getSession().getServletContext().getRealPath("/resources/upload/notice/");
+			
+			// 저장한 실제 파일명
+			String originFileName = file.getOriginalFilename();
+			
+			// 확장자를 제외한 파일명
+			String onlyFileName = originFileName.substring(0,originFileName.lastIndexOf("."));
+			
+			// 파일의 확장자
+			String extension = originFileName.substring(originFileName.lastIndexOf("."));
+			
+			String filepath = onlyFileName+"_"+getCurrentTime()+extension;
+			
+			String fullpath = savePath+filepath;
+			
+			try {
+				byte[] bytes = file.getBytes();
+				
+			} catch (IOException e) {
+			}
+		}
+		
+		
+		return null;
+	}
+	
 	
 	@RequestMapping(value = "/modifyNoticeFrm.do")
 	public String modifyNoticeFrm(Notice n, Model m) {
