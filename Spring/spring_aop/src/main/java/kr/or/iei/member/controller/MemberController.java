@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -28,6 +30,16 @@ public class MemberController {
 	public MemberController() {
 		super();		
 		System.out.println("멤바 컨트롤러 생성");
+	}
+	
+	@ExceptionHandler(RuntimeException.class)
+	public String errorHandler() {
+		return "redirect:/error.do";
+	}
+	
+	@RequestMapping("/error.do")
+	public String error() {
+		return "member/error";
 	}
 	
 	@RequestMapping(value="/login.do")
@@ -59,6 +71,7 @@ public class MemberController {
 	}
 	
 	// ajax 통신의 return 방식
+	@CrossOrigin(origins = {"http://192.168.10.7","http://localhost","http://192.168.10.8"})
 	@ResponseBody
 	@RequestMapping(value="/checkId.do",produces = "text/html;charset=utf-8")
 	public String checkId(String memberId) {		

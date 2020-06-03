@@ -24,7 +24,7 @@ pageEncoding="UTF-8"%>
       const memberId = $(this).val();
 
       $.ajax({
-        url: "/checkId.do",
+        url: "http://192.168.10.28/checkId.do",
         type: "post",
         data: { memberId: memberId },
         success: function (data) {

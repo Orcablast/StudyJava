@@ -7,6 +7,7 @@ public class Member {
 	private String memberName;
 	private int age;
 	private String enrollDate;
+		
 	public Member() {
 		super();
 		// TODO Auto-generated constructor stub
