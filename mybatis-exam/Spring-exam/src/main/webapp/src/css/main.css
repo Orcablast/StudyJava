@@ -1,0 +1,7 @@
+@import url("header.css");
+@import url("/src/css/styles.css");
+
+.main {
+  width: 90%;
+  margin: 0 auto;
+}

@@ -1,0 +1,110 @@
+@import url("/src/css/styles.css");
+@import url("/src/css/body.css");
+
+section{
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    width: 550px;
+    margin-top: 30px;
+}
+section > span{
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(75, 75, 75);
+    margin-top: 50px;
+}
+
+form{
+    margin-top: 40px;
+    width: 70%;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    position: relative;    
+}
+
+form div > span{
+    position: absolute;
+    font-size: 14px;
+    left: 120px;
+    top: 2px;
+    font-weight: bold;
+    color: red;
+    opacity: 0.6;
+}
+
+form div:nth-child(6) > span{
+    top: -12px;
+}
+
+form div:nth-child(5) > span{
+    color: blue;
+}
+
+form div:not(:first-of-type){
+    margin-top: 30px;
+}
+
+form div label{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(139, 139, 139);
+    cursor: text;
+}
+
+form div input,
+select{
+    height: 40px;
+    margin-top: 4px;
+    border-radius: 5px;
+    border: 1px solid #dbdbdb;
+    font-size: 18px;
+    text-indent: 10px;
+    color: rgb(75, 75, 75);
+}
+
+form button{
+    background-color: rgb(59, 59, 59);
+    border: none;
+    margin-top: 40px;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 25px;
+    color: #f8f8f8;
+    padding: 0;
+}
+section > div{
+    margin-top: 50px;
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+input:hover{
+    border-color: rgb(30, 30, 30);
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: all 0.2s ease-in-out;
+}
+
+a{
+    opacity: 0.4;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 30px 0;
+}

@@ -1,0 +1,31 @@
+@import url("bootstrap.css");
+@import url("main.css");
+#content {
+  display: flex;
+  width: calc(100% - 250px);
+}
+
+.boardTop {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.boardTop form {
+  display: flex;
+}
+
+select.form-control {
+  width: 100px;
+}
+
+input.form-control {
+  width: 200px;
+}
+
+form > * {
+  margin-right: 5px;
+}
+
+#boardTitle {
+  width: 100%;
+}

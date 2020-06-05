@@ -1,0 +1,9 @@
+body{
+    background-image: url("/src/imgs/login-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section{
+    margin: auto;
+}
