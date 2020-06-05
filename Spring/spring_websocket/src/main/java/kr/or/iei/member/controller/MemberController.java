@@ -76,7 +76,7 @@ public class MemberController {
 	// ajax 통신의 return 방식
 	@CrossOrigin(origins = {"http://192.168.10.7","http://localhost","http://192.168.10.8"})
 	@ResponseBody
-	@RequestMapping(value="/checkId.do",produces = "text/html;charset=utf-8")
+	@RequestMapping(value="/checkId.do", produces = "text/html;charset=utf-8")
 	public String checkId(String memberId) {		
 		// 비지니스 로직 호출
 		int result = service.checkId(memberId);
