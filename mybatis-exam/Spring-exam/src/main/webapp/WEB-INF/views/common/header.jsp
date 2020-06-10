@@ -16,11 +16,7 @@ prefix="c"%>
   integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
   crossorigin="anonymous"
 ></script>
-<script
-  src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-  crossorigin="anonymous"
-></script>
+<script src="/src/js/bootstrap/bootstrap.min.js"></script>
 <header>
   <span>A_CLASS</span>
   <div>
@@ -88,6 +84,11 @@ prefix="c"%>
         </table>
         <form id="msgForm">
           <div class="form-group">
+            <input
+              type="hidden"
+              id="msgSender"
+              value="${sessionScope.member.memberId}"
+            />
             <label for="recipient-name" class="col-form-label"
               >받는 사람 :</label
             >
@@ -111,12 +112,70 @@ prefix="c"%>
   </div>
 </div>
 <script>
+  let ws;
+
+  wsConnect();
+
+  function sendMsg() {
+    const msgReceiver = $("#recipient-name").val();
+    const msgSender = $("#msgSender").val();
+    const msgContent = $("#message-text").val();
+
+    const msg = {
+      type: "msg",
+      msgSender: msgSender,
+      msgReceiver: msgReceiver,
+      msgContent: msgContent,
+    };
+
+    ws.send(JSON.stringify(msg));
+
+    $("#recipient-name").val("");
+    $("#msgSender").val("");
+    $("#message-text").val("");
+  }
+
+  function wsConnect() {
+    ws = new WebSocket("ws://192.168.10.7/msg.do");
+    const memberId = "${sessionScope.member.memberId}";
+
+    ws.onopen = function () {
+      const msg = {
+        type: "register",
+        memberId: memberId,
+      };
+
+      ws.send(JSON.stringify(msg));
+    };
+
+    ws.onmessage = function (e) {
+      console.log(e.data);
+      $("#msgCount").html(e.data);
+    };
+
+    ws.onclose = function () {
+      const msg = {
+        type: "exit",
+        memberId: memberId,
+      };
+
+      ws.send(JSON.stringify(msg));
+    };
+  }
+
   $("#msgForm").hide();
 
   $("#writeBtn").click(showForm);
 
   $("#msgModal").on("hidden.bs.modal", function () {
-    alert("!");
+    showTbl();
+
+    if ($(".modal-footer").children().length == 4) {
+      $(".modal-footer").children().eq(0).remove();
+      $(".modal-footer").children().eq(1).remove();
+    } else if ($(".modal-footer").children().length == 3) {
+      $(".modal-footer").children().eq(1).remove();
+    }
   });
 
   function showTbl() {
@@ -141,5 +200,12 @@ prefix="c"%>
     $(this).remove();
     $(".modal-footer").append(btn);
     btn.addEventListener("click", showTbl);
+
+    const sendBtn = document.createElement("button");
+    sendBtn.innerHTML = "전송";
+    sendBtn.classList.add("btn");
+    sendBtn.classList.add("btn-primary");
+    $(".modal-footer").prepend(sendBtn);
+    sendBtn.addEventListener("click", sendMsg);
   }
 </script>

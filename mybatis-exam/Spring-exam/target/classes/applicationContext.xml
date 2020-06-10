@@ -56,7 +56,15 @@
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name="maxUploadSize" value="10485760" />
 	</bean>
-
+	
+	<!-- 웹소킹 세팅 -->
+	<websocket:handlers>
+		<websocket:mapping handler="msgHandler" path="/msg.do"/>
+		<websocket:handshake-interceptors>
+			<bean class="org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor"></bean>
+		</websocket:handshake-interceptors>
+	</websocket:handlers>
+	
 	<aop:aspectj-autoproxy />
 
 	<context:component-scan
