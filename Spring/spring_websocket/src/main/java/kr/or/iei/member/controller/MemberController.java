@@ -150,4 +150,12 @@ public class MemberController {
 		}
 		
 	}
+	
+	@ResponseBody
+	@RequestMapping("/arduinoTest.do")
+	public String arduino(String str) {
+		System.out.println(str);
+		return "ok";
+	}
+	
 }
