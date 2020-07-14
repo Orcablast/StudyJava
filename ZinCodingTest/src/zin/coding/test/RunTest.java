@@ -10,6 +10,7 @@ public class RunTest {
 		try {
 			controller.setUp();			
 			controller.putFileToCd();
+			controller.printResult();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -8,7 +8,7 @@ public class File {
 	// 기본 생성자
 	public File() {
 		// 파일의 용량을 정수 1~649 사이의 난수로 부여
-		this.fileSize = (int)(Math.random()*650);
+		this.fileSize = (int)(Math.random()*649)+1;
 	}
 	
 	// 파일의 용량을 반환
